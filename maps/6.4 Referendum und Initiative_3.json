@@ -1,0 +1,15 @@
+{
+  "root": {
+    "text": "Initiative",
+    "children": [
+      {
+        "text": "Volksinitiative - Bund",
+        "children": []
+      },
+      {
+        "text": "Initiativen auf Kantonsebene",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Judikative (Bundesgericht)",
+    "children": [
+      {
+        "text": "Oberste richterliche Instanz",
+        "children": []
+      },
+      {
+        "text": "Richterlicher Instanzenweg",
+        "children": []
+      },
+      {
+        "text": "Gerichts- und Prozessarten",
+        "children": []
+      },
+      {
+        "text": "Strafgericht",
+        "children": []
+      },
+      {
+        "text": "Zivilgericht",
+        "children": []
+      },
+      {
+        "text": "Verwaltungsgericht",
+        "children": []
+      }
+    ]
+  }
+}

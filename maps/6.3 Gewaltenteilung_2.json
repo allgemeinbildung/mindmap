@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Legislative (Parlament)",
+    "children": [
+      {
+        "text": "Zusammensetzung (Nationalrat, Ständerat)",
+        "children": []
+      },
+      {
+        "text": "Aufgaben",
+        "children": []
+      },
+      {
+        "text": "Arbeitsweise",
+        "children": []
+      },
+      {
+        "text": "Sessionen",
+        "children": []
+      },
+      {
+        "text": "Fraktionen",
+        "children": []
+      },
+      {
+        "text": "Kommissionen",
+        "children": []
+      },
+      {
+        "text": "Vereinigte Bundesversammlung",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "root": {
+    "text": "Politisches System Kt Zürich",
+    "children": [
+      {
+        "text": "Kantonale Ebene",
+        "children": []
+      },
+      {
+        "text": "Regierungsrat Exekutive",
+        "children": []
+      }
+    ]
+  }
+}

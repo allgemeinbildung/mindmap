@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Interessengruppen",
+    "children": [
+      {
+        "text": "Parteien",
+        "children": []
+      },
+      {
+        "text": "Definition und Rolle",
+        "children": []
+      },
+      {
+        "text": "Politische Grundhaltungen",
+        "children": []
+      },
+      {
+        "text": "Liberal",
+        "children": []
+      },
+      {
+        "text": "Links",
+        "children": []
+      },
+      {
+        "text": "Rechts",
+        "children": []
+      },
+      {
+        "text": "Konservativ",
+        "children": []
+      }
+    ]
+  }
+}

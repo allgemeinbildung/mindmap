@@ -1,0 +1,63 @@
+{
+  "root": {
+    "text": "Interessengruppen",
+    "children": [
+      {
+        "text": "Parteien",
+        "children": []
+      },
+      {
+        "text": "Regierungsparteien",
+        "children": []
+      },
+      {
+        "text": "SVP",
+        "children": []
+      },
+      {
+        "text": "SP",
+        "children": []
+      },
+      {
+        "text": "Die Mitte",
+        "children": []
+      },
+      {
+        "text": "FDP",
+        "children": []
+      },
+      {
+        "text": "Weitere Parteien",
+        "children": []
+      },
+      {
+        "text": "GPS",
+        "children": []
+      },
+      {
+        "text": "GLP",
+        "children": []
+      },
+      {
+        "text": "EVP",
+        "children": []
+      },
+      {
+        "text": "Darstellungsformen",
+        "children": []
+      },
+      {
+        "text": "Links Rechts Schema",
+        "children": []
+      },
+      {
+        "text": "Smartspider",
+        "children": []
+      },
+      {
+        "text": "Parteienspektrum im Parlament",
+        "children": []
+      }
+    ]
+  }
+}

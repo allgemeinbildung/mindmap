@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Interessengruppen",
+    "children": [
+      {
+        "text": "NGOs",
+        "children": []
+      },
+      {
+        "text": "Definition und Rolle in Global Governance",
+        "children": []
+      },
+      {
+        "text": "Amnesty International",
+        "children": []
+      },
+      {
+        "text": "WWF",
+        "children": []
+      },
+      {
+        "text": "Greenpeace",
+        "children": []
+      },
+      {
+        "text": "Public Eye",
+        "children": []
+      },
+      {
+        "text": "attac",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "root": {
+    "text": "Politisches System Kt Zürich",
+    "children": [
+      {
+        "text": "Bundesebene Vertretung Kt ZH",
+        "children": []
+      },
+      {
+        "text": "Nationalrat",
+        "children": []
+      },
+      {
+        "text": "Ständerat",
+        "children": []
+      }
+    ]
+  }
+}
