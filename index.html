@@ -6,35 +6,36 @@
     <style>
         body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; }
         #mermaid-container { margin-top: 5px; }
-        button { 
+        .controls a, .controls button { 
+            display: inline-block;
             padding: 10px 18px; margin: 5px; font-size: 1.2em; 
             cursor: pointer; border: 1px solid #ccc; border-radius: 5px;
             background-color: #f0f0f0; transition: background-color 0.2s;
+            color: black; text-decoration: none; font-family: sans-serif;
         }
-        button:hover { background-color: #e0e0e0; }
-        #open-full-page { 
-            font-size: 1em; font-weight: bold; background-color: #e7f5ff; 
-            border-color: #b3d9ff; color: #005a9e; 
+        .controls a:hover, .controls button:hover { background-color: #e0e0e0; }
+        
+        /* This CSS hides the buttons when printing the page */
+        @media print {
+            body { padding: 0; margin: 0; }
+            .controls { display: none; }
         }
     </style>
 </head>
 <body>
     <div id="mermaid-container"></div>
     <div class="controls">
-        <button id="open-full-page" style="display: none;">Activate Buttons ↗</button>
-
-        <button id="download-svg" style="display: none;" title="Download as SVG">⬇️</button>
-        <button id="copy-image" style="display: none;" title="Copy as Image (for Word, etc.)">🖼️</button>
+        <a id="download-svg" href="#" download="mindmap.svg" title="Download as SVG">⬇️</a>
+        <button id="copy-svg" title="Copy as SVG Code">📋</button>
+        <button id="print-page" title="Print to PDF">🖨️</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
     
     <script>
-        const isInIframe = window.self !== window.top;
+        mermaid.initialize({ startOnLoad: false });
 
         const renderDiagram = async () => {
-            mermaid.initialize({ startOnLoad: false });
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
             const mindmapName = urlParams.get('mindmap'); 
@@ -47,49 +48,34 @@
                 const data = await response.json();
                 const { svg } = await mermaid.render('mermaid-graph', data.mermaidCode);
                 container.innerHTML = svg;
-                setupUI(svg);
+                setupButtons(svg);
             } catch (error) { console.error("Error:", error); }
         };
 
-        const setupUI = (svgCode) => {
-            const openBtn = document.getElementById('open-full-page');
-            const downloadBtn = document.getElementById('download-svg');
-            const copyBtn = document.getElementById('copy-image');
+        const setupButtons = (svgCode) => {
+            // 1. Download as SVG Button
+            // This method is the most reliable, as it sets the data directly on the link.
+            const downloadLink = document.getElementById('download-svg');
+            const dataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
+            downloadLink.href = dataUrl;
 
-            if (isInIframe) {
-                // We are inside Obsidian, so show the "Activate" button
-                openBtn.style.display = 'inline-block';
-                openBtn.onclick = () => window.open(window.location.href, '_blank');
-            } else {
-                // We are on the full page, so show the real buttons
-                downloadBtn.style.display = 'inline-block';
-                copyBtn.style.display = 'inline-block';
-                
-                // Attach the working logic to the buttons
-                downloadBtn.onclick = () => {
-                    const blob = new Blob([svgCode], { type: 'image/svg+xml' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url; a.download = 'mindmap.svg'; a.click();
-                    URL.revokeObjectURL(url);
-                };
+            // 2. Copy as SVG Code Button
+            const copyBtn = document.getElementById('copy-svg');
+            copyBtn.onclick = () => {
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    copyBtn.innerHTML = "✅";
+                    setTimeout(() => { copyBtn.innerHTML = '📋'; }, 2000);
+                }).catch(err => {
+                    console.error('Copy failed:', err);
+                    alert('Copy failed. Ensure you are viewing on a secure (https) page.');
+                });
+            };
 
-                copyBtn.onclick = async () => {
-                    try {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
-                        const v = await canvg.Canvg.from(ctx, svgCode);
-                        await v.render();
-                        const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-                        
-                        copyBtn.innerHTML = "✅";
-                        setTimeout(() => { copyBtn.innerHTML = '🖼️'; }, 2000);
-                    } catch (err) {
-                        alert('Copy failed. Ensure you are using a modern browser like Chrome or Firefox.');
-                    }
-                };
-            }
+            // 3. Print to PDF Button
+            const printBtn = document.getElementById('print-page');
+            printBtn.onclick = () => {
+                window.print();
+            };
         };
 
         renderDiagram();
