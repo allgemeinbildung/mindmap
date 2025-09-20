@@ -35,25 +35,35 @@
         // Initialize Mermaid
         mermaid.initialize({ startOnLoad: false });
 
-        const renderDiagram = async () => {
-            const container = document.getElementById('mermaid-container');
-            const urlParams = new URLSearchParams(window.location.search);
-            const mermaidCode = urlParams.get('mindmap');
-
-            if (!mermaidCode) {
-                container.innerHTML = "Error: No mindmap data found in URL.";
-                return;
-            }
-
-            try {
-                const decodedCode = decodeURIComponent(mermaidCode);
-                const { svg } = await mermaid.render('mermaid-graph', decodedCode);
-                container.innerHTML = svg;
-                setupButtons(svg);
-            } catch (error) {
-                container.innerHTML = `Error rendering Mermaid diagram: ${error}`;
-            }
-        };
+    const renderDiagram = async () => {
+                const container = document.getElementById('mermaid-container');
+                const urlParams = new URLSearchParams(window.location.search);
+                const mindmapName = urlParams.get('mindmap'); // e.g., "5.2"
+    
+                if (!mindmapName) {
+                    container.innerHTML = "Error: No mindmap name specified in URL.";
+                    return;
+                }
+    
+                const filePath = `./maps/${mindmapName}.json`;
+    
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) {
+                        throw new Error(`Mindmap file not found at ${filePath}`);
+                    }
+                    const data = await response.json();
+                    const mermaidCode = data.mermaidCode;
+    
+                    const { svg } = await mermaid.render('mermaid-graph', mermaidCode);
+                    container.innerHTML = svg;
+                    setupButtons(svg);
+    
+                } catch (error) {
+                    container.innerHTML = `Error: ${error.message}`;
+                    console.error("Failed to load or render mindmap:", error);
+                }
+            };
 
         const setupButtons = (svgCode) => {
             // Download SVG
