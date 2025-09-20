@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Mermaid Renderer</title>
     <style>
-        body { text-align: center; margin: 0; padding: 10px; }
+        body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; }
         #mermaid-container { margin-top: 5px; }
         button { 
             padding: 10px 18px; margin: 5px; font-size: 1.2em; 
@@ -12,6 +12,7 @@
             background-color: #f0f0f0; transition: background-color 0.2s;
         }
         button:hover { background-color: #e0e0e0; }
+        .status-message { font-size: 1.2em; color: #28a745; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -20,14 +21,43 @@
         <button id="download-svg" title="Download as SVG">⬇️</button>
         <button id="copy-image" title="Copy as Image (for Word, etc.)">🖼️</button>
     </div>
+    <div id="status"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
     
     <script>
-        mermaid.initialize({ startOnLoad: false });
+        const handleHelperTab = async () => {
+            // This function runs if the page is opened as a "helper tab"
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageDataUrl = urlParams.get('copy_data');
+            
+            if (!imageDataUrl) return false; // Not a helper tab
 
-        const renderDiagram = async () => {
+            // Hide the main content, show a status message
+            document.getElementById('mermaid-container').style.display = 'none';
+            document.getElementById('controls').style.display = 'none';
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = '<p class="status-message">Copying to clipboard...</p>';
+
+            try {
+                // Convert the Data URL back to a Blob and copy to clipboard
+                const response = await fetch(imageDataUrl);
+                const blob = await response.blob();
+                await navigator.clipboard.write([
+                    new ClipboardItem({ 'image/png': blob })
+                ]);
+                statusDiv.innerHTML = '<p class="status-message">✅ Copied! You can now close this tab.</p>';
+            } catch (err) {
+                console.error('Helper tab failed to copy:', err);
+                statusDiv.innerHTML = '<p>Copy failed. Please try again.</p>';
+            }
+            return true; // Was a helper tab
+        };
+
+        const setupPrimaryPage = async () => {
+            // This function runs if the page is the primary view (in the iframe)
+            mermaid.initialize({ startOnLoad: false });
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
             const mindmapName = urlParams.get('mindmap'); 
@@ -45,60 +75,47 @@
         };
 
         const setupButtons = (svgCode, isInIframe) => {
-            const downloadBtn = document.getElementById('download-svg');
-            
-            if (isInIframe) {
-                downloadBtn.onclick = () => {
+            // Download button logic (unchanged)
+            document.getElementById('download-svg').onclick = () => {
+                if (isInIframe) {
                     window.open(window.location.href, '_blank');
                     alert("A new tab has been opened. Please use the download button ⬇️ there to save the file.");
-                };
-            } else {
-                downloadBtn.onclick = () => {
+                } else {
                     const blob = new Blob([svgCode], { type: 'image/svg+xml' });
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url; a.download = 'mindmap.svg'; a.click();
                     URL.revokeObjectURL(url);
-                };
-            }
+                }
+            };
 
-            // NEW: Universal "Copy as Image" logic
-            const copyBtn = document.getElementById('copy-image');
-            copyBtn.onclick = async () => {
+            // "Copy as Image" button logic
+            document.getElementById('copy-image').onclick = async () => {
                 try {
-                    // 1. Create an in-memory canvas
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
-                    
-                    // 2. Use canvg to render the SVG onto the canvas
                     const v = await canvg.Canvg.from(ctx, svgCode);
                     await v.render();
+                    const dataUrl = canvas.toDataURL('image/png');
                     
-                    // 3. Get the image as a PNG Blob from the canvas
-                    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                    
-                    // 4. Use the Clipboard API to write the PNG Blob
-                    await navigator.clipboard.write([
-                        new ClipboardItem({ 'image/png': blob })
-                    ]);
-
-                    // Provide user feedback
-                    const originalIcon = copyBtn.innerHTML;
-                    copyBtn.innerHTML = "✅";
-                    copyBtn.disabled = true;
-                    setTimeout(() => {
-                        copyBtn.innerHTML = originalIcon;
-                        copyBtn.disabled = false;
-                    }, 2000);
+                    // Open the helper tab and pass the image data in the URL
+                    const helperUrl = `${window.location.pathname}?copy_data=${encodeURIComponent(dataUrl)}`;
+                    window.open(helperUrl, '_blank');
 
                 } catch (err) {
-                    console.error('Failed to copy image: ', err);
-                    alert('Could not copy image to clipboard.');
+                    console.error('Failed to prepare image for copying:', err);
+                    alert('Could not prepare the image.');
                 }
             };
         };
-
-        renderDiagram();
+        
+        // --- Main execution ---
+        // Check if this is a helper tab first. If not, run the primary page setup.
+        handleHelperTab().then(isHelper => {
+            if (!isHelper) {
+                setupPrimaryPage();
+            }
+        });
     </script>
 </body>
 </html>
