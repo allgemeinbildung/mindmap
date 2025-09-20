@@ -5,8 +5,18 @@
     <title>Mermaid Renderer</title>
     <style>
         body { font-family: sans-serif; text-align: center; }
-        #mermaid-container { margin-bottom: 20px; }
-        button { padding: 8px 16px; margin: 5px; cursor: pointer; }
+        #mermaid-container { margin: 20px; }
+        button { 
+            padding: 10px 18px; 
+            margin: 5px; 
+            cursor: pointer; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+        button:hover { background-color: #e0e0e0; }
+        #excalidraw-btn { background-color: #d8e2ff; }
+        #excalidraw-btn:hover { background-color: #c4d1f7; }
     </style>
 </head>
 <body>
@@ -15,17 +25,16 @@
     <div id="controls">
         <button id="download-svg">Download as SVG</button>
         <button id="download-png">Download as PNG</button>
+        <button id="open-in-excalidraw" id="excalidraw-btn">➡️ Open in Excalidraw</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
 
     <script>
         // Initialize Mermaid
         mermaid.initialize({ startOnLoad: false });
 
-        // Function to render the diagram
         const renderDiagram = async () => {
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
@@ -46,9 +55,8 @@
             }
         };
 
-        // Function to set up download buttons
         const setupButtons = (svgCode) => {
-            // Download SVG
+            // ... (download-svg and download-png functions remain the same)
             document.getElementById('download-svg').onclick = () => {
                 const blob = new Blob([svgCode], { type: 'image/svg+xml' });
                 const url = URL.createObjectURL(blob);
@@ -59,7 +67,6 @@
                 URL.revokeObjectURL(url);
             };
 
-            // Download PNG
             document.getElementById('download-png').onclick = async () => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
@@ -71,6 +78,51 @@
                 a.href = dataUrl;
                 a.download = 'mindmap.png';
                 a.click();
+            };
+
+            // NEW: Setup Excalidraw button
+            document.getElementById('open-in-excalidraw').onclick = () => {
+                // Step 1: Base64-encode the SVG to create a Data URL
+                const svgDataURL = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgCode)));
+
+                // Step 2: Create the Excalidraw library JSON structure
+                const excalidrawLibrary = {
+                    type: "excalidrawlib",
+                    version: 2,
+                    source: "https://allgemeinbildung.github.io/mindmap/",
+                    libraryItems: [
+                        {
+                            id: "mermaid-mindmap",
+                            status: "published",
+                            elements: [
+                                {
+                                    type: "image",
+                                    version: 1,
+                                    versionNonce: Date.now(),
+                                    isDeleted: false,
+                                    id: "image-1",
+                                    fillStyle: "hachure",
+                                    strokeWidth: 1,
+                                    strokeStyle: "solid",
+                                    opacity: 100,
+                                    x: 0,
+                                    y: 0,
+                                    width: 500,  // You can adjust default size
+                                    height: 500, // You can adjust default size
+                                    fileId: null,
+                                    dataURL: svgDataURL
+                                }
+                            ]
+                        }
+                    ]
+                };
+
+                // Step 3: URL-encode the JSON and create the final link
+                const libraryData = encodeURIComponent(JSON.stringify(excalidrawLibrary));
+                const excalidrawURL = `https://excalidraw.com/#addLibrary=data:application/json,${libraryData}`;
+                
+                // Step 4: Open the link in a new tab
+                window.open(excalidrawURL, '_blank');
             };
         };
 
