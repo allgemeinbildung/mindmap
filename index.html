@@ -18,10 +18,11 @@
     <div id="mermaid-container"></div>
     <div class="controls">
         <button id="download-svg" title="Download as SVG">⬇️</button>
-        <button id="copy-svg" title="Copy as SVG Image">📋</button>
+        <button id="copy-image" title="Copy as Image (for Word, etc.)">🖼️</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
     
     <script>
         mermaid.initialize({ startOnLoad: false });
@@ -39,7 +40,7 @@
                 const data = await response.json();
                 const { svg } = await mermaid.render('mermaid-graph', data.mermaidCode);
                 container.innerHTML = svg;
-                setupButtons(svg, window.self !== window.top); // Pass boolean if in an iframe
+                setupButtons(svg, window.self !== window.top);
             } catch (error) { console.error("Error:", error); }
         };
 
@@ -47,13 +48,11 @@
             const downloadBtn = document.getElementById('download-svg');
             
             if (isInIframe) {
-                // If inside an iframe, the button opens a new tab and alerts the user.
                 downloadBtn.onclick = () => {
                     window.open(window.location.href, '_blank');
                     alert("A new tab has been opened. Please use the download button ⬇️ there to save the file.");
                 };
             } else {
-                // If not in an iframe (i.e., in the new tab), the button performs the download.
                 downloadBtn.onclick = () => {
                     const blob = new Blob([svgCode], { type: 'image/svg+xml' });
                     const url = URL.createObjectURL(blob);
@@ -63,17 +62,39 @@
                 };
             }
 
-            // Copy button logic remains the same.
-            const copyBtn = document.getElementById('copy-svg');
-            copyBtn.onclick = () => {
-                 navigator.clipboard.writeText(svgCode).then(() => {
+            // NEW: Universal "Copy as Image" logic
+            const copyBtn = document.getElementById('copy-image');
+            copyBtn.onclick = async () => {
+                try {
+                    // 1. Create an in-memory canvas
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    // 2. Use canvg to render the SVG onto the canvas
+                    const v = await canvg.Canvg.from(ctx, svgCode);
+                    await v.render();
+                    
+                    // 3. Get the image as a PNG Blob from the canvas
+                    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                    
+                    // 4. Use the Clipboard API to write the PNG Blob
+                    await navigator.clipboard.write([
+                        new ClipboardItem({ 'image/png': blob })
+                    ]);
+
+                    // Provide user feedback
+                    const originalIcon = copyBtn.innerHTML;
                     copyBtn.innerHTML = "✅";
                     copyBtn.disabled = true;
                     setTimeout(() => {
-                        copyBtn.innerHTML = '📋';
+                        copyBtn.innerHTML = originalIcon;
                         copyBtn.disabled = false;
                     }, 2000);
-                }).catch(err => console.error('Failed to copy: ', err));
+
+                } catch (err) {
+                    console.error('Failed to copy image: ', err);
+                    alert('Could not copy image to clipboard.');
+                }
             };
         };
 
