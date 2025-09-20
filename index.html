@@ -56,7 +56,7 @@
         };
 
         const setupButtons = (svgCode) => {
-            // ... (download-svg and download-png functions remain the same)
+            // Download SVG
             document.getElementById('download-svg').onclick = () => {
                 const blob = new Blob([svgCode], { type: 'image/svg+xml' });
                 const url = URL.createObjectURL(blob);
@@ -67,6 +67,7 @@
                 URL.revokeObjectURL(url);
             };
 
+            // Download PNG
             document.getElementById('download-png').onclick = async () => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
@@ -80,10 +81,10 @@
                 a.click();
             };
 
-            // NEW: Setup Excalidraw button
+            // Setup Excalidraw button with the FIX
             document.getElementById('open-in-excalidraw').onclick = () => {
-                // Step 1: Base64-encode the SVG to create a Data URL
-                const svgDataURL = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgCode)));
+                // Step 1: Create a robust SVG Data URL using encodeURIComponent
+                const svgDataURL = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
 
                 // Step 2: Create the Excalidraw library JSON structure
                 const excalidrawLibrary = {
@@ -107,8 +108,8 @@
                                     opacity: 100,
                                     x: 0,
                                     y: 0,
-                                    width: 500,  // You can adjust default size
-                                    height: 500, // You can adjust default size
+                                    width: 500,
+                                    height: 500,
                                     fileId: null,
                                     dataURL: svgDataURL
                                 }
