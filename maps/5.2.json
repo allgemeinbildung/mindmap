@@ -1,3 +1,16 @@
 {
-  "mermaidCode": "mindmap\n    Haftpflichtversicherungen\n        Grundlagen der Haftpflicht\n            Haftungsprinzip (OR#Art. 41)\n            Erstperson\n            Zweitperson\n            Drittperson"
+  "root": {
+    "text": "Haftpflichtversicherungen",
+    "children": [
+      {
+        "text": "Grundlagen der Haftpflicht",
+        "children": [
+          { "text": "Haftungsprinzip (OR#Art. 41)" },
+          { "text": "Erstperson" },
+          { "text": "Zweitperson" },
+          { "text": "Drittperson" }
+        ]
+      }
+    ]
+  }
 }
