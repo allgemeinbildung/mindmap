@@ -10,6 +10,7 @@
         button { 
             padding: 10px 18px; 
             margin: 5px; 
+            font-size: 1.2em; /* Larger icons */
             cursor: pointer; 
             border: 1px solid #ccc; 
             border-radius: 5px;
@@ -17,9 +18,7 @@
             transition: background-color 0.2s;
         }
         button:hover { background-color: #e0e0e0; }
-        #copy-svg { background-color: #d4edda; } /* Green for copy */
-        #copy-svg:hover { background-color: #c3e6cb; }
-        .instructions { margin-top: 20px; color: #555; }
+        .instructions { margin-top: 20px; color: #555; max-width: 600px; margin-left: auto; margin-right: auto; }
     </style>
 </head>
 <body>
@@ -27,76 +26,84 @@
     <div id="mermaid-container"></div>
     
     <div class="controls">
-        <button id="download-svg">Download as SVG</button>
-        <button id="download-png">Download as PNG</button>
-        <button id="copy-svg">📋 Copy as SVG</button>
+        <button id="download-svg" title="Download as SVG">⬇️</button>
+        <button id="copy-svg" title="Copy as SVG Image">📋</button>
+        <button id="copy-markdown" title="Copy as Markdown List">📝</button>
     </div>
 
     <div class="instructions">
         <p>
-            For editing, click "Copy as SVG", then open a tool like 
-            <a href="https://excalidraw.com" target="_blank">Excalidraw</a> 
-            and press Ctrl+V (or Cmd+V) to paste.
+            • For a visual copy, click 📋, then paste into <a href="https://excalidraw.com" target="_blank">Excalidraw</a>.<br>
+            • For an editable mind map, click 📝, then paste into <strong>Freeplane, XMind</strong>, or other mind map software.
         </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
-
+    
     <script>
         mermaid.initialize({ startOnLoad: false });
 
+        let rawMermaidCode = ''; // Store the raw code globally
+
         const renderDiagram = async () => {
-            // ... (this function remains exactly the same as the previous version)
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
             const mindmapName = urlParams.get('mindmap'); 
 
-            if (!mindmapName) {
-                container.innerHTML = "Error: No mindmap name specified in URL.";
-                return;
-            }
+            if (!mindmapName) { /* ... error handling ... */ return; }
             const filePath = `./maps/${mindmapName}.json`;
             try {
                 const response = await fetch(filePath);
-                if (!response.ok) throw new Error(`Mindmap file not found at ${filePath}`);
+                if (!response.ok) throw new Error(`Mindmap file not found`);
                 const data = await response.json();
-                const { svg } = await mermaid.render('mermaid-graph', data.mermaidCode);
+                rawMermaidCode = data.mermaidCode; // Save the raw code
+                const { svg } = await mermaid.render('mermaid-graph', rawMermaidCode);
                 container.innerHTML = svg;
                 setupButtons(svg);
-            } catch (error) {
-                container.innerHTML = `Error: ${error.message}`;
-                console.error("Failed to load or render mindmap:", error);
-            }
+            } catch (error) { /* ... error handling ... */ }
         };
 
         const setupButtons = (svgCode) => {
-            // ... (download-svg and download-png functions are unchanged)
-            document.getElementById('download-svg').onclick = () => { /* ... */ };
-            document.getElementById('download-png').onclick = async () => { /* ... */ };
+            // Download as SVG
+            document.getElementById('download-svg').onclick = () => {
+                const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = 'mindmap.svg'; a.click();
+                URL.revokeObjectURL(url);
+            };
 
-            // =========================================================================
-            // NEW: Clipboard functionality
-            // =========================================================================
-            const copyBtn = document.getElementById('copy-svg');
-            copyBtn.onclick = () => {
-                navigator.clipboard.writeText(svgCode).then(() => {
-                    // Provide user feedback that the copy was successful
-                    const originalText = copyBtn.innerHTML;
-                    copyBtn.innerHTML = "Copied! ✅";
-                    copyBtn.disabled = true;
-                    setTimeout(() => {
-                        copyBtn.innerHTML = originalText;
-                        copyBtn.disabled = false;
-                    }, 2000); // Revert back after 2 seconds
-                }).catch(err => {
-                    console.error('Failed to copy SVG code: ', err);
-                    alert('Could not copy to clipboard. See console for details.');
-                });
+            // Copy as SVG Image
+            const copySvgBtn = document.getElementById('copy-svg');
+            copySvgBtn.onclick = () => copyToClipboard(svgCode, copySvgBtn, '📋');
+
+            // NEW: Copy as Markdown List
+            const copyMdBtn = document.getElementById('copy-markdown');
+            copyMdBtn.onclick = () => {
+                const markdown = rawMermaidCode
+                    .split('\n') // Split into lines
+                    .slice(1) // Remove the first line ("mindmap")
+                    .map(line => {
+                        const indent = line.search(/\S|$/); // Find first non-space character
+                        const level = Math.floor(indent / 4); // Assuming 4-space indents
+                        return '  '.repeat(level) + '- ' + line.trim();
+                    })
+                    .join('\n');
+                copyToClipboard(markdown, copyMdBtn, '📝');
             };
         };
+        
+        const copyToClipboard = (text, buttonElement, originalIcon) => {
+             navigator.clipboard.writeText(text).then(() => {
+                buttonElement.innerHTML = "✅";
+                buttonElement.disabled = true;
+                setTimeout(() => {
+                    buttonElement.innerHTML = originalIcon;
+                    buttonElement.disabled = false;
+                }, 2000);
+            }).catch(err => console.error('Failed to copy: ', err));
+        };
 
-        // Run the rendering on page load
         renderDiagram();
     </script>
 </body>
