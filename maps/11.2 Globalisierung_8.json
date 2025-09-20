@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Kommunikation",
+    "children": [
+      {
+        "text": "Globales Dorf",
+        "children": []
+      },
+      {
+        "text": "Vorteile",
+        "children": []
+      },
+      {
+        "text": "Slacktivismus",
+        "children": []
+      },
+      {
+        "text": "Risiken/Nachteile",
+        "children": []
+      }
+    ]
+  }
+}

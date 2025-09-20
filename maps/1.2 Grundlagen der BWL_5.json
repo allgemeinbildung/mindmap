@@ -1,0 +1,43 @@
+{
+  "root": {
+    "text": "Grundlagen BWL",
+    "children": [
+      {
+        "text": "Aufbauorganisation",
+        "children": []
+      },
+      {
+        "text": "Definition Aufbauorganisation",
+        "children": []
+      },
+      {
+        "text": "Stelle",
+        "children": []
+      },
+      {
+        "text": "Aufgaben",
+        "children": []
+      },
+      {
+        "text": "Kompetenzen",
+        "children": []
+      },
+      {
+        "text": "Verantwortung",
+        "children": []
+      },
+      {
+        "text": "Organigramm",
+        "children": []
+      },
+      {
+        "text": "Definition",
+        "children": []
+      },
+      {
+        "text": "Zweck",
+        "children": []
+      }
+    ]
+  }
+}

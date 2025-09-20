@@ -1,0 +1,43 @@
+{
+  "root": {
+    "text": "Grundlagen BWL",
+    "children": [
+      {
+        "text": "Unternehmensziele",
+        "children": []
+      },
+      {
+        "text": "Zeithorizonte",
+        "children": []
+      },
+      {
+        "text": "kurzfristig",
+        "children": []
+      },
+      {
+        "text": "mittelfristig",
+        "children": []
+      },
+      {
+        "text": "langfristig",
+        "children": []
+      },
+      {
+        "text": "Zielbeziehungen",
+        "children": []
+      },
+      {
+        "text": "Zielkonflikt",
+        "children": []
+      },
+      {
+        "text": "Zielharmonie",
+        "children": []
+      },
+      {
+        "text": "Zielindifferenz",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Pflichten Berufsbildende",
+    "children": [
+      {
+        "text": "Ausbildungspflicht",
+        "children": []
+      },
+      {
+        "text": "Lohnzahlungspflicht",
+        "children": []
+      },
+      {
+        "text": "Versicherungspflicht",
+        "children": []
+      },
+      {
+        "text": "Ferien gewähren",
+        "children": []
+      },
+      {
+        "text": "Jugendurlaub ermöglichen",
+        "children": []
+      },
+      {
+        "text": "Freistellung für Unterricht/üK/QV",
+        "children": []
+      },
+      {
+        "text": "Ausstellung eines Lehrzeugnisses",
+        "children": []
+      }
+    ]
+  }
+}

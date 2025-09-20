@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Berufsbildung Schweiz: Schule und Betrieb",
+    "children": [
+      {
+        "text": "Organisation der dualen Berufsbildung",
+        "children": []
+      },
+      {
+        "text": "Lehrbetrieb",
+        "children": []
+      },
+      {
+        "text": "Berufsfachschule",
+        "children": []
+      },
+      {
+        "text": "Überbetriebliche Kurse üK",
+        "children": []
+      }
+    ]
+  }
+}

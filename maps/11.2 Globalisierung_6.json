@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Kultur",
+    "children": [
+      {
+        "text": "Kultureller Austausch",
+        "children": []
+      },
+      {
+        "text": "Phänomene der Kulturglokalisierung",
+        "children": []
+      },
+      {
+        "text": "Gegenbewegungen",
+        "children": []
+      },
+      {
+        "text": "Globale soziale Bewegungen",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Wirtschaft",
+    "children": [
+      {
+        "text": "Zunahme Warenhandel",
+        "children": []
+      },
+      {
+        "text": "Globalisierung Finanzmärkte",
+        "children": []
+      },
+      {
+        "text": "Handelsblöcke",
+        "children": []
+      },
+      {
+        "text": "Folgen wirtsch. Globalisierung",
+        "children": []
+      },
+      {
+        "text": "Positive Aspekte",
+        "children": []
+      },
+      {
+        "text": "Negative Aspekte",
+        "children": []
+      },
+      {
+        "text": "Zunehmende Umweltbelastung",
+        "children": []
+      },
+      {
+        "text": "Situation der Entwicklungsländer",
+        "children": []
+      }
+    ]
+  }
+}

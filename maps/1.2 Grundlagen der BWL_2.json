@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Grundlagen BWL",
+    "children": [
+      {
+        "text": "Anspruchsgruppen",
+        "children": []
+      },
+      {
+        "text": "Mitarbeitende",
+        "children": []
+      },
+      {
+        "text": "Kunden",
+        "children": []
+      },
+      {
+        "text": "Staat",
+        "children": []
+      },
+      {
+        "text": "Kapitalgeber",
+        "children": []
+      },
+      {
+        "text": "Lieferanten",
+        "children": []
+      },
+      {
+        "text": "Konkurrenz",
+        "children": []
+      },
+      {
+        "text": "Institutionen",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "root": {
+    "text": "Grundlagen BWL",
+    "children": [
+      {
+        "text": "Unternehmenskonzept",
+        "children": []
+      },
+      {
+        "text": "Leistung",
+        "children": []
+      },
+      {
+        "text": "Ziele",
+        "children": []
+      },
+      {
+        "text": "Mittel",
+        "children": []
+      },
+      {
+        "text": "Verfahren",
+        "children": []
+      },
+      {
+        "text": "Finanzen",
+        "children": []
+      },
+      {
+        "text": "Ziele",
+        "children": []
+      },
+      {
+        "text": "Mittel",
+        "children": []
+      },
+      {
+        "text": "Verfahren",
+        "children": []
+      },
+      {
+        "text": "Soziales",
+        "children": []
+      },
+      {
+        "text": "Ziele",
+        "children": []
+      },
+      {
+        "text": "Mittel",
+        "children": []
+      },
+      {
+        "text": "Verfahren",
+        "children": []
+      }
+    ]
+  }
+}

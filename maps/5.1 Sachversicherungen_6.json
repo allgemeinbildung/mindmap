@@ -1,0 +1,15 @@
+{
+  "root": {
+    "text": "Sachversicherungen",
+    "children": [
+      {
+        "text": "Hausratsversicherung",
+        "children": []
+      },
+      {
+        "text": "Unterversicherung",
+        "children": []
+      }
+    ]
+  }
+}

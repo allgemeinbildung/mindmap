@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Der Lehrvertrag",
+    "children": [
+      {
+        "text": "Probezeit + Beendigung",
+        "children": []
+      },
+      {
+        "text": "Probezeit",
+        "children": []
+      },
+      {
+        "text": "Auflösung nach Probezeit",
+        "children": []
+      },
+      {
+        "text": "Verlängerung Lehrzeit",
+        "children": []
+      }
+    ]
+  }
+}

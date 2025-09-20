@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Pflichten Lernende",
+    "children": [
+      {
+        "text": "Hauptpflicht",
+        "children": []
+      },
+      {
+        "text": "Besuch Berufsfachschule/üK",
+        "children": []
+      },
+      {
+        "text": "Sorgfaltspflicht",
+        "children": []
+      },
+      {
+        "text": "Treuepflicht",
+        "children": []
+      },
+      {
+        "text": "Haftung bei Schäden",
+        "children": []
+      },
+      {
+        "text": "Überstunden leisten",
+        "children": []
+      },
+      {
+        "text": "Lerndokumentation führen",
+        "children": []
+      }
+    ]
+  }
+}

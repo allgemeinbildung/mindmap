@@ -1,0 +1,15 @@
+{
+  "root": {
+    "text": "Bilaterale Verträge",
+    "children": [
+      {
+        "text": "Bilaterale I",
+        "children": []
+      },
+      {
+        "text": "Bilaterale II",
+        "children": []
+      }
+    ]
+  }
+}

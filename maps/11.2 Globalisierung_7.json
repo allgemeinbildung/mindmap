@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Umwelt",
+    "children": [
+      {
+        "text": "Grenzüberschreitende Umweltprobleme",
+        "children": []
+      },
+      {
+        "text": "Ursachen/Verstärker",
+        "children": []
+      },
+      {
+        "text": "Herausforderungen",
+        "children": []
+      },
+      {
+        "text": "Lösungsansätze",
+        "children": []
+      }
+    ]
+  }
+}

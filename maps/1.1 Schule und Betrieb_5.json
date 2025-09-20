@@ -1,0 +1,27 @@
+{
+  "root": {
+    "text": "Gesetzliche Grundlagen und Akteure",
+    "children": [
+      {
+        "text": "Bund",
+        "children": []
+      },
+      {
+        "text": "Kantone",
+        "children": []
+      },
+      {
+        "text": "Berufsverbände",
+        "children": []
+      },
+      {
+        "text": "Lehrbetrieb",
+        "children": []
+      },
+      {
+        "text": "Berufsfachschule",
+        "children": []
+      }
+    ]
+  }
+}

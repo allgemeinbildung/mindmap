@@ -1,0 +1,19 @@
+{
+  "root": {
+    "text": "Berufsbildung Schweiz: Schule und Betrieb",
+    "children": [
+      {
+        "text": "Allgemeinbildung ABU",
+        "children": []
+      },
+      {
+        "text": "Lernbereiche ABU",
+        "children": []
+      },
+      {
+        "text": "Qualifikationsverfahren ABU",
+        "children": []
+      }
+    ]
+  }
+}

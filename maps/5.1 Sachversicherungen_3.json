@@ -1,0 +1,15 @@
+{
+  "root": {
+    "text": "Sachversicherungen",
+    "children": [
+      {
+        "text": "Fahrzeugversicherungen",
+        "children": []
+      },
+      {
+        "text": "Rechtsschutzversicherung Auto",
+        "children": []
+      }
+    ]
+  }
+}

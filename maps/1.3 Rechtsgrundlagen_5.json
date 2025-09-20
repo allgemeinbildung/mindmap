@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Wichtige Rechtsgrundsätze",
+    "children": [
+      {
+        "text": "Rechtsgleichheit BV Art. 8",
+        "children": []
+      },
+      {
+        "text": "Treu und Glauben ZGB Art. 2",
+        "children": []
+      },
+      {
+        "text": "Beweislast ZGB Art. 8",
+        "children": []
+      },
+      {
+        "text": "Gerichtliches Ermessen ZGB Art. 4",
+        "children": []
+      }
+    ]
+  }
+}

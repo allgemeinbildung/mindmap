@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Politik",
+    "children": [
+      {
+        "text": "Notwendigkeit internationaler Kooperation",
+        "children": []
+      },
+      {
+        "text": "Wichtige internationale Akteure/Foren",
+        "children": []
+      },
+      {
+        "text": "UNO-Sonderkonferenzen",
+        "children": []
+      },
+      {
+        "text": "G7-Gipfel",
+        "children": []
+      },
+      {
+        "text": "G20-Gipfel",
+        "children": []
+      },
+      {
+        "text": "WEF",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "root": {
+    "text": "EU Heute",
+    "children": [
+      {
+        "text": "Grundfreiheiten",
+        "children": []
+      },
+      {
+        "text": "Euro-Zone",
+        "children": []
+      },
+      {
+        "text": "Mitgliedsstaaten",
+        "children": []
+      }
+    ]
+  }
+}

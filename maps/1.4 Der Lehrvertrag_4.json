@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Rechte Lernende",
+    "children": [
+      {
+        "text": "Lohnanspruch",
+        "children": []
+      },
+      {
+        "text": "Lohnfortzahlung",
+        "children": []
+      },
+      {
+        "text": "Geregelte Arbeitszeit",
+        "children": []
+      },
+      {
+        "text": "Abgeltung Überstunden",
+        "children": []
+      },
+      {
+        "text": "Ferienanspruch",
+        "children": []
+      },
+      {
+        "text": "Nur berufsbezogene Arbeiten",
+        "children": []
+      },
+      {
+        "text": "Besuch von Kursen/BM",
+        "children": []
+      },
+      {
+        "text": "Teilnahme am Qualifikationsverfahren",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Herausforderungen der EU",
+    "children": [
+      {
+        "text": "Flüchtlingspolitik",
+        "children": []
+      },
+      {
+        "text": "Brexit",
+        "children": []
+      },
+      {
+        "text": "Staatsverschuldung",
+        "children": []
+      },
+      {
+        "text": "Terrorismus",
+        "children": []
+      },
+      {
+        "text": "Verteidigungspolitik",
+        "children": []
+      },
+      {
+        "text": "Beziehungen Russland/Türkei",
+        "children": []
+      },
+      {
+        "text": "Interne Differenzen",
+        "children": []
+      }
+    ]
+  }
+}

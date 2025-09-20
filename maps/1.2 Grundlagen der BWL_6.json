@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Grundlagen BWL",
+    "children": [
+      {
+        "text": "Organisationsmodelle",
+        "children": []
+      },
+      {
+        "text": "Einzelunternehmen",
+        "children": []
+      },
+      {
+        "text": "Einlinienorganisation",
+        "children": []
+      },
+      {
+        "text": "Stab Linien Organisation",
+        "children": []
+      },
+      {
+        "text": "Kontrollspanne",
+        "children": []
+      },
+      {
+        "text": "Breitengliederung",
+        "children": []
+      },
+      {
+        "text": "Tiefengliederung",
+        "children": []
+      }
+    ]
+  }
+}

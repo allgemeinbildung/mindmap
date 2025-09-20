@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "EU-Organe",
+    "children": [
+      {
+        "text": "Europäischer Rat",
+        "children": []
+      },
+      {
+        "text": "Rat der EU",
+        "children": []
+      },
+      {
+        "text": "Europäisches Parlament",
+        "children": []
+      },
+      {
+        "text": "Europäische Kommission",
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Globalisierung",
+    "children": [
+      {
+        "text": "Wirtschaft",
+        "children": []
+      },
+      {
+        "text": "Politik",
+        "children": []
+      },
+      {
+        "text": "Kultur",
+        "children": []
+      },
+      {
+        "text": "Umwelt",
+        "children": []
+      },
+      {
+        "text": "Kommunikation",
+        "children": []
+      },
+      {
+        "text": "Sprache",
+        "children": []
+      }
+    ]
+  }
+}

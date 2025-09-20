@@ -1,0 +1,79 @@
+{
+  "root": {
+    "text": "Mietzeit",
+    "children": [
+      {
+        "text": "Pflichten Mieter",
+        "children": []
+      },
+      {
+        "text": "Mietzins & Nebenkosten",
+        "children": []
+      },
+      {
+        "text": "OR Art. 257, Art. 257a, Art. 257b",
+        "children": []
+      },
+      {
+        "text": "Sorgfalt & Rücksichtnahme",
+        "children": []
+      },
+      {
+        "text": "OR Art. 257f",
+        "children": []
+      },
+      {
+        "text": "Hausordnung",
+        "children": []
+      },
+      {
+        "text": "Duldungspflicht",
+        "children": []
+      },
+      {
+        "text": "kleine Mängel",
+        "children": []
+      },
+      {
+        "text": "z.B. Glühbirnen, Dichtungen",
+        "children": []
+      },
+      {
+        "text": "OR Art. 259",
+        "children": []
+      },
+      {
+        "text": "Rechte Mieter",
+        "children": []
+      },
+      {
+        "text": "Mängel (mittlere/grosse)",
+        "children": []
+      },
+      {
+        "text": "Rechte bei Nichtbeseitigung",
+        "children": []
+      },
+      {
+        "text": "OR Art. 259d, Art. 259e, Art. 259g, Art. 259b",
+        "children": []
+      },
+      {
+        "text": "Änderungen durch Mieter",
+        "children": []
+      },
+      {
+        "text": "OR Art. 260a",
+        "children": []
+      },
+      {
+        "text": "Untermiete",
+        "children": []
+      },
+      {
+        "text": "OR Art. 262",
+        "children": []
+      }
+    ]
+  }
+}
