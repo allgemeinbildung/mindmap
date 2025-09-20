@@ -4,30 +4,74 @@
     <meta charset="UTF-8">
     <title>Mermaid Renderer</title>
     <style>
-        body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; }
-        #mermaid-container { margin-top: 5px; }
-        .controls a, .controls button { 
-            display: inline-block;
-            padding: 10px 18px; margin: 5px; font-size: 1.2em; 
+        body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+        #mermaid-container { margin-top: 5px; flex-grow: 1; display: flex; justify-content: center; align-items: center; }
+        .controls { position: fixed; bottom: 10px; right: 10px; display: flex; gap: 5px; }
+        button { 
+            padding: 10px 18px; font-size: 1.2em; 
             cursor: pointer; border: 1px solid #ccc; border-radius: 5px;
             background-color: #f0f0f0; transition: background-color 0.2s;
-            color: black; text-decoration: none; font-family: sans-serif;
         }
-        .controls a:hover, .controls button:hover { background-color: #e0e0e0; }
-        
-        /* This CSS hides the buttons when printing the page */
-        @media print {
-            body { padding: 0; margin: 0; }
-            .controls { display: none; }
+        button:hover { background-color: #e0e0e0; }
+
+        /* Modal / Popup Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 500px;
+            border-radius: 8px;
+            position: relative;
+            text-align: left;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div id="mermaid-container"></div>
     <div class="controls">
-        <a id="download-svg" href="#" download="mindmap.svg" title="Download as SVG">⬇️</a>
-        <button id="copy-svg" title="Copy as SVG Code">📋</button>
-        <button id="print-page" title="Print to PDF">🖨️</button>
+        <button id="copy-svg" title="Als SVG-Code kopieren">📋</button>
+    </div>
+
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Mindmap kopiert\!</h2>
+        <p>Der SVG-Code der Mindmap wurde in Ihre Zwischenablage kopiert.</p>
+        <p>So fügen Sie die Mindmap in eine Software ein:</p>
+        <ol>
+          <li>Öffnen Sie <a href="https://excalidraw.com/" target="_blank">Excalidraw</a> (oder eine andere SVG-kompatible Software wie Obsidian, Inkscape, Figma).</li>
+          <li>Fügen Sie den Inhalt mit **Strg+V** (Windows) oder **Cmd+V** (Mac) ein.</li>
+          <li>In **Excalidraw**: Klicken Sie oben links auf das **Hamburger-Menü (3 Striche)**, wählen Sie **"Exportieren als Bild..."** und wählen Sie Ihr gewünschtes Format (z.B. PNG, SVG).</li>
+        </ol>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
@@ -53,29 +97,37 @@
         };
 
         const setupButtons = (svgCode) => {
-            // 1. Download as SVG Button
-            // This method is the most reliable, as it sets the data directly on the link.
-            const downloadLink = document.getElementById('download-svg');
-            const dataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
-            downloadLink.href = dataUrl;
-
-            // 2. Copy as SVG Code Button
             const copyBtn = document.getElementById('copy-svg');
+            const modal = document.getElementById("copyModal");
+            const closeButton = document.querySelector(".close-button");
+
             copyBtn.onclick = () => {
                 navigator.clipboard.writeText(svgCode).then(() => {
+                    // Show confirmation and open modal
                     copyBtn.innerHTML = "✅";
-                    setTimeout(() => { copyBtn.innerHTML = '📋'; }, 2000);
+                    copyBtn.disabled = true;
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '📋';
+                        copyBtn.disabled = false;
+                    }, 2000);
+                    modal.style.display = "block"; // Show the modal
                 }).catch(err => {
                     console.error('Copy failed:', err);
-                    alert('Copy failed. Ensure you are viewing on a secure (https) page.');
+                    alert('Kopieren fehlgeschlagen. Bitte stellen Sie sicher, dass Sie eine sichere (HTTPS) Seite verwenden.');
                 });
             };
 
-            // 3. Print to PDF Button
-            const printBtn = document.getElementById('print-page');
-            printBtn.onclick = () => {
-                window.print();
-            };
+            // Close the modal when the close button is clicked
+            closeButton.onclick = () => {
+                modal.style.display = "none";
+            }
+
+            // Close the modal when clicking outside of it
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         };
 
         renderDiagram();
