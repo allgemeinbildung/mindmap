@@ -5,7 +5,8 @@
     <title>Mermaid Renderer</title>
     <style>
         body { font-family: sans-serif; text-align: center; }
-        #mermaid-container { margin: 20px; }
+        #mermaid-container { margin: 20px; padding: 10px; border: 1px solid #eee; }
+        .controls { margin-top: 15px; }
         button { 
             padding: 10px 18px; 
             margin: 5px; 
@@ -13,38 +14,40 @@
             border: 1px solid #ccc; 
             border-radius: 5px;
             background-color: #f0f0f0;
+            transition: background-color 0.2s;
         }
         button:hover { background-color: #e0e0e0; }
-        #excalidraw-btn { background-color: #d8e2ff; }
-        #excalidraw-btn:hover { background-color: #c4d1f7; }
+        #copy-svg { background-color: #d4edda; } /* Green for copy */
+        #copy-svg:hover { background-color: #c3e6cb; }
+        .instructions { margin-top: 20px; color: #555; }
     </style>
 </head>
 <body>
     <h1>Mermaid Diagram</h1>
     <div id="mermaid-container"></div>
-    <div id="controls">
+    
+    <div class="controls">
         <button id="download-svg">Download as SVG</button>
         <button id="download-png">Download as PNG</button>
-        <button id="open-in-excalidraw" id="excalidraw-btn">➡️ Open in Excalidraw</button>
+        <button id="copy-svg">📋 Copy as SVG</button>
+    </div>
+
+    <div class="instructions">
+        <p>
+            For editing, click "Copy as SVG", then open a tool like 
+            <a href="https://excalidraw.com" target="_blank">Excalidraw</a> 
+            and press Ctrl+V (or Cmd+V) to paste.
+        </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
 
     <script>
-        // Initialize Mermaid
         mermaid.initialize({ startOnLoad: false });
 
-        // =========================================================================
-        // NEW: A reliable helper function to encode Unicode text to Base64
-        // =========================================================================
-        const unicodeToBase64 = (str) => {
-            const uint8Array = new TextEncoder().encode(str);
-            const binaryString = String.fromCharCode.apply(null, uint8Array);
-            return btoa(binaryString);
-        };
-
         const renderDiagram = async () => {
+            // ... (this function remains exactly the same as the previous version)
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
             const mindmapName = urlParams.get('mindmap'); 
@@ -53,21 +56,14 @@
                 container.innerHTML = "Error: No mindmap name specified in URL.";
                 return;
             }
-
             const filePath = `./maps/${mindmapName}.json`;
-
             try {
                 const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error(`Mindmap file not found at ${filePath}`);
-                }
+                if (!response.ok) throw new Error(`Mindmap file not found at ${filePath}`);
                 const data = await response.json();
-                const mermaidCode = data.mermaidCode;
-
-                const { svg } = await mermaid.render('mermaid-graph', mermaidCode);
+                const { svg } = await mermaid.render('mermaid-graph', data.mermaidCode);
                 container.innerHTML = svg;
                 setupButtons(svg);
-
             } catch (error) {
                 container.innerHTML = `Error: ${error.message}`;
                 console.error("Failed to load or render mindmap:", error);
@@ -75,53 +71,28 @@
         };
 
         const setupButtons = (svgCode) => {
-            // ... (download-svg and download-png functions remain the same)
-            document.getElementById('download-svg').onclick = () => { /* ... no change ... */ };
-            document.getElementById('download-png').onclick = async () => { /* ... no change ... */ };
+            // ... (download-svg and download-png functions are unchanged)
+            document.getElementById('download-svg').onclick = () => { /* ... */ };
+            document.getElementById('download-png').onclick = async () => { /* ... */ };
 
-            document.getElementById('open-in-excalidraw').onclick = () => {
-                // Step 1: Use the new, reliable function to create Base64 data
-                const base64Data = unicodeToBase64(svgCode);
-                const svgDataURL = 'data:image/svg+xml;base64,' + base64Data;
-
-                // Step 2: Create the Excalidraw library JSON structure
-                const excalidrawLibrary = {
-                    type: "excalidrawlib",
-                    version: 2,
-                    source: "https://allgemeinbildung.github.io/mindmap/",
-                    libraryItems: [
-                        {
-                            id: "mermaid-mindmap-" + Date.now(),
-                            status: "published",
-                            elements: [
-                                {
-                                    type: "image",
-                                    version: 1,
-                                    versionNonce: Date.now(),
-                                    isDeleted: false,
-                                    id: "image-1",
-                                    fillStyle: "hachure",
-                                    strokeWidth: 1,
-                                    strokeStyle: "solid",
-                                    opacity: 100,
-                                    x: 0,
-                                    y: 0,
-                                    width: 500,
-                                    height: 500,
-                                    fileId: null,
-                                    dataURL: svgDataURL
-                                }
-                            ]
-                        }
-                    ]
-                };
-
-                // Step 3: URL-encode the JSON and create the final link
-                const libraryData = encodeURIComponent(JSON.stringify(excalidrawLibrary));
-                const excalidrawURL = `https://excalidraw.com/#addLibrary=data:application/json,${libraryData}`;
-                
-                // Step 4: Open the link in a new tab
-                window.open(excalidrawURL, '_blank');
+            // =========================================================================
+            // NEW: Clipboard functionality
+            // =========================================================================
+            const copyBtn = document.getElementById('copy-svg');
+            copyBtn.onclick = () => {
+                navigator.clipboard.writeText(svgCode).then(() => {
+                    // Provide user feedback that the copy was successful
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = "Copied! ✅";
+                    copyBtn.disabled = true;
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.disabled = false;
+                    }, 2000); // Revert back after 2 seconds
+                }).catch(err => {
+                    console.error('Failed to copy SVG code: ', err);
+                    alert('Could not copy to clipboard. See console for details.');
+                });
             };
         };
 
