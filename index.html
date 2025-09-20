@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mermaid Renderer</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        #mermaid-container { margin-bottom: 20px; }
+        button { padding: 8px 16px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Mermaid Diagram</h1>
+    <div id="mermaid-container"></div>
+    <div id="controls">
+        <button id="download-svg">Download as SVG</button>
+        <button id="download-png">Download as PNG</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ startOnLoad: false });
+
+        // Function to render the diagram
+        const renderDiagram = async () => {
+            const container = document.getElementById('mermaid-container');
+            const urlParams = new URLSearchParams(window.location.search);
+            const mermaidCode = urlParams.get('mindmap');
+
+            if (!mermaidCode) {
+                container.innerHTML = "Error: No mindmap data found in URL.";
+                return;
+            }
+
+            try {
+                const decodedCode = decodeURIComponent(mermaidCode);
+                const { svg } = await mermaid.render('mermaid-graph', decodedCode);
+                container.innerHTML = svg;
+                setupButtons(svg);
+            } catch (error) {
+                container.innerHTML = `Error rendering Mermaid diagram: ${error}`;
+            }
+        };
+
+        // Function to set up download buttons
+        const setupButtons = (svgCode) => {
+            // Download SVG
+            document.getElementById('download-svg').onclick = () => {
+                const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'mindmap.svg';
+                a.click();
+                URL.revokeObjectURL(url);
+            };
+
+            // Download PNG
+            document.getElementById('download-png').onclick = async () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const v = await canvg.Canvg.from(ctx, svgCode);
+                await v.render();
+                
+                const dataUrl = canvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = 'mindmap.png';
+                a.click();
+            };
+        };
+
+        // Run the rendering on page load
+        renderDiagram();
+    </script>
+</body>
+</html>
