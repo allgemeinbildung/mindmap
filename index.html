@@ -4,34 +4,25 @@
     <meta charset="UTF-8">
     <title>Mermaid Renderer</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin: 0; padding: 15px; }
-        #mermaid-container { margin: 15px 0; padding: 10px; border: 1px solid #eee; }
+        body { font-family: sans-serif; text-align: center; }
+        #mermaid-container { margin: 20px; padding: 10px; border: 1px solid #eee; }
         .controls { margin-top: 15px; }
         button { 
-            padding: 10px 18px; margin: 5px; font-size: 1.2em; 
-            cursor: pointer; border: 1px solid #ccc; border-radius: 5px;
-            background-color: #f0f0f0; transition: background-color 0.2s;
+            padding: 10px 18px; 
+            margin: 5px; 
+            font-size: 1.2em; /* Larger icons */
+            cursor: pointer; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.2s;
         }
         button:hover { background-color: #e0e0e0; }
-        .instructions { 
-            margin-top: 20px; color: #555; max-width: 600px; 
-            margin-left: auto; margin-right: auto; line-height: 1.5;
-        }
-        .full-page-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 15px;
-            background-color: #e7f5ff;
-            color: #005a9e;
-            border: 1px solid #b3d9ff;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .full-page-link:hover { background-color: #d0ebff; }
+        .instructions { margin-top: 20px; color: #555; max-width: 600px; margin-left: auto; margin-right: auto; }
     </style>
 </head>
 <body>
+    <h1>Mermaid Diagram</h1>
     <div id="mermaid-container"></div>
     
     <div class="controls">
@@ -40,15 +31,10 @@
         <button id="copy-markdown" title="Copy as Markdown List">📝</button>
     </div>
 
-    <a href="#" id="open-new-tab" class="full-page-link" target="_blank">
-      Open in New Tab for Full Functionality ↗
-    </a>
-
     <div class="instructions">
         <p>
-            Buttons not working? Open in a new tab. <br>
             • For a visual copy, click 📋, then paste into <a href="https://excalidraw.com" target="_blank">Excalidraw</a>.<br>
-            • For an editable mind map, click 📝, then paste into <strong>Freeplane, XMind</strong>, etc.
+            • For an editable mind map, click 📝, then paste into <strong>Freeplane, XMind</strong>, or other mind map software.
         </p>
     </div>
 
@@ -57,38 +43,66 @@
     <script>
         mermaid.initialize({ startOnLoad: false });
 
-        let rawMermaidCode = ''; 
+        let rawMermaidCode = ''; // Store the raw code globally
 
         const renderDiagram = async () => {
-            // This part is the same, it fetches and renders the diagram
             const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
             const mindmapName = urlParams.get('mindmap'); 
 
-            // Set the href for the "Open in New Tab" link
-            document.getElementById('open-new-tab').href = window.location.href;
-
-            if (!mindmapName) { /* ... */ return; }
+            if (!mindmapName) { /* ... error handling ... */ return; }
             const filePath = `./maps/${mindmapName}.json`;
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`Mindmap file not found`);
                 const data = await response.json();
-                rawMermaidCode = data.mermaidCode; 
+                rawMermaidCode = data.mermaidCode; // Save the raw code
                 const { svg } = await mermaid.render('mermaid-graph', rawMermaidCode);
                 container.innerHTML = svg;
                 setupButtons(svg);
-            } catch (error) { /* ... */ }
+            } catch (error) { /* ... error handling ... */ }
         };
 
         const setupButtons = (svgCode) => {
-            // All button logic (download, copy) is exactly the same
-            document.getElementById('download-svg').onclick = () => { /* ... */ };
-            document.getElementById('copy-svg').onclick = () => copyToClipboard(svgCode, document.getElementById('copy-svg'), '📋');
-            document.getElementById('copy-markdown').onclick = () => { /* ... */ };
+            // Download as SVG
+            document.getElementById('download-svg').onclick = () => {
+                const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = 'mindmap.svg'; a.click();
+                URL.revokeObjectURL(url);
+            };
+
+            // Copy as SVG Image
+            const copySvgBtn = document.getElementById('copy-svg');
+            copySvgBtn.onclick = () => copyToClipboard(svgCode, copySvgBtn, '📋');
+
+            // NEW: Copy as Markdown List
+            const copyMdBtn = document.getElementById('copy-markdown');
+            copyMdBtn.onclick = () => {
+                const markdown = rawMermaidCode
+                    .split('\n') // Split into lines
+                    .slice(1) // Remove the first line ("mindmap")
+                    .map(line => {
+                        const indent = line.search(/\S|$/); // Find first non-space character
+                        const level = Math.floor(indent / 4); // Assuming 4-space indents
+                        return '  '.repeat(level) + '- ' + line.trim();
+                    })
+                    .join('\n');
+                copyToClipboard(markdown, copyMdBtn, '📝');
+            };
         };
         
-        const copyToClipboard = (text, buttonElement, originalIcon) => { /* ... */ };
+        const copyToClipboard = (text, buttonElement, originalIcon) => {
+             navigator.clipboard.writeText(text).then(() => {
+                buttonElement.innerHTML = "✅";
+                buttonElement.disabled = true;
+                setTimeout(() => {
+                    buttonElement.innerHTML = originalIcon;
+                    buttonElement.disabled = false;
+                }, 2000);
+            }).catch(err => console.error('Failed to copy: ', err));
+        };
 
         renderDiagram();
     </script>
