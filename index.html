@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Mermaid Renderer</title>
     <style>
-        /* CSS styles remain the same as the previous version */
+        /* Base and Control Styles from the newer version */
         body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; }
         #mermaid-container { margin-top: 5px; }
         .controls {
@@ -18,7 +18,21 @@
             color: black; text-decoration: none; font-family: sans-serif;
         }
         .controls a:hover, .controls button:hover { background-color: #e0e0e0; }
-        .modal { /* ... modal styles ... */ }
+
+        /* Modal / Popup Styles from the older version */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+        .modal-content {
+            background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888;
+            width: 80%; max-width: 500px; border-radius: 8px; position: relative;
+            text-align: left; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .close-button { color: #aaa; position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; }
+        .close-button:hover, .close-button:focus { color: black; text-decoration: none; cursor: pointer; }
+        .modal-footer { text-align: right; margin-top: 20px; }
+        .modal-button { padding: 8px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .modal-button:hover { background-color: #0056b3; }
+
+        /* Hide controls when printing */
         @media print { .controls { display: none; } }
     </style>
 </head>
@@ -29,14 +43,29 @@
         <button id="print-page" title="Drucken / Als PDF speichern">🖨️</button>
     </div>
 
-    <div id="copyModal" class="modal"> ... </div>
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Mindmap kopiert!</h2>
+        <p>Der SVG-Code der Mindmap wurde in Ihre Zwischenablage kopiert.</p>
+        <p>So fügen Sie die Mindmap in eine Software ein:</p>
+        <ol>
+          <li>Öffnen Sie <a href="https://excalidraw.com/" target="_blank">Excalidraw</a> (oder eine andere SVG-kompatible Software wie Obsidian, Inkscape, Figma).</li>
+          <li>Fügen Sie den Inhalt mit <strong>Strg+V</strong> (Windows) oder <strong>Cmd+V</strong> (Mac) ein.</li>
+          <li>In <strong>Excalidraw</strong>: Klicken Sie oben links auf das <strong>Hamburger-Menü (3 Striche)</strong>, wählen Sie <strong>"Exportieren als Bild..."</strong> und wählen Sie Ihr gewünschtes Format (z.B. PNG, SVG).</li>
+        </ol>
+        <div class="modal-footer">
+          <button id="modal-ok-button" class="modal-button">OK</button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     
     <script>
         mermaid.initialize({ startOnLoad: false });
 
-        // NEU: Helper function to convert hierarchical JSON to a Mermaid string
+        // Helper function to convert hierarchical JSON to a Mermaid string (from newer version)
         function jsonToMermaidString(jsonData) {
             let mermaidString = 'mindmap\n';
             
@@ -93,7 +122,7 @@
                         copyBtn.innerHTML = '📋';
                         copyBtn.disabled = false;
                     }, 2000);
-                    modal.style.display = "block";
+                    modal.style.display = "block"; // This now works with the reintegrated modal
                 }).catch(err => {
                     console.error('Copy failed:', err);
                     alert('Kopieren fehlgeschlagen.');
@@ -102,6 +131,7 @@
 
             printBtn.onclick = () => { window.print(); };
 
+            // Modal closing logic
             const closeModal = () => { modal.style.display = "none"; };
             closeButton.onclick = closeModal;
             okButton.onclick = closeModal;
