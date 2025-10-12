@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Lohnabzüge",
+        "children": [
+          {
+            "text": "Spezialregelungen Lernende",
+            "children": [
+              {
+                "text": "Nicht abzugsfähige Kosten",
+                "children": [
+                  {
+                    "text": "BU"
+                  },
+                  {
+                    "text": "Schulbesuch"
+                  },
+                  {
+                    "text": "üK"
+                  },
+                  {
+                    "text": "Qualifikationsverfahren"
+                  }
+                ]
+              },
+              {
+                "text": "Mögliche Abzüge (mit Lehrvertragsregelung)",
+                "children": [
+                  {
+                    "text": "Kost"
+                  },
+                  {
+                    "text": "Logis"
+                  },
+                  {
+                    "text": "Berufskleidung"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

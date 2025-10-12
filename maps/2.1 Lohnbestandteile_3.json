@@ -1,0 +1,61 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Lohnabzüge",
+        "children": [
+          {
+            "text": "Sozialversicherungsbeiträge (ab 18. LJ)",
+            "children": [
+              {
+                "text": "AHV (Alters- und Hinterlassenenversicherung)",
+                "children": [
+                  {
+                    "text": "Beitragssatz (AN/AG)"
+                  },
+                  {
+                    "text": "Hauptzweck"
+                  }
+                ]
+              },
+              {
+                "text": "IV (Invalidenversicherung)",
+                "children": [
+                  {
+                    "text": "Beitragssatz (AN/AG)"
+                  },
+                  {
+                    "text": "Hauptzweck"
+                  }
+                ]
+              },
+              {
+                "text": "EO (Erwerbsersatzordnung)",
+                "children": [
+                  {
+                    "text": "Beitragssatz (AN/AG)"
+                  },
+                  {
+                    "text": "Hauptzweck"
+                  }
+                ]
+              },
+              {
+                "text": "ALV (Arbeitslosenversicherung)",
+                "children": [
+                  {
+                    "text": "Beitragssatz (AN/AG)"
+                  },
+                  {
+                    "text": "Hauptzweck"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

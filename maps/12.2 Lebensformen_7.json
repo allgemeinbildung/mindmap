@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Erbrecht",
+        "children": [
+          {
+            "text": "Gesetzliche Erbfolge",
+            "children": [
+              {
+                "text": "Parentelsystem / Stämme (ZGB Art. 457ff.)"
+              },
+              {
+                "text": "Stellung des überlebenden Ehegatten (ZGB Art. 462)"
+              }
+            ]
+          },
+          {
+            "text": "Verfügung von Todes wegen",
+            "children": [
+              {
+                "text": "Testamentsformen"
+              },
+              {
+                "text": "Pflichtteile (ZGB Art. 471)"
+              },
+              {
+                "text": "Frei verfügbare Quote"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

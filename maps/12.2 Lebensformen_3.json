@@ -1,0 +1,70 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Ehe",
+        "children": [
+          {
+            "text": "Weg zur Ehe",
+            "children": [
+              {
+                "text": "Verlöbnis (ZGB Art. 90ff.)",
+                "children": []
+              },
+              {
+                "text": "Ehevoraussetzungen",
+                "children": []
+              },
+              {
+                "text": "Ehehindernisse (ZGB Art. 95, 96)",
+                "children": []
+              },
+              {
+                "text": "Zivilen Trauung (ZGB Art. 101, 102)",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Wirkungen der Ehe",
+            "children": [
+              {
+                "text": "Allgemeine Rechte und Pflichten (ZGB Art. 159)",
+                "children": []
+              },
+              {
+                "text": "Familiennamen (ZGB Art. 160)",
+                "children": []
+              },
+              {
+                "text": "Eheliche Wohnung (ZGB Art. 162, 169)",
+                "children": []
+              },
+              {
+                "text": "Unterhalt der Familie (ZGB Art. 163)",
+                "children": []
+              },
+              {
+                "text": "Betrag zur freien Verfügung (ZGB Art. 164)",
+                "children": []
+              },
+              {
+                "text": "Vertretung der ehelichen Gemeinschaft (ZGB Art. 166)",
+                "children": []
+              },
+              {
+                "text": "Berufs- und Gewerbeausübung (ZGB Art. 167)",
+                "children": []
+              },
+              {
+                "text": "Auskunftspflicht (ZGB Art. 170)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

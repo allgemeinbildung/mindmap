@@ -1,0 +1,49 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "3. Säule: Private Vorsorge",
+        "children": [
+          {
+            "text": "Säule 3a (gebundene Vorsorge)",
+            "children": [
+              {
+                "text": "Zweck"
+              },
+              {
+                "text": "Zielgruppe"
+              },
+              {
+                "text": "Maximalbeträge"
+              },
+              {
+                "text": "Steuervorteile"
+              },
+              {
+                "text": "Bedingungen für den Vorbezug"
+              },
+              {
+                "text": "Unterschiede Bank- vs. Versicherungslösung"
+              }
+            ]
+          },
+          {
+            "text": "Säule 3b (freie Vorsorge)",
+            "children": [
+              {
+                "text": "Charakteristik"
+              },
+              {
+                "text": "Beispiele für Anlageformen"
+              },
+              {
+                "text": "Steuerliche Aspekte"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

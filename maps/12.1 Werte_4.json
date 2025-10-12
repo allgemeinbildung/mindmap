@@ -1,0 +1,44 @@
+{
+  "root": {
+    "text": "Werte und Gesellschaft",
+    "children": [
+      {
+        "text": "Sexualität & Sexuelle Orientierung",
+        "children": [
+          {
+            "text": "Individuelle sexuelle Entwicklung",
+            "children": []
+          },
+          {
+            "text": "Heterosexualität",
+            "children": []
+          },
+          {
+            "text": "Homosexualität (schwul/lesbisch)",
+            "children": []
+          },
+          {
+            "text": "Bisexualität",
+            "children": []
+          },
+          {
+            "text": "Transgender/Transsexualität",
+            "children": []
+          },
+          {
+            "text": "Intersexualität",
+            "children": []
+          },
+          {
+            "text": "LGBT+",
+            "children": []
+          },
+          {
+            "text": "Coming-out",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

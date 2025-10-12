@@ -1,0 +1,52 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Kontoauszug",
+        "children": [
+          {
+            "text": "Zweck",
+            "children": [
+              {
+                "text": "Umsatzübersicht"
+              },
+              {
+                "text": "Kontrolle"
+              },
+              {
+                "text": "Beleg"
+              }
+            ]
+          },
+          {
+            "text": "Inhalt",
+            "children": [
+              {
+                "text": "Eingänge"
+              },
+              {
+                "text": "Ausgänge"
+              },
+              {
+                "text": "Saldo"
+              }
+            ]
+          },
+          {
+            "text": "Formen",
+            "children": [
+              {
+                "text": "Papierform (schriftlich)"
+              },
+              {
+                "text": "Elektronischer Kontoauszug",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

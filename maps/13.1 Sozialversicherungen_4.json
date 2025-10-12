@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge",
+        "children": [
+          {
+            "text": "IV",
+            "children": [
+              {
+                "text": "Zweck",
+                "children": []
+              },
+              {
+                "text": "Versicherte Personen",
+                "children": []
+              },
+              {
+                "text": "Grundsatz «Eingliederung vor Rente»"
+              },
+              {
+                "text": "Arten von Eingliederungsmassnahmen",
+                "children": []
+              },
+              {
+                "text": "Weitere Leistungen (Hilfsmittel, Taggelder)",
+                "children": []
+              },
+              {
+                "text": "Rentenregelung (abhängig vom Invaliditätsgrad)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

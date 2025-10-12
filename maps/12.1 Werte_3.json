@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Werte und Gesellschaft",
+    "children": [
+      {
+        "text": "Gleichstellung Mann/Frau",
+        "children": [
+          {
+            "text": "Historische Entwicklung (Frauenstimmrecht)",
+            "children": []
+          },
+          {
+            "text": "Rechtliche Grundlage (BV Art. 8 Abs. 3)",
+            "children": []
+          },
+          {
+            "text": "Aspekte der Gleichstellung (Beispiele)",
+            "children": []
+          },
+          {
+            "text": "Traditionelle vs. moderne Rollenbilder",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

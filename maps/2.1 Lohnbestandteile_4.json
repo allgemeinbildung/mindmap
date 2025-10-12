@@ -1,0 +1,43 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Lohnabzüge",
+        "children": [
+          {
+            "text": "Unfallversicherung (UVG)",
+            "children": [
+              {
+                "text": "NBU (Nichtberufsunfall)",
+                "children": [
+                  {
+                    "text": "Wer trägt die Prämie?",
+                    "children": []
+                  },
+                  {
+                    "text": "Ist sie vom Lohn abzugsfähig?",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "BU (Berufsunfall)",
+                "children": [
+                  {
+                    "text": "Wer trägt die Prämie?",
+                    "children": []
+                  },
+                  {
+                    "text": "Ist sie vom Lohn abzugsfähig?",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

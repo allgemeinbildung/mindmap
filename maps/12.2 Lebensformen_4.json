@@ -1,0 +1,47 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Kindesverhältnis",
+        "children": [
+          {
+            "text": "Entstehung des Kindesverhältnisses (ZGB Art. 252ff.)",
+            "children": []
+          },
+          {
+            "text": "Wirkungen des Kindesverhältnisses",
+            "children": [
+              {
+                "text": "Name und Bürgerrecht (ZGB Art. 270, 271)"
+              },
+              {
+                "text": "Unterhaltspflicht (ZGB Art. 276, 277)"
+              }
+            ]
+          },
+          {
+            "text": "Elterliche Sorge (ZGB Art. 296ff.)",
+            "children": [
+              {
+                "text": "Rechte und Pflichten in der Erziehung (ZGB Art. 301-303)"
+              },
+              {
+                "text": "Recht auf Ausbildung"
+              },
+              {
+                "text": "Vertretung des Kindes (ZGB Art. 304)"
+              },
+              {
+                "text": "Verwaltung des Kindesvermögens (ZGB Art. 318ff.)"
+              },
+              {
+                "text": "Arbeitserwerb und Taschengeld (ZGB Art. 323)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

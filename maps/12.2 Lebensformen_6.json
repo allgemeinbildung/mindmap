@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Scheidung und Trennung",
+        "children": [
+          {
+            "text": "Scheidung",
+            "children": [
+              {
+                "text": "Scheidung auf gemeinsames Begehren (ZGB Art. 111)",
+                "children": []
+              },
+              {
+                "text": "Scheidung auf Klage (ZGB Art. 114-115)",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Trennung (ZGB Art. 117, 118)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

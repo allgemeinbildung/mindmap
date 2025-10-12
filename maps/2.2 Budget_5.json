@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Mein Budget",
+    "children": [
+      {
+        "text": "Budgeterstellung",
+        "children": [
+          {
+            "text": "Schritte der Erstellung",
+            "children": [
+              {
+                "text": "Einnahmen",
+                "children": []
+              },
+              {
+                "text": "Rückstellungen",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Budgetkontrolle",
+        "children": [
+          {
+            "text": "Ausgabenkontrolle",
+            "children": []
+          },
+          {
+            "text": "Saldo",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

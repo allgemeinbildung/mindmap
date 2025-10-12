@@ -1,0 +1,33 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Güterrecht",
+        "children": [
+          {
+            "text": "Errungenschaftsbeteiligung",
+            "children": [
+              {
+                "text": "Eigengut (ZGB Art. 198)",
+                "children": []
+              },
+              {
+                "text": "Errungenschaft (ZGB Art. 197)",
+                "children": []
+              },
+              {
+                "text": "Güterrechtliche Auseinandersetzung",
+                "children": [
+                  {
+                    "text": "Hälftige Teilung des Vorschlags (ZGB Art. 215)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Lohnabzüge",
+        "children": [
+          {
+            "text": "Weitere mögliche Abzüge",
+            "children": [
+              {
+                "text": "BVG (Berufliche Vorsorge)"
+              },
+              {
+                "text": "KTG (Krankentaggeldversicherung)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Ausbezahlter Lohn",
+        "children": [
+          {
+            "text": "Nettolohn"
+          },
+          {
+            "text": "+ Spesenentschädigung"
+          },
+          {
+            "text": "+ Sozialzulagen (z.B. Kinder-, Familienzulage)"
+          }
+        ]
+      }
+    ]
+  }
+}

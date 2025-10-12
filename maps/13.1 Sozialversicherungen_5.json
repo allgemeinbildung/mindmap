@@ -1,0 +1,33 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge",
+        "children": [
+          {
+            "text": "ALV",
+            "children": [
+              {
+                "text": "Zweck",
+                "children": []
+              },
+              {
+                "text": "Leistungssituationen (Arbeitslosigkeit, Kurzarbeit, etc.)",
+                "children": []
+              },
+              {
+                "text": "Voraussetzungen für Taggeldbezug",
+                "children": []
+              },
+              {
+                "text": "Massnahmen durch RAV",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Bruttolohn",
+        "children": [
+          {
+            "text": "Lohnzusätze",
+            "children": [
+              {
+                "text": "Überstunden",
+                "children": []
+              },
+              {
+                "text": "13. Monatslohn",
+                "children": []
+              },
+              {
+                "text": "Gratifikation",
+                "children": []
+              },
+              {
+                "text": "Naturallohn",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Nettolohn",
+        "children": []
+      }
+    ]
+  }
+}

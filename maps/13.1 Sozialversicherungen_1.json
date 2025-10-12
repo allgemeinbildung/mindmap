@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge"
+      },
+      {
+        "text": "2. Säule: Berufliche Vorsorge"
+      },
+      {
+        "text": "3. Säule: Private Vorsorge"
+      }
+    ]
+  }
+}

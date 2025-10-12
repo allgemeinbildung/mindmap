@@ -1,0 +1,49 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge",
+        "children": [
+          {
+            "text": "EO",
+            "children": [
+              {
+                "text": "Dienstleistende (Militär, Zivil-, Schutzdienst)",
+                "children": []
+              },
+              {
+                "text": "Mutterschaftsentschädigung (MSE)",
+                "children": [
+                  {
+                    "text": "Anspruchsvoraussetzungen"
+                  },
+                  {
+                    "text": "Dauer"
+                  },
+                  {
+                    "text": "Höhe"
+                  }
+                ]
+              },
+              {
+                "text": "Vaterschaftsentschädigung (VSE)",
+                "children": [
+                  {
+                    "text": "Anspruchsvoraussetzungen"
+                  },
+                  {
+                    "text": "Dauer"
+                  },
+                  {
+                    "text": "Höhe"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

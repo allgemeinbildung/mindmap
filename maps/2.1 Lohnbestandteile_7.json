@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Lohnabrechnung",
+        "children": [
+          {
+            "text": "Zweck (OR Art. 323b Abs. 1)",
+            "children": [
+              {
+                "text": "Kontrolle"
+              },
+              {
+                "text": "Nachweis"
+              },
+              {
+                "text": "Information"
+              }
+            ]
+          },
+          {
+            "text": "Typische Bestandteile (gem. Muster S. 47)",
+            "children": []
+          },
+          {
+            "text": "Wichtige Unterscheidungen",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

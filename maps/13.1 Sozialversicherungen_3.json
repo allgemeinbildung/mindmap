@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge",
+        "children": [
+          {
+            "text": "AHV",
+            "children": [
+              {
+                "text": "Zweck (Existenzsicherung)",
+                "children": []
+              },
+              {
+                "text": "Versicherte Personen",
+                "children": []
+              },
+              {
+                "text": "Finanzierung (Umlageverfahren, Staatsbeiträge)",
+                "children": []
+              },
+              {
+                "text": "Beitragsjahre und Rentenanspruch",
+                "children": []
+              },
+              {
+                "text": "Rentenhöhe",
+                "children": []
+              },
+              {
+                "text": "Zentrale Herausforderungen (Demografie)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "1. Säule: Staatliche Vorsorge",
+        "children": [
+          {
+            "text": "Hauptzweck (Existenzsicherung)",
+            "children": []
+          },
+          {
+            "text": "Verantwortung (Staat)",
+            "children": []
+          },
+          {
+            "text": "Obligatorium (obligatorisch)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "2. Säule: Berufliche Vorsorge",
+        "children": [
+          {
+            "text": "Hauptzweck (Fortsetzung Lebensstandard)",
+            "children": []
+          },
+          {
+            "text": "Verantwortung (Arbeitgeber)",
+            "children": []
+          },
+          {
+            "text": "Obligatorium (teilweise obligatorisch)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "3. Säule: Private Vorsorge",
+        "children": [
+          {
+            "text": "Hauptzweck (individuelle Ergänzungen)",
+            "children": []
+          },
+          {
+            "text": "Verantwortung (Eigenverantwortung)",
+            "children": []
+          },
+          {
+            "text": "Obligatorium (freiwillig)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

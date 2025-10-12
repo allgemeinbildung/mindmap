@@ -1,0 +1,30 @@
+{
+  "root": {
+    "text": "Mein Budget",
+    "children": [
+      {
+        "text": "Budgeterstellung",
+        "children": [
+          {
+            "text": "Schritte der Erstellung",
+            "children": [
+              {
+                "text": "Fixe Kosten",
+                "children": [
+                  {
+                    "text": "Definition",
+                    "children": []
+                  },
+                  {
+                    "text": "Beispiele",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

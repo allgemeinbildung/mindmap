@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Mein Budget",
+    "children": [
+      {
+        "text": "Umgang mit Schulden",
+        "children": [
+          {
+            "text": "Erste Schritte bei Schulden",
+            "children": []
+          },
+          {
+            "text": "Warnsignale",
+            "children": []
+          },
+          {
+            "text": "Hilfsangebote",
+            "children": [
+              {
+                "text": "budgetberatung.ch"
+              },
+              {
+                "text": "schulden.ch"
+              },
+              {
+                "text": "kantonale Beratungsstellen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

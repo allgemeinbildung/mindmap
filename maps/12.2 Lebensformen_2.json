@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Lebensformen",
+    "children": [
+      {
+        "text": "Konkubinat",
+        "children": [
+          {
+            "text": "Definition",
+            "children": []
+          },
+          {
+            "text": "Vorteile",
+            "children": []
+          },
+          {
+            "text": "Nachteile",
+            "children": []
+          },
+          {
+            "text": "Konkubinatsvertrag",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Schweizer Altersvorsorge",
+    "children": [
+      {
+        "text": "2. Säule: Berufliche Vorsorge",
+        "children": [
+          {
+            "text": "Pensionskasse (BVG)",
+            "children": [
+              {
+                "text": "Zweck (Fortsetzung Lebensstandard)"
+              },
+              {
+                "text": "Versicherungspflicht"
+              },
+              {
+                "text": "Finanzierungsprinzip (Kapitaldeckungsverfahren)"
+              },
+              {
+                "text": "Beiträge"
+              },
+              {
+                "text": "Leistungen"
+              },
+              {
+                "text": "Möglichkeiten des Vorbezugs"
+              },
+              {
+                "text": "Probleme"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

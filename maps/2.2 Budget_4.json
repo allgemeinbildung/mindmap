@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Mein Budget",
+    "children": [
+      {
+        "text": "Budgeterstellung",
+        "children": [
+          {
+            "text": "Schritte der Erstellung",
+            "children": [
+              {
+                "text": "Variable Kosten",
+                "children": [
+                  {
+                    "text": "Definition",
+                    "children": []
+                  },
+                  {
+                    "text": "Beispiele",
+                    "children": []
+                  },
+                  {
+                    "text": "Beeinflussbarkeit",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

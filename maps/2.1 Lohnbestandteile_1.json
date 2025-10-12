@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Lohn",
+    "children": [
+      {
+        "text": "Bruttolohn"
+      },
+      {
+        "text": "Nettolohn"
+      },
+      {
+        "text": "Lohnabzüge"
+      }
+    ]
+  }
+}
