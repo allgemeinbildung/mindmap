@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Wichtigste Staatsaufgaben Schweiz",
+    "children": [
+      {
+        "text": "Verfassungsauftrag BV Art Zwei",
+        "children": []
+      },
+      {
+        "text": "Schutz von Freiheit und Rechten",
+        "children": []
+      },
+      {
+        "text": "Förderung der Wohlfahrt",
+        "children": []
+      },
+      {
+        "text": "Chancengleichheit",
+        "children": []
+      }
+    ]
+  }
+}
