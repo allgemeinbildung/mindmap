@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Stabile Preise, Inflation und Deflation",
+    "children": [
+      {
+        "text": "Inflation",
+        "children": [
+          {
+            "text": "Definition & Ursachen",
+            "children": []
+          },
+          {
+            "text": "Folgen für Private",
+            "children": []
+          },
+          {
+            "text": "Folgen für Wirtschaft & Staat",
+            "children": []
+          },
+          {
+            "text": "Lohn-Preis-Spirale",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -10,14 +10,7 @@
           },
           {
             "text": "Wer kann betrieben werden?",
-            "children": [
-              {
-                "text": "Handlungsfähige natürliche und juristische Personen"
-              },
-              {
-                "text": "Bedingt handlungsfähige Personen im Rahmen ihres Lohnes"
-              }
-            ]
+            "children": []
           }
         ]
       }

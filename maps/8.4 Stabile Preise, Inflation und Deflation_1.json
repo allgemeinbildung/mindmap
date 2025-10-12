@@ -1,0 +1,22 @@
+{
+  "root": {
+    "text": "Stabile Preise, Inflation und Deflation",
+    "children": [
+      {
+        "text": "Inflation"
+      },
+      {
+        "text": "Deflation"
+      },
+      {
+        "text": "LIK (Landesindex)"
+      },
+      {
+        "text": "SNB (Schweizerische Nationalbank)"
+      },
+      {
+        "text": "Staatsfinanzierung"
+      }
+    ]
+  }
+}

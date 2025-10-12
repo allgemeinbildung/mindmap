@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Stabile Preise, Inflation und Deflation",
+    "children": [
+      {
+        "text": "SNB (Schweizerische Nationalbank)",
+        "children": [
+          {
+            "text": "Aufgaben & Ziele der SNB",
+            "children": []
+          },
+          {
+            "text": "Instrumente (Geldpolitik)",
+            "children": []
+          },
+          {
+            "text": "Inflationsbekämpfung",
+            "children": []
+          },
+          {
+            "text": "Deflationsbekämpfung",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Stabile Preise, Inflation und Deflation",
+    "children": [
+      {
+        "text": "LIK (Landesindex)",
+        "children": [
+          {
+            "text": "Definition & Zweck",
+            "children": []
+          },
+          {
+            "text": "Warenkorb & Berechnung",
+            "children": []
+          },
+          {
+            "text": "Anwendungen & Limitationen",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
