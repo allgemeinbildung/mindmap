@@ -7,65 +7,37 @@
         "children": [
           {
             "text": "Bundesstaat",
-            "children": [
-              {
-                "text": "Definition: Zusammenschluss von Teilstaaten zu einem Gesamtstaat (z.B. Schweiz, Deutschland, USA)"
-              }
-            ]
+            "children": []
           },
           {
             "text": "Einheitsstaat",
-            "children": [
-              {
-                "text": "Definition: Ein Staat wird von einem Zentrum aus regiert (z.B. Frankreich, Italien, Grossbritannien)"
-              }
-            ]
+            "children": []
           },
           {
             "text": "Staatenbund",
-            "children": [
-              {
-                "text": "Definition: Lockerer Zusammenschluss selbstständiger Staaten (z.B. UNO, NATO, OPEC)"
-              }
-            ]
+            "children": []
           },
           {
             "text": "Föderalismus in der Schweiz",
             "children": [
               {
                 "text": "Definition",
-                "children": [
-                  {
-                    "text": "Macht ist zwischen Bund, Kantonen und Gemeinden aufgeteilt. Jede Ebene hat eigene Aufgaben."
-                  }
-                ]
+                "children": []
               },
               {
                 "text": "Aufgabenteilung (Beispiele)",
                 "children": [
                   {
                     "text": "Bundesaufgaben",
-                    "children": [
-                      {
-                        "text": "Beziehungen zum Ausland, Militär, Nationalstrassennetz, Kernenergie"
-                      }
-                    ]
+                    "children": []
                   },
                   {
                     "text": "Kantonsaufgaben",
-                    "children": [
-                      {
-                        "text": "Polizeiwesen, Gesundheitswesen, Bildungswesen (mit Ausnahmen)"
-                      }
-                    ]
+                    "children": []
                   },
                   {
                     "text": "Gemeindeaufgaben",
-                    "children": [
-                      {
-                        "text": "Ortsplanung, Kehrichtabfuhr, Feuerwehr, Primarschule"
-                      }
-                    ]
+                    "children": []
                   }
                 ]
               }
