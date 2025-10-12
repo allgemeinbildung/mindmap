@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Mitwirkungsrechte und Pflichten in der Schweiz",
+    "children": [
+      {
+        "text": "Grundlagen der Rechte & Pflichten",
+        "children": [
+          {
+            "text": "Menschenrechte",
+            "children": []
+          },
+          {
+            "text": "Grund- und Freiheitsrechte",
+            "children": []
+          },
+          {
+            "text": "Staatsbürgerliche Rechte",
+            "children": []
+          },
+          {
+            "text": "Staatsbürgerliche Pflichten",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

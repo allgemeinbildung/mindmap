@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Grundlagen des Versicherungswesens und Risikomanagements",
+    "children": [
+      {
+        "text": "Risikomanagement"
+      },
+      {
+        "text": "Persönliche Risiken"
+      },
+      {
+        "text": "Versicherungswesen"
+      }
+    ]
+  }
+}

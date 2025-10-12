@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Krankenversicherung",
+        "children": [
+          {
+            "text": "Grundversicherung (obligatorisch)",
+            "children": [
+              {
+                "text": "Kostenbeteiligung",
+                "children": [
+                  {
+                    "text": "Franchise (min. 300 / max. 2500)",
+                    "children": []
+                  },
+                  {
+                    "text": "Selbstbehalt (10% / max. 700)",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Freizügigkeit",
+                "children": []
+              },
+              {
+                "text": "Kündigungsfrist (30. November)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

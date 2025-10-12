@@ -1,0 +1,49 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Gesundheitsförderung",
+        "children": [
+          {
+            "text": "Prinzipien (Selbstverantwortung, Selbstheilungskräfte)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Stress erkennen und bewältigen",
+        "children": [
+          {
+            "text": "Definition Stress"
+          },
+          {
+            "text": "Stressoren",
+            "children": []
+          },
+          {
+            "text": "Symptome",
+            "children": []
+          },
+          {
+            "text": "Strategien gegen Stress",
+            "children": [
+              {
+                "text": "Lebensstrategie/Ressourcen pflegen"
+              },
+              {
+                "text": "Arbeitsverhalten"
+              },
+              {
+                "text": "Bewegung"
+              },
+              {
+                "text": "Entspannung"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

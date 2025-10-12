@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Sucht",
+        "children": [
+          {
+            "text": "Suchtmittel",
+            "children": [
+              {
+                "text": "Anabolika",
+                "children": []
+              },
+              {
+                "text": "Alkohol",
+                "children": []
+              },
+              {
+                "text": "Tabak",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

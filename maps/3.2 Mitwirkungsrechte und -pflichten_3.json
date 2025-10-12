@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Mitwirkungsrechte und Pflichten in der Schweiz",
+    "children": [
+      {
+        "text": "Politische Teilhabe (Stimm- & Wahlrecht)",
+        "children": [
+          {
+            "text": "Stimmrecht",
+            "children": []
+          },
+          {
+            "text": "Wahlrecht",
+            "children": [
+              {
+                "text": "Aktives Wahlrecht"
+              },
+              {
+                "text": "Passives Wahlrecht"
+              }
+            ]
+          },
+          {
+            "text": "Voraussetzungen (Stimm- & Wahlrecht)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

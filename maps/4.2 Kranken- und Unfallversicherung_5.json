@@ -1,0 +1,30 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Ergänzende Informationen/Versicherungen",
+        "children": [
+          {
+            "text": "Vergleichsdienste",
+            "children": []
+          },
+          {
+            "text": "Krankentaggeldversicherung",
+            "children": [
+              {
+                "text": "Zweck (Lohnfortzahlung)"
+              },
+              {
+                "text": "Abschlussformen (Kollektiv/Einzel)"
+              },
+              {
+                "text": "Gesetzliche Grundlage (OR Art. 324a)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

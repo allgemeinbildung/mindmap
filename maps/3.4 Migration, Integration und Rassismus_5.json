@@ -1,0 +1,56 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Integration",
+        "children": [
+          {
+            "text": "Begriffe",
+            "children": [
+              {
+                "text": "Assimilation"
+              },
+              {
+                "text": "Integration"
+              }
+            ]
+          },
+          {
+            "text": "Schweizer Integrationspolitik",
+            "children": [
+              {
+                "text": "Historische Entwicklung"
+              },
+              {
+                "text": "Heutiger Stand"
+              }
+            ]
+          },
+          {
+            "text": "Arbeitsmarkt & Aufenthalt",
+            "children": [
+              {
+                "text": "Duales System"
+              },
+              {
+                "text": "Aufenthaltsbewilligungen",
+                "children": [
+                  {
+                    "text": "L (Kurzaufenthalt)"
+                  },
+                  {
+                    "text": "B (Aufenthalt)"
+                  },
+                  {
+                    "text": "C (Niederlassung)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

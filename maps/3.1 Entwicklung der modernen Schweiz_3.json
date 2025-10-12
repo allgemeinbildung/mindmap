@@ -1,0 +1,42 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Historische Meilensteine",
+        "children": [
+          {
+            "text": "Erster Weltkrieg (CH-Bezug)",
+            "children": []
+          },
+          {
+            "text": "Generalstreik 1918",
+            "children": [
+              {
+                "text": "Wichtigste Forderungen"
+              },
+              {
+                "text": "Unmittelbare Konsequenzen"
+              }
+            ]
+          },
+          {
+            "text": "Proporzwahl 1919",
+            "children": []
+          },
+          {
+            "text": "Zweiter Weltkrieg (CH-Bezug)",
+            "children": [
+              {
+                "text": "Restriktive Flüchtlingspolitik"
+              },
+              {
+                "text": "Raubgold-Problematik"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

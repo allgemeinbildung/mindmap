@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Politisches System Schweiz",
+        "children": [
+          {
+            "text": "Steckbrief Schweiz heute",
+            "children": [
+              {
+                "text": "Geografie & Fläche",
+                "children": []
+              },
+              {
+                "text": "Bevölkerung & Sprachen",
+                "children": []
+              },
+              {
+                "text": "Staatsstruktur (Kantone/Gemeinden)",
+                "children": []
+              },
+              {
+                "text": "Regierungsform",
+                "children": []
+              },
+              {
+                "text": "Internationale Mitgliedschaften",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

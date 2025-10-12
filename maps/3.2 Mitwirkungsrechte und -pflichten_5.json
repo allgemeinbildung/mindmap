@@ -1,0 +1,50 @@
+{
+  "root": {
+    "text": "Mitwirkungsrechte und Pflichten in der Schweiz",
+    "children": [
+      {
+        "text": "Wahlverfahren",
+        "children": [
+          {
+            "text": "Majorzwahl (Mehrheitswahl)",
+            "children": [
+              {
+                "text": "Grundprinzip"
+              },
+              {
+                "text": "Anwendungsbereiche"
+              },
+              {
+                "text": "Vorteil"
+              },
+              {
+                "text": "Nachteil"
+              }
+            ]
+          },
+          {
+            "text": "Proporzwahl (Verhältniswahl)",
+            "children": [
+              {
+                "text": "Grundprinzip"
+              },
+              {
+                "text": "Anwendungsbereiche"
+              },
+              {
+                "text": "Vorteil"
+              },
+              {
+                "text": "Nachteil"
+              }
+            ]
+          },
+          {
+            "text": "Stille Wahl",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

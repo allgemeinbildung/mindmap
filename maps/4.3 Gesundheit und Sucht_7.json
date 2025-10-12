@@ -1,0 +1,46 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Sexuelle Gesundheit",
+        "children": [
+          {
+            "text": "Definition Sexuelle Gesundheit",
+            "children": []
+          },
+          {
+            "text": "Verhütungsmittel und Schutzmassnahmen",
+            "children": [
+              {
+                "text": "Pille"
+              },
+              {
+                "text": "Kondom"
+              },
+              {
+                "text": "Spirale"
+              },
+              {
+                "text": "Pflaster"
+              },
+              {
+                "text": "Ring"
+              },
+              {
+                "text": "Pille danach"
+              },
+              {
+                "text": "HIV-Test"
+              }
+            ]
+          },
+          {
+            "text": "STI/Geschlechtskrankheiten",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

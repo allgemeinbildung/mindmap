@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Jugendstrafrecht (JStG)",
+        "children": [
+          {
+            "text": "Ziele & Grundsätze (Erziehung, Reintegration, Alter)",
+            "children": []
+          },
+          {
+            "text": "Verfahrensbeteiligte (Jugendanwaltschaft, Sozialarbeit)",
+            "children": []
+          },
+          {
+            "text": "Verfahrensabschluss (Strafbefehl, Anklage, Einstellung)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

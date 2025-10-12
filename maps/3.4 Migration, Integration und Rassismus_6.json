@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Migration",
+        "children": [
+          {
+            "text": "Asyl",
+            "children": [
+              {
+                "text": "Definition Flüchtling (gem. Genfer Konvention)"
+              },
+              {
+                "text": "Asylgründe (CH)"
+              },
+              {
+                "text": "Asylverfahren (SEM)"
+              },
+              {
+                "text": "Vorläufige Aufnahme"
+              }
+            ]
+          },
+          {
+            "text": "Einbürgerung",
+            "children": [
+              {
+                "text": "Voraussetzungen des Bundes",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

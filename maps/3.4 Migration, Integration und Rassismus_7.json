@@ -1,0 +1,46 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Rassismus & Diskriminierung",
+        "children": [
+          {
+            "text": "Entstehungsprozess",
+            "children": [
+              {
+                "text": "Stereotype"
+              },
+              {
+                "text": "Vorurteile"
+              },
+              {
+                "text": "Diskriminierung"
+              }
+            ]
+          },
+          {
+            "text": "Formen des Rassismus",
+            "children": [
+              {
+                "text": "Rassismus ggü. Schwarzen"
+              },
+              {
+                "text": "Fremdenfeindlichkeit"
+              },
+              {
+                "text": "Muslimfeindlichkeit"
+              },
+              {
+                "text": "Antisemitismus"
+              },
+              {
+                "text": "Rolle Rechtsextremismus"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

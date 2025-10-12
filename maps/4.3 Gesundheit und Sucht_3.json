@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Grundlagen der Gesundheit",
+        "children": [
+          {
+            "text": "Körperliches Wohlergehen",
+            "children": [
+              {
+                "text": "Richtige Ernährung",
+                "children": []
+              },
+              {
+                "text": "Risikofaktoren",
+                "children": [
+                  {
+                    "text": "Falsche Ernährung",
+                    "children": []
+                  },
+                  {
+                    "text": "Rauchen",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

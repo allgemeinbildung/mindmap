@@ -1,0 +1,36 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Migration",
+        "children": [
+          {
+            "text": "Globale Dimension",
+            "children": [
+              {
+                "text": "Ausmass aktuell",
+                "children": []
+              },
+              {
+                "text": "Migration erzeugt Migration",
+                "children": []
+              },
+              {
+                "text": "Ausländeranteil",
+                "children": [
+                  {
+                    "text": "Weltweit (Beispiele)"
+                  },
+                  {
+                    "text": "Schweiz (Gründe)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

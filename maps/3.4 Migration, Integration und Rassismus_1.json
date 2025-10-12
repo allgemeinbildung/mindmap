@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Migration"
+      },
+      {
+        "text": "Integration"
+      },
+      {
+        "text": "Rassismus & Diskriminierung"
+      }
+    ]
+  }
+}

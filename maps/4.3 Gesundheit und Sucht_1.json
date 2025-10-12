@@ -1,0 +1,19 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Grundlagen der Gesundheit"
+      },
+      {
+        "text": "Gesundheitsförderung & Stress"
+      },
+      {
+        "text": "Sexuelle Gesundheit"
+      },
+      {
+        "text": "Sucht"
+      }
+    ]
+  }
+}

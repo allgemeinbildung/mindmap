@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Grundlagen des Versicherungswesens und Risikomanagements",
+    "children": [
+      {
+        "text": "Versicherungswesen",
+        "children": [
+          {
+            "text": "Solidaritätsprinzip",
+            "children": [
+              {
+                "text": "Prämienzahlungen aller Versicherten"
+              },
+              {
+                "text": "Versicherungskasse (Geldtopf)"
+              },
+              {
+                "text": "Leistungen an Geschädigte"
+              },
+              {
+                "text": "Gefahrengemeinschaft"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

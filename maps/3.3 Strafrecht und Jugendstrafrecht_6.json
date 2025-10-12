@@ -1,0 +1,55 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Jugendstrafrecht (JStG)",
+        "children": [
+          {
+            "text": "Sanktionen im Jugendstrafrecht",
+            "children": [
+              {
+                "text": "Schutzmassnahmen (Vorrang!)",
+                "children": [
+                  {
+                    "text": "Aufsicht"
+                  },
+                  {
+                    "text": "Persönliche Betreuung"
+                  },
+                  {
+                    "text": "Ambulante Behandlung"
+                  },
+                  {
+                    "text": "Unterbringung"
+                  }
+                ]
+              },
+              {
+                "text": "Strafen (altersgestaffelt)",
+                "children": [
+                  {
+                    "text": "Verweis"
+                  },
+                  {
+                    "text": "Persönliche Leistung"
+                  },
+                  {
+                    "text": "Busse"
+                  },
+                  {
+                    "text": "Freiheitsentzug"
+                  }
+                ]
+              },
+              {
+                "text": "Kostenbeteiligung Eltern",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

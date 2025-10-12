@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Historische Meilensteine",
+        "children": [
+          {
+            "text": "Einführung AHV 1948",
+            "children": []
+          },
+          {
+            "text": "Zauberformel 1959",
+            "children": []
+          },
+          {
+            "text": "Frauenstimmrecht 1971",
+            "children": []
+          },
+          {
+            "text": "Gründung Kanton Jura 1978",
+            "children": []
+          },
+          {
+            "text": "UNO-Beitritt 2002",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

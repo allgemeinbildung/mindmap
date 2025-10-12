@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": "Mitwirkungsrechte und Pflichten in der Schweiz",
+    "children": [
+      {
+        "text": "Wahlverfahren",
+        "children": [
+          {
+            "text": "Proporzwahl (Verhältniswahl)",
+            "children": [
+              {
+                "text": "Listenveränderungen",
+                "children": [
+                  {
+                    "text": "Streichen"
+                  },
+                  {
+                    "text": "Kumulieren"
+                  },
+                  {
+                    "text": "Panaschieren"
+                  },
+                  {
+                    "text": "Leere Liste verwenden"
+                  }
+                ]
+              },
+              {
+                "text": "Stimmenarten",
+                "children": [
+                  {
+                    "text": "Kandidatenstimmen"
+                  },
+                  {
+                    "text": "Zusatzstimmen"
+                  },
+                  {
+                    "text": "Parteistimmen"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

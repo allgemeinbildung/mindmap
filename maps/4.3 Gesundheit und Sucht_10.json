@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Sucht",
+        "children": [
+          {
+            "text": "Suchtmittel",
+            "children": [
+              {
+                "text": "Cannabis",
+                "children": [
+                  {
+                    "text": "Wirkung/Risiken",
+                    "children": []
+                  },
+                  {
+                    "text": "Gesetzliche Bestimmungen",
+                    "children": [
+                      {
+                        "text": "Besitz (Erwachsene/Jugendliche)"
+                      },
+                      {
+                        "text": "Strassenverkehr (Nulltoleranz)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

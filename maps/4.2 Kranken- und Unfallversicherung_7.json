@@ -1,0 +1,43 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Unfallversicherung",
+        "children": [
+          {
+            "text": "Leistungen Unfallversicherung",
+            "children": [
+              {
+                "text": "Zusätzliche Kostenübernahmen",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Versicherungsschutz nach Austritt",
+            "children": [
+              {
+                "text": "Erlöschen nach 30 Tagen"
+              },
+              {
+                "text": "Abredeversicherung",
+                "children": [
+                  {
+                    "text": "Zweck"
+                  },
+                  {
+                    "text": "Maximale Dauer (6 Monate)"
+                  },
+                  {
+                    "text": "Abschlussfrist"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

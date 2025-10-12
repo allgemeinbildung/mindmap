@@ -1,0 +1,64 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Krankenversicherung",
+        "children": [
+          {
+            "text": "Grundversicherung (obligatorisch)",
+            "children": [
+              {
+                "text": "Leistungen Grundversicherung",
+                "children": [
+                  {
+                    "text": "Arztbesuche"
+                  },
+                  {
+                    "text": "Spitalaufenthalte (allgemein, Wohnkanton)"
+                  },
+                  {
+                    "text": "Kassenpflichtige Medikamente"
+                  },
+                  {
+                    "text": "..."
+                  }
+                ]
+              },
+              {
+                "text": "Sparmöglichkeiten",
+                "children": [
+                  {
+                    "text": "Franchise erhöhen"
+                  },
+                  {
+                    "text": "Günstigere Kasse wählen"
+                  },
+                  {
+                    "text": "Alternative Versicherungsmodelle"
+                  },
+                  {
+                    "text": "Zusatzversicherungen prüfen"
+                  }
+                ]
+              },
+              {
+                "text": "Prämienverbilligung",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Zusatzversicherungen (freiwillig)",
+            "children": [
+              {
+                "text": "Beispiele für Leistungen",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

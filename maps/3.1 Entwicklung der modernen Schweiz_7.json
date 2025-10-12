@@ -1,0 +1,80 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Politisches System Schweiz",
+        "children": [
+          {
+            "text": "Gewaltenteilung",
+            "children": [
+              {
+                "text": "Legislative (Gesetzgebung)",
+                "children": [
+                  {
+                    "text": "Hauptfunktion",
+                    "children": []
+                  },
+                  {
+                    "text": "Organe (Bundesebene)",
+                    "children": []
+                  },
+                  {
+                    "text": "Hauptaufgaben",
+                    "children": []
+                  },
+                  {
+                    "text": "Wahlverfahren",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Exekutive (Ausführung)",
+                "children": [
+                  {
+                    "text": "Hauptfunktion",
+                    "children": []
+                  },
+                  {
+                    "text": "Organe (Bundesebene)",
+                    "children": []
+                  },
+                  {
+                    "text": "Hauptaufgaben",
+                    "children": []
+                  },
+                  {
+                    "text": "Wahlverfahren",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Judikative (Rechtsprechung)",
+                "children": [
+                  {
+                    "text": "Hauptfunktion",
+                    "children": []
+                  },
+                  {
+                    "text": "Organe (Bundesebene)",
+                    "children": []
+                  },
+                  {
+                    "text": "Hauptaufgaben",
+                    "children": []
+                  },
+                  {
+                    "text": "Wahlverfahren",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

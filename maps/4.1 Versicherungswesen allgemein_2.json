@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Grundlagen des Versicherungswesens und Risikomanagements",
+    "children": [
+      {
+        "text": "Riskmanagement",
+        "children": [
+          {
+            "text": "Risiken erkennen",
+            "children": []
+          },
+          {
+            "text": "Risiken vermeiden",
+            "children": []
+          },
+          {
+            "text": "Folgen absichern",
+            "children": []
+          },
+          {
+            "text": "Fehleinschätzung von Risiken",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

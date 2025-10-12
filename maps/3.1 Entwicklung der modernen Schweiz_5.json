@@ -1,0 +1,56 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Bundesverfassung",
+        "children": [
+          {
+            "text": "Rolle & Zweck der BV",
+            "children": []
+          },
+          {
+            "text": "Kerninhalte der BV",
+            "children": [
+              {
+                "text": "Machtträger definieren"
+              },
+              {
+                "text": "Gewaltenteilung ausbalancieren"
+              },
+              {
+                "text": "Rechte & Pflichten sichern"
+              },
+              {
+                "text": "Kompetenzen verteilen"
+              }
+            ]
+          },
+          {
+            "text": "BV als Basis für Gesetze",
+            "children": [
+              {
+                "text": "ZGB (BV Art. 122)"
+              },
+              {
+                "text": "OR (BV Art. 122)"
+              },
+              {
+                "text": "SVG (BV Art. 82)"
+              },
+              {
+                "text": "StGB (BV Art. 123)"
+              },
+              {
+                "text": "BBG (BV Art. 173)"
+              },
+              {
+                "text": "AVIG (BV Art. 114)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

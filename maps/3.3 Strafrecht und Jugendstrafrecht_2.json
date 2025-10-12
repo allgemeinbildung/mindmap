@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Grundlagen des Strafrechts (Erwachsene)",
+        "children": [
+          {
+            "text": "Zweck",
+            "children": []
+          },
+          {
+            "text": "Grundsätze",
+            "children": [
+              {
+                "text": "Keine Sanktion ohne Gesetz (StGB Art. 1)"
+              },
+              {
+                "text": "Schuldprinzip (StGB Art. 12)"
+              },
+              {
+                "text": "Strafmassfindung (StGB Art. 47)"
+              }
+            ]
+          },
+          {
+            "text": "Deliktarten",
+            "children": [
+              {
+                "text": "Offizialdelikt"
+              },
+              {
+                "text": "Antragsdelikt (StGB Art. 30)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

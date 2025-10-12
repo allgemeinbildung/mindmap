@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Schweiz & Migration",
+        "children": [
+          {
+            "text": "Historisch: Auswanderungsland",
+            "children": [
+              {
+                "text": "Gründe",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Aktuell: Einwanderungsland",
+            "children": [
+              {
+                "text": "Gründe für Einwanderung"
+              },
+              {
+                "text": "Wichtigste Herkunftsgruppen"
+              },
+              {
+                "text": "Bedeutung für die Wirtschaft"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

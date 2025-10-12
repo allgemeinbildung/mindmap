@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Konzentration und Leistungsfähigkeit",
+        "children": [
+          {
+            "text": "Definition Konzentration",
+            "children": []
+          },
+          {
+            "text": "Voraussetzungen für Konzentration",
+            "children": []
+          },
+          {
+            "text": "Konzentrationsfördernde Massnahmen",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Grundlagen des Strafrechts (Erwachsene)"
+      },
+      {
+        "text": "Jugendstrafrecht (JStG)"
+      }
+    ]
+  }
+}

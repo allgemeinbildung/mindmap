@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Unfallversicherung",
+        "children": [
+          {
+            "text": "Obligatorium",
+            "children": [
+              {
+                "text": "Berufsunfall (BU)"
+              },
+              {
+                "text": "Nichtberufsunfall (NBU) ab 8h/Woche"
+              }
+            ]
+          },
+          {
+            "text": "Voraussetzungen Unfall (5 Kriterien)",
+            "children": []
+          },
+          {
+            "text": "Leistungen Unfallversicherung",
+            "children": [
+              {
+                "text": "Keine Kostenbeteiligung"
+              },
+              {
+                "text": "Lohnersatz (80% ab 3. Tag)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

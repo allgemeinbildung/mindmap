@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Sucht",
+        "children": [
+          {
+            "text": "Definition Sucht",
+            "children": []
+          },
+          {
+            "text": "Abhängigkeitssyndrom (ICD-10 Kriterien)",
+            "children": [
+              {
+                "text": "Kriterium 1"
+              },
+              {
+                "text": "Kriterium 2"
+              },
+              {
+                "text": "Kriterium 3"
+              },
+              {
+                "text": "Kriterium 4"
+              },
+              {
+                "text": "Kriterium 5"
+              },
+              {
+                "text": "Kriterium 6"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

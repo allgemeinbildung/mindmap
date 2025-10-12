@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Grundlagen des Versicherungswesens und Risikomanagements",
+    "children": [
+      {
+        "text": "Versicherungswesen",
+        "children": [
+          {
+            "text": "Versicherungsarten",
+            "children": [
+              {
+                "text": "Personenversicherungen",
+                "children": []
+              },
+              {
+                "text": "Sachversicherungen",
+                "children": []
+              },
+              {
+                "text": "Haftpflichtversicherungen",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

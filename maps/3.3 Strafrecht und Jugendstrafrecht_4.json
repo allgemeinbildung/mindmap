@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Grundlagen des Strafrechts (Erwachsene)",
+        "children": [
+          {
+            "text": "Massnahmen",
+            "children": [
+              {
+                "text": "Therapeutische Massnahmen (StGB Art. 56ff.)",
+                "children": []
+              },
+              {
+                "text": "Verwahrung (StGB Art. 64)",
+                "children": []
+              },
+              {
+                "text": "Andere Massnahmen (StGB Art. 66ff.)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

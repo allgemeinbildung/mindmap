@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Politisches System Schweiz",
+        "children": [
+          {
+            "text": "Gemeinden & Milizsystem",
+            "children": [
+              {
+                "text": "Gemeindeautonomie (BV Art. 50)",
+                "children": []
+              },
+              {
+                "text": "Aufgaben der Gemeindeebene",
+                "children": [
+                  {
+                    "text": "Legislative"
+                  },
+                  {
+                    "text": "Exekutive"
+                  },
+                  {
+                    "text": "Judikative"
+                  }
+                ]
+              },
+              {
+                "text": "Milizsystem erklärt",
+                "children": [
+                  {
+                    "text": "Vorteile",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Herausforderungen & Anpassungen Milizsystem",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

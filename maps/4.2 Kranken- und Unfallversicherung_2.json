@@ -1,0 +1,50 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Krankenversicherung",
+        "children": [
+          {
+            "text": "Grundversicherung (obligatorisch)",
+            "children": [
+              {
+                "text": "Grundsätze",
+                "children": [
+                  {
+                    "text": "Obligatorium"
+                  },
+                  {
+                    "text": "Gleiche Leistungen"
+                  },
+                  {
+                    "text": "Kostenbeteiligung"
+                  },
+                  {
+                    "text": "Aufnahmepflicht"
+                  }
+                ]
+              },
+              {
+                "text": "Definition „Krankheit“",
+                "children": []
+              },
+              {
+                "text": "„Police“",
+                "children": []
+              },
+              {
+                "text": "„Prämie“",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Zusatzversicherungen (freiwillig)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

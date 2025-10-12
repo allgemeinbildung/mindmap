@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Mitwirkungsrechte und Pflichten in der Schweiz",
+    "children": [
+      {
+        "text": "Politische Teilhabe (Stimm- & Wahlrecht)",
+        "children": [
+          {
+            "text": "Mehrheitsarten",
+            "children": [
+              {
+                "text": "Absolutes Mehr",
+                "children": []
+              },
+              {
+                "text": "Relatives Mehr",
+                "children": []
+              },
+              {
+                "text": "Qualifiziertes Mehr",
+                "children": []
+              },
+              {
+                "text": "Volksmehr",
+                "children": []
+              },
+              {
+                "text": "Ständemehr",
+                "children": []
+              },
+              {
+                "text": "Doppeltes Mehr",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

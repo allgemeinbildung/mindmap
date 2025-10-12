@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Entwicklung der modernen Schweiz",
+    "children": [
+      {
+        "text": "Historische Meilensteine",
+        "children": [
+          {
+            "text": "Gründung Bundesstaat 1848",
+            "children": []
+          },
+          {
+            "text": "Bundesverfassung 1848",
+            "children": []
+          },
+          {
+            "text": "Referendumsrecht 1874",
+            "children": []
+          },
+          {
+            "text": "Initiativrecht 1891",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

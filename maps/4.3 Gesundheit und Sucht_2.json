@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Grundlagen der Gesundheit",
+        "children": [
+          {
+            "text": "Definition Gesundheit",
+            "children": []
+          },
+          {
+            "text": "Körperliches Wohlergehen",
+            "children": []
+          },
+          {
+            "text": "Geistiges Wohlergehen",
+            "children": []
+          },
+          {
+            "text": "Soziales Wohlergehen",
+            "children": []
+          },
+          {
+            "text": "Reparaturmedizin vs. Gesundheitsförderung",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

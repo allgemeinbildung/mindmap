@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Strafrecht & Jugendstrafrecht",
+    "children": [
+      {
+        "text": "Grundlagen des Strafrechts (Erwachsene)",
+        "children": [
+          {
+            "text": "Strafarten",
+            "children": [
+              {
+                "text": "Freiheitsstrafe (StGB Art. 40)",
+                "children": []
+              },
+              {
+                "text": "Geldstrafe (StGB Art. 34ff.)",
+                "children": []
+              },
+              {
+                "text": "Busse (StGB Art. 106)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

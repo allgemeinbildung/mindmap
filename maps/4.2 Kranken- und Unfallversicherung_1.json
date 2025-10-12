@@ -1,0 +1,13 @@
+{
+  "root": {
+    "text": "Kranken- und Unfallversicherung",
+    "children": [
+      {
+        "text": "Krankenversicherung"
+      },
+      {
+        "text": "Unfallversicherung"
+      }
+    ]
+  }
+}

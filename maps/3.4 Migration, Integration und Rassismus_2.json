@@ -1,0 +1,20 @@
+{
+  "root": {
+    "text": "Migration, Integration & Rassismus",
+    "children": [
+      {
+        "text": "Migration",
+        "children": [
+          {
+            "text": "Push-Faktoren",
+            "children": []
+          },
+          {
+            "text": "Pull-Faktoren",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

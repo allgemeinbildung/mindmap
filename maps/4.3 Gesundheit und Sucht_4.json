@@ -1,0 +1,46 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Grundlagen der Gesundheit",
+        "children": [
+          {
+            "text": "Geistiges Wohlergehen",
+            "children": [
+              {
+                "text": "Bedeutung",
+                "children": []
+              },
+              {
+                "text": "Psychologie",
+                "children": []
+              },
+              {
+                "text": "Hilfesuche",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Soziales Wohlergehen",
+            "children": [
+              {
+                "text": "Prägung durch Umfeld"
+              },
+              {
+                "text": "Soziale Sicherheit"
+              },
+              {
+                "text": "Wirtschaftliche Interessen"
+              },
+              {
+                "text": "Social Networks"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

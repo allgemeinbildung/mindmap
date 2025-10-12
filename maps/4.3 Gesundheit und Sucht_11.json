@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Gesundheit und Sucht",
+    "children": [
+      {
+        "text": "Sucht",
+        "children": [
+          {
+            "text": "Prävention",
+            "children": []
+          },
+          {
+            "text": "Anlaufstellen",
+            "children": [
+              {
+                "text": "jugendberatung.me"
+              },
+              {
+                "text": "safezone.ch"
+              },
+              {
+                "text": "suchtschweiz.ch"
+              },
+              {
+                "text": "feel-ok.ch"
+              },
+              {
+                "text": "tschau.ch"
+              },
+              {
+                "text": "147.ch (Pro Juventute)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

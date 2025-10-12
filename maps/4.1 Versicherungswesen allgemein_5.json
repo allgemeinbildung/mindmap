@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Grundlagen des Versicherungswesens und Risikomanagements",
+    "children": [
+      {
+        "text": "Persönliche Risiken",
+        "children": [
+          {
+            "text": "Alkohol und Tabak",
+            "children": []
+          },
+          {
+            "text": "Bewegungsarmut und falsche Ernährung",
+            "children": []
+          },
+          {
+            "text": "Krankheiten",
+            "children": [
+              {
+                "text": "Impfungen"
+              },
+              {
+                "text": "Geschlechtskrankheiten"
+              }
+            ]
+          },
+          {
+            "text": "Unfälle",
+            "children": [
+              {
+                "text": "Strassenverkehr"
+              },
+              {
+                "text": "Arbeitsplatz"
+              },
+              {
+                "text": "Freizeit"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
