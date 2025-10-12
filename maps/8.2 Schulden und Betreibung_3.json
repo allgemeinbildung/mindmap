@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Schulden und Betreibung",
+    "children": [
+      {
+        "text": "Betreibung (Grundlagen)",
+        "children": [
+          {
+            "text": "Gesetzliche Grundlage: SchKG (inkl. Verweis auf Art. 31)"
+          },
+          {
+            "text": "Wer kann betrieben werden?",
+            "children": [
+              {
+                "text": "Handlungsfähige natürliche und juristische Personen"
+              },
+              {
+                "text": "Bedingt handlungsfähige Personen im Rahmen ihres Lohnes"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "root": {
+    "text": "Schulden und Betreibung",
+    "children": [
+      {
+        "text": "Betreibung (Grundlagen)",
+        "children": [
+          {
+            "text": "Betreibungsarten",
+            "children": [
+              {
+                "text": "Betreibung auf Pfändung (inkl. SchKG Art. 89 ff.)",
+                "children": [
+                  {
+                    "text": "Für wen?",
+                    "children": []
+                  },
+                  {
+                    "text": "Was wird verwertet/gepfändet?",
+                    "children": []
+                  },
+                  {
+                    "text": "Besonderheiten",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Betreibung auf Pfandverwertung (inkl. SchKG Art. 151 ff.)",
+                "children": [
+                  {
+                    "text": "Für wen?",
+                    "children": []
+                  },
+                  {
+                    "text": "Was wird verwertet/gepfändet?",
+                    "children": []
+                  },
+                  {
+                    "text": "Besonderheiten",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Betreibung auf Konkurs (inkl. SchKG Art. 159 ff.)",
+                "children": [
+                  {
+                    "text": "Für wen?",
+                    "children": []
+                  },
+                  {
+                    "text": "Was wird verwertet/gepfändet?",
+                    "children": []
+                  },
+                  {
+                    "text": "Besonderheiten",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

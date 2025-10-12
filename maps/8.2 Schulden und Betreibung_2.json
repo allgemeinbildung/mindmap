@@ -1,0 +1,44 @@
+{
+  "root": {
+    "text": "Schulden und Betreibung",
+    "children": [
+      {
+        "text": "Verschuldung",
+        "children": [
+          {
+            "text": "Ursachen für Verschuldung bei Jugendlichen",
+            "children": []
+          },
+          {
+            "text": "Präventionsmassnahmen",
+            "children": [
+              {
+                "text": "Budget"
+              },
+              {
+                "text": "Konten"
+              },
+              {
+                "text": "Spartipps (Bankkarte, Bargeld, Handy, Kleider, Ausgang)"
+              }
+            ]
+          },
+          {
+            "text": "Vorgehen bei bestehenden Schulden",
+            "children": [
+              {
+                "text": "Überblick verschaffen"
+              },
+              {
+                "text": "Rückzahlungsplan"
+              },
+              {
+                "text": "Gläubigerkontakt"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

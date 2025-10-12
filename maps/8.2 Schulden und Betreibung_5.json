@@ -1,0 +1,53 @@
+{
+  "root": {
+    "text": "Schulden und Betreibung",
+    "children": [
+      {
+        "text": "Betreibung (Grundlagen)",
+        "children": [
+          {
+            "text": "Ablauf Betreibungsverfahren (Pfändung)",
+            "children": [
+              {
+                "text": "Betreibungsbegehren",
+                "children": []
+              },
+              {
+                "text": "Zahlungsbefehl",
+                "children": []
+              },
+              {
+                "text": "Rechtsvorschlag",
+                "children": []
+              },
+              {
+                "text": "Gesuch um Rechtsöffnung",
+                "children": []
+              },
+              {
+                "text": "Fortsetzungsbegehren",
+                "children": []
+              },
+              {
+                "text": "Pfändungsankündigung & Pfändungsvollzug",
+                "children": []
+              },
+              {
+                "text": "Verwertungsbegehren",
+                "children": []
+              },
+              {
+                "text": "Versteigerung (Verwertung)",
+                "children": []
+              },
+              {
+                "text": "Verlustschein",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
