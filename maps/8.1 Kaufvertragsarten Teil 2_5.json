@@ -1,0 +1,33 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 2",
+    "children": [
+      {
+        "text": "Kauf mit Kleindarlehen",
+        "children": [
+          {
+            "text": "Merkmale & Eigentum",
+            "children": []
+          },
+          {
+            "text": "KKG & Kosten",
+            "children": [
+              {
+                "text": "Rücktrittsrecht gem. KKG Art. 16"
+              },
+              {
+                "text": "Kreditfähigkeitsprüfung gem. KKG Art. 28"
+              },
+              {
+                "text": "Form gem. KKG Art. 9"
+              },
+              {
+                "text": "Hohe Zinsen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

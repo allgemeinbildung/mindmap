@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 2",
+    "children": [
+      {
+        "text": "Kauf mit Konsumkreditvertrag",
+        "children": [
+          {
+            "text": "KKG-Schutzbestimmungen",
+            "children": [
+              {
+                "text": "Zweck"
+              },
+              {
+                "text": "Rücktrittsrecht (gem. KKG Art. 16)"
+              },
+              {
+                "text": "Kreditfähigkeitsprüfung (gem. KKG Art. 28)"
+              },
+              {
+                "text": "Meldepflicht IKO"
+              }
+            ]
+          },
+          {
+            "text": "Vertragsdetails & Eigentum",
+            "children": [
+              {
+                "text": "Notwendige Vertragsinhalte (gem. KKG Art. 9, 10)"
+              },
+              {
+                "text": "Eigentumsvorbehalt (gem. ZGB Art. 715f)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

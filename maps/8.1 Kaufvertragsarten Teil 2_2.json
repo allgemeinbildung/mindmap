@@ -1,0 +1,47 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 2",
+    "children": [
+      {
+        "text": "Leasing",
+        "children": [
+          {
+            "text": "Definition & Eigentum",
+            "children": []
+          },
+          {
+            "text": "Rechtliches (KKG)",
+            "children": [
+              {
+                "text": "Rücktrittsrecht"
+              },
+              {
+                "text": "Zwingende Vertragsinhalte (gem. KKG Art. 11)"
+              },
+              {
+                "text": "Bonitätsprüfung"
+              },
+              {
+                "text": "Rolle der IKO"
+              }
+            ]
+          },
+          {
+            "text": "Kosten & Risiken",
+            "children": [
+              {
+                "text": "Bestandteile der Leasingrate"
+              },
+              {
+                "text": "Versteckte Zusatzkosten"
+              },
+              {
+                "text": "Folgen vorzeitiger Vertragsauflösung"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
