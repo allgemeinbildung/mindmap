@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Grundlagen des Wirtschaftens",
+        "children": [
+          {
+            "text": "Wohlfahrt",
+            "children": []
+          },
+          {
+            "text": "Wohlstand",
+            "children": []
+          },
+          {
+            "text": "BIP",
+            "children": [
+              {
+                "text": "Definition",
+                "children": []
+              },
+              {
+                "text": "Berechnungsarten",
+                "children": []
+              },
+              {
+                "text": "Nominales vs. Reales BIP",
+                "children": []
+              },
+              {
+                "text": "BIP pro Kopf",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

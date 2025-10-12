@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Wirtschaftsordnung und Staat",
+        "children": [
+          {
+            "text": "Wirtschaftsformen",
+            "children": [
+              {
+                "text": "Freie Marktwirtschaft"
+              },
+              {
+                "text": "Zentrale Planwirtschaft"
+              }
+            ]
+          },
+          {
+            "text": "Soziale Marktwirtschaft",
+            "children": [
+              {
+                "text": "Durchsetzung Rechtssystem"
+              },
+              {
+                "text": "Gerechte Verteilung"
+              },
+              {
+                "text": "Korrektur Marktversagen"
+              }
+            ]
+          },
+          {
+            "text": "Staatsversagen",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

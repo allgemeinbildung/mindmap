@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Grundlagen des Wirtschaftens",
+        "children": [
+          {
+            "text": "Einkommens- und Vermögensverteilung",
+            "children": [
+              {
+                "text": "Lorenzkurve",
+                "children": [
+                  {
+                    "text": "Was sie misst"
+                  },
+                  {
+                    "text": "Linie der Gleichverteilung"
+                  },
+                  {
+                    "text": "Bedeutung der Krümmung ('Bauch')"
+                  },
+                  {
+                    "text": "Situation in der Schweiz..."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

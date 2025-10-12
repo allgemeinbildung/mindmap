@@ -1,0 +1,49 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Wirtschaftspolitische Ziele und Prozesse",
+        "children": [
+          {
+            "text": "Konjunktur und Konjunkturzyklus",
+            "children": [
+              {
+                "text": "Vier Phasen",
+                "children": [
+                  {
+                    "text": "Aufschwung",
+                    "children": []
+                  },
+                  {
+                    "text": "Hochkonjunktur",
+                    "children": []
+                  },
+                  {
+                    "text": "Abschwung",
+                    "children": []
+                  },
+                  {
+                    "text": "Rezession",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "text": "Konjunkturpolitik",
+                "children": [
+                  {
+                    "text": "Ziel staatlicher Eingriffe"
+                  },
+                  {
+                    "text": "Beispiele für Massnahmen"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

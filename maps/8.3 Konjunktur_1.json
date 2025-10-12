@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Grundlagen des Wirtschaftens"
+      },
+      {
+        "text": "Wirtschaftsordnung und Staat"
+      },
+      {
+        "text": "Wirtschaftspolitische Ziele und Prozesse"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "root": {
+    "text": "Konjunktur",
+    "children": [
+      {
+        "text": "Wirtschaftspolitische Ziele und Prozesse",
+        "children": [
+          {
+            "text": "Arbeitslosigkeit und Armut",
+            "children": [
+              {
+                "text": "Tiefe Arbeitslosigkeit als Ziel",
+                "children": [
+                  {
+                    "text": "Staatliche Massnahmen (z.B. Kurzarbeit)"
+                  }
+                ]
+              },
+              {
+                "text": "Armut in der Schweiz",
+                "children": [
+                  {
+                    "text": "Armutsgrenze"
+                  },
+                  {
+                    "text": "Working Poor"
+                  },
+                  {
+                    "text": "Betroffene Gruppen"
+                  },
+                  {
+                    "text": "Staatliche Hilfen (z.B. BV Art. 12)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
