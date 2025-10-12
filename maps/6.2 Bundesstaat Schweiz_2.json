@@ -3,7 +3,7 @@
     "text": "Bundesstaat Schweiz",
     "children": [
       {
-        "text": "Staatsformen und Föderalismus",
+        "text": "Staatsformen",
         "children": [
           {
             "text": "Bundesstaat",
@@ -11,10 +11,6 @@
               {
                 "text": "Föderalismus in der Schweiz",
                 "children": [
-                  {
-                    "text": "Definition",
-                    "children": []
-                  },
                   {
                     "text": "Aufgabenteilung (Beispiele)",
                     "children": [
@@ -37,6 +33,9 @@
             ]
           },
           {
+            "text": "Definition Föderalismus",
+            "children": []
+          },          {
             "text": "Einheitsstaat",
             "children": []
           },

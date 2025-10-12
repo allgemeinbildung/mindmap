@@ -1,34 +1,58 @@
 {
   "root": {
-    "text": "Interessengruppen",
+    "text": "Parteien",
     "children": [
       {
-        "text": "Parteien",
-        "children": []
-      },
-      {
-        "text": "Definition und Rolle",
-        "children": []
+        "text": "Definition und Rolle"
       },
       {
         "text": "Politische Grundhaltungen",
-        "children": []
-      },
-      {
-        "text": "Liberal",
-        "children": []
-      },
-      {
-        "text": "Links",
-        "children": []
-      },
-      {
-        "text": "Rechts",
-        "children": []
-      },
-      {
-        "text": "Konservativ",
-        "children": []
+        "children": [
+          {
+            "text": "Liberal",
+            "children": [
+              {
+                "text": "Kernmerkmal 1"
+              },
+              {
+                "text": "Kernmerkmal 2"
+              }
+            ]
+          },
+          {
+            "text": "Links",
+            "children": [
+              {
+                "text": "Kernmerkmal 1"
+              },
+              {
+                "text": "Kernmerkmal 2"
+              }
+            ]
+          },
+          {
+            "text": "Rechts",
+            "children": [
+              {
+                "text": "Kernmerkmal 1"
+              },
+              {
+                "text": "Kernmerkmal 2"
+              }
+            ]
+          },
+          {
+            "text": "Konservativ",
+            "children": [
+              {
+                "text": "Kernmerkmal 1"
+              },
+              {
+                "text": "Kernmerkmal 2"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

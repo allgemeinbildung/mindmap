@@ -1,34 +1,64 @@
 {
   "root": {
-    "text": "Interessengruppen",
+    "text": "NGOs",
     "children": [
       {
-        "text": "NGOs",
-        "children": []
-      },
-      {
-        "text": "Definition und Rolle in Global Governance",
-        "children": []
+        "text": "Definition und Rolle in Global Governance"
       },
       {
         "text": "Amnesty International",
-        "children": []
+        "children": [
+          {
+            "text": "Hauptziel"
+          },
+          {
+            "text": "Beispiel für Tätigkeit / Bedeutung"
+          }
+        ]
       },
       {
         "text": "WWF",
-        "children": []
+        "children": [
+          {
+            "text": "Hauptziel"
+          },
+          {
+            "text": "Beispiel für Tätigkeit / Bedeutung"
+          }
+        ]
       },
       {
         "text": "Greenpeace",
-        "children": []
+        "children": [
+          {
+            "text": "Hauptziel"
+          },
+          {
+            "text": "Beispiel für Tätigkeit / Bedeutung"
+          }
+        ]
       },
       {
         "text": "Public Eye",
-        "children": []
+        "children": [
+          {
+            "text": "Hauptziel"
+          },
+          {
+            "text": "Beispiel für Tätigkeit / Bedeutung"
+          }
+        ]
       },
       {
         "text": "attac",
-        "children": []
+        "children": [
+          {
+            "text": "Hauptziel"
+          },
+          {
+            "text": "Beispiel für Tätigkeit / Bedeutung"
+          }
+        ]
       }
     ]
   }

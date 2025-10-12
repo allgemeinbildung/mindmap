@@ -3,12 +3,41 @@
     "text": "Initiative",
     "children": [
       {
-        "text": "Volksinitiative - Bund",
-        "children": []
+        "text": "Volksinitiative (Bund)",
+        "children": [
+          {
+            "text": "Ziel"
+          },
+          {
+            "text": "Bedingungen"
+          },
+          {
+            "text": "Ablauf",
+            "children": [
+              {
+                "text": "Unterschriftensammlung"
+              },
+              {
+                "text": "Prüfung"
+              },
+              {
+                "text": "Beratung Parlament/Bundesrat"
+              },
+              {
+                "text": "Gegenvorschlag (optional)"
+              },
+              {
+                "text": "Volksabstimmung"
+              }
+            ]
+          },
+          {
+            "text": "Erforderliches Mehr"
+          }
+        ]
       },
       {
-        "text": "Initiativen auf Kantonsebene",
-        "children": []
+        "text": "Initiativen auf Kantonsebene"
       }
     ]
   }

@@ -1,17 +1,17 @@
 {
   "root": {
-    "text": "Referendum",
+    "text": "Referendum und Initiative",
     "children": [
       {
-        "text": "Obligatorisches Referendum",
+        "text": "Referendum",
         "children": []
       },
       {
-        "text": "Fakultatives Referendum",
+        "text": "Initiative",
         "children": []
       },
       {
-        "text": "Bedeutung des Referendums",
+        "text": "Petitionsrecht",
         "children": []
       }
     ]

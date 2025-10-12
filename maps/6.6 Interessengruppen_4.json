@@ -1,26 +1,48 @@
 {
   "root": {
-    "text": "Interessengruppen",
+    "text": "Verbände",
     "children": [
       {
-        "text": "Verbände",
-        "children": []
-      },
-      {
-        "text": "Definition und Zweck",
-        "children": []
+        "text": "Definition und Zweck"
       },
       {
         "text": "Arbeitgeberverbände",
-        "children": []
+        "children": [
+          {
+            "text": "Beispiel 1"
+          },
+          {
+            "text": "Beispiel 2"
+          }
+        ]
       },
       {
-        "text": "Arbeitnehmerverbände Gewerkschaften",
-        "children": []
+        "text": "Arbeitnehmerverbände (Gewerkschaften)",
+        "children": [
+          {
+            "text": "Beispiel 1"
+          },
+          {
+            "text": "Beispiel 2"
+          }
+        ]
       },
       {
-        "text": "Funktion Einflussnahme in der Politik",
-        "children": []
+        "text": "Funktion/Einflussnahme in der Politik",
+        "children": [
+          {
+            "text": "Lobbying"
+          },
+          {
+            "text": "Vernehmlassung"
+          },
+          {
+            "text": "Initiativen/Referenden"
+          },
+          {
+            "text": "Kontakte zu Parteien"
+          }
+        ]
       }
     ]
   }

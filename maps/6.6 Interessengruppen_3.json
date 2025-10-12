@@ -1,62 +1,76 @@
 {
   "root": {
-    "text": "Interessengruppen",
+    "text": "Parteien",
     "children": [
       {
-        "text": "Parteien",
-        "children": []
-      },
-      {
         "text": "Regierungsparteien",
-        "children": []
-      },
-      {
-        "text": "SVP",
-        "children": []
-      },
-      {
-        "text": "SP",
-        "children": []
-      },
-      {
-        "text": "Die Mitte",
-        "children": []
-      },
-      {
-        "text": "FDP",
-        "children": []
+        "children": [
+          {
+            "text": "SVP",
+            "children": [
+              { "text": "Hauptanliegen" }
+            ]
+          },
+          {
+            "text": "SP",
+            "children": [
+              { "text": "Hauptanliegen" }
+            ]
+          },
+          {
+            "text": "Die Mitte",
+            "children": [
+              { "text": "Hauptanliegen" }
+            ]
+          },
+          {
+            "text": "FDP",
+            "children": [
+              { "text": "Hauptanliegen" }
+            ]
+          }
+        ]
       },
       {
         "text": "Weitere Parteien",
-        "children": []
-      },
-      {
-        "text": "GPS",
-        "children": []
-      },
-      {
-        "text": "GLP",
-        "children": []
-      },
-      {
-        "text": "EVP",
-        "children": []
+        "children": [
+          {
+            "text": "GPS"
+          },
+          {
+            "text": "GLP"
+          },
+          {
+            "text": "EVP"
+          }
+        ]
       },
       {
         "text": "Darstellungsformen",
-        "children": []
-      },
-      {
-        "text": "Links Rechts Schema",
-        "children": []
-      },
-      {
-        "text": "Smartspider",
-        "children": []
+        "children": [
+          {
+            "text": "Links-Rechts-Schema"
+          },
+          {
+            "text": "Smartspider",
+            "children": [
+              {
+                "text": "Zweck"
+              }
+            ]
+          }
+        ]
       },
       {
         "text": "Parteienspektrum im Parlament",
-        "children": []
+        "children": [
+          {
+            "text": "Nationalrat (Anzahl Sitze)"
+          },
+          {
+            "text": "Ständerat (Anzahl Sitze)"
+          }
+        ]
       }
     ]
   }

@@ -4,15 +4,31 @@
     "children": [
       {
         "text": "Obligatorisches Referendum",
-        "children": []
+        "children": [
+          {
+            "text": "Auslöser"
+          },
+          {
+            "text": "Bedingungen"
+          },
+          {
+            "text": "Erforderliches Mehr"
+          }
+        ]
       },
       {
         "text": "Fakultatives Referendum",
-        "children": []
-      },
-      {
-        "text": "Bedeutung des Referendums",
-        "children": []
+        "children": [
+          {
+            "text": "Auslöser"
+          },
+          {
+            "text": "Bedingungen"
+          },
+          {
+            "text": "Erforderliches Mehr"
+          }
+        ]
       }
     ]
   }
