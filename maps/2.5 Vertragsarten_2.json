@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Vertragsarten",
+    "children": [
+      {
+        "text": "Werkvertrag",
+        "children": [
+          {
+            "text": "Formvorschrift",
+            "children": []
+          },
+          {
+            "text": "Werkherstellung",
+            "children": []
+          },
+          {
+            "text": "Entschädigung (OR Art. 373)",
+            "children": []
+          },
+          {
+            "text": "Haftung (OR Art. 364, 366, 368, 371)",
+            "children": []
+          },
+          {
+            "text": "Auflösung (OR Art. 375, 377)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

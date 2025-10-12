@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Der Kaufvertrag (OR Art. 184ff)",
+        "children": [
+          {
+            "text": "Ablauf (Anfrage, Angebot, Bestellung)"
+          },
+          {
+            "text": "Verbindlichkeit von Angeboten (OR Art. 7)"
+          },
+          {
+            "text": "Unbestellte Ware (OR Art. 6a)"
+          },
+          {
+            "text": "Haustürkauf (OR Art. 40aff)"
+          }
+        ]
+      }
+    ]
+  }
+}

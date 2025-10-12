@@ -1,0 +1,50 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Digitale Bankdienstleistungen",
+            "children": [
+              {
+                "text": "E-Banking",
+                "children": [
+                  {
+                    "text": "Kernfunktion"
+                  },
+                  {
+                    "text": "Vorteil"
+                  }
+                ]
+              },
+              {
+                "text": "QR-Rechnung",
+                "children": [
+                  {
+                    "text": "Kernfunktion"
+                  },
+                  {
+                    "text": "Vorteil"
+                  }
+                ]
+              },
+              {
+                "text": "eBill",
+                "children": [
+                  {
+                    "text": "Kernfunktion"
+                  },
+                  {
+                    "text": "Vorteil"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Kartenbasierte Zahlungen",
+            "children": [
+              {
+                "text": "Travel-Prepaid-Karte",
+                "children": [
+                  {
+                    "text": "Kernfunktion (aufladbar, für Reisen)",
+                    "children": []
+                  },
+                  {
+                    "text": "Vorteile",
+                    "children": []
+                  },
+                  {
+                    "text": "Nachteile/Gebühren",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

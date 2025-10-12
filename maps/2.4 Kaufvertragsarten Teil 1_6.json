@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Grundlagen des Vertragsrechts",
+        "children": [
+          {
+            "text": "Verjährung (OR Art. 127, 128)",
+            "children": [
+              {
+                "text": "Bedeutung",
+                "children": []
+              },
+              {
+                "text": "Fristen (10 Jahre, 5 Jahre, 2 Jahre)",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

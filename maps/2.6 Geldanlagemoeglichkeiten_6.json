@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Anlageformen",
+        "children": [
+          {
+            "text": "Wertschriften",
+            "children": [
+              {
+                "text": "Aktien",
+                "children": [
+                  {
+                    "text": "Miteigentümer"
+                  },
+                  {
+                    "text": "I.d.R. unbeschränkte Laufzeit"
+                  },
+                  {
+                    "text": "Variable Dividende (nicht garantiert)"
+                  },
+                  {
+                    "text": "Stimmrecht an GV"
+                  },
+                  {
+                    "text": "Höheres Risiko & höhere Gewinnchancen"
+                  },
+                  {
+                    "text": "Kursschwankungen"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

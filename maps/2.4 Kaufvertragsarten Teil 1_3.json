@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Grundlagen des Vertragsrechts",
+        "children": [
+          {
+            "text": "Vertragsformen (OR Art. 11)",
+            "children": [
+              {
+                "text": "Formfreiheit"
+              },
+              {
+                "text": "Mündliche Verträge"
+              },
+              {
+                "text": "Schriftliche Verträge",
+                "children": [
+                  {
+                    "text": "Einfache Schriftlichkeit"
+                  },
+                  {
+                    "text": "Qualifizierte Schriftlichkeit"
+                  },
+                  {
+                    "text": "Öffentliche Beurkundung"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

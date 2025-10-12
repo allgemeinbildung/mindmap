@@ -1,0 +1,20 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Barzahlung",
+        "children": [
+          {
+            "text": "Definition",
+            "children": []
+          },
+          {
+            "text": "Eigenschaften",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

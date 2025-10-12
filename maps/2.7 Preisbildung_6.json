@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Produktionsfaktoren",
+        "children": [
+          {
+            "text": "Boden/Umwelt",
+            "children": []
+          },
+          {
+            "text": "Arbeit/Wissen",
+            "children": []
+          },
+          {
+            "text": "Kapital",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

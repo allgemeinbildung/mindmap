@@ -1,0 +1,50 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Bankbasierte Zahlungen",
+            "children": [
+              {
+                "text": "Banküberweisung",
+                "children": [
+                  {
+                    "text": "Funktionsweise"
+                  },
+                  {
+                    "text": "Anwendungsbeispiel"
+                  }
+                ]
+              },
+              {
+                "text": "Dauerauftrag",
+                "children": [
+                  {
+                    "text": "Funktionsweise"
+                  },
+                  {
+                    "text": "Anwendungsbeispiel"
+                  }
+                ]
+              },
+              {
+                "text": "LSV",
+                "children": [
+                  {
+                    "text": "Funktionsweise"
+                  },
+                  {
+                    "text": "Anwendungsbeispiel"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

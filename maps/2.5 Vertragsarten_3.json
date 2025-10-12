@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Vertragsarten",
+    "children": [
+      {
+        "text": "Einfacher Auftrag",
+        "children": [
+          {
+            "text": "Formvorschrift",
+            "children": []
+          },
+          {
+            "text": "Persönliche Auftragsführung (OR Art. 398)",
+            "children": []
+          },
+          {
+            "text": "Entschädigung",
+            "children": []
+          },
+          {
+            "text": "Haftung",
+            "children": []
+          },
+          {
+            "text": "Auflösung (OR Art. 404)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

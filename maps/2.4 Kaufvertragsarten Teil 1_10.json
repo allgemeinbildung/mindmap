@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Der Kaufvertrag (OR Art. 184ff)",
+        "children": [
+          {
+            "text": "Gewährleistung/Garantie (OR Art. 197, 210)",
+            "children": [
+              {
+                "text": "Gesetzliche Garantie (2 Jahre)"
+              },
+              {
+                "text": "Vertragliche Garantie"
+              },
+              {
+                "text": "Wichtigkeit der AGB"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Anlageformen",
+        "children": [
+          {
+            "text": "Wertschriften",
+            "children": [
+              {
+                "text": "Obligationen",
+                "children": [
+                  {
+                    "text": "Gläubiger (kein Eigentümer)"
+                  },
+                  {
+                    "text": "Feste Laufzeit"
+                  },
+                  {
+                    "text": "Fester Zins"
+                  },
+                  {
+                    "text": "Rückzahlung des Kapitals am Ende"
+                  },
+                  {
+                    "text": "Relativ hohe Sicherheit"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

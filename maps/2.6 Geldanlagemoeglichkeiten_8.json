@@ -1,0 +1,38 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Anlageformen",
+        "children": [
+          {
+            "text": "Kryptowährungen",
+            "children": [
+              {
+                "text": "Digital/virtuell"
+              },
+              {
+                "text": "Dezentral"
+              },
+              {
+                "text": "Kryptografisch gesichert"
+              },
+              {
+                "text": "Unabhängig von Banken/Staaten (meist)"
+              },
+              {
+                "text": "Hohe Volatilität"
+              },
+              {
+                "text": "Spekulativ"
+              },
+              {
+                "text": "Hochriskant"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

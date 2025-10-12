@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Einfache Kaufvertragsarten",
+        "children": [
+          {
+            "text": "Eigentum",
+            "children": []
+          },
+          {
+            "text": "Besitz",
+            "children": []
+          },
+          {
+            "text": "Barkauf (OR Art. 184ff)",
+            "children": [
+              {
+                "text": "Zahlung"
+              },
+              {
+                "text": "Eigentum"
+              },
+              {
+                "text": "Rücktrittsrecht"
+              }
+            ]
+          },
+          {
+            "text": "Gewöhnlicher Kreditkauf",
+            "children": [
+              {
+                "text": "Zahlung"
+              },
+              {
+                "text": "Eigentum"
+              },
+              {
+                "text": "Rücktrittsrecht"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

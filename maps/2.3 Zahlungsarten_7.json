@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Kartenbasierte Zahlungen",
+            "children": [
+              {
+                "text": "Kundenkarten",
+                "children": [
+                  {
+                    "text": "Hauptzweck (Kundenbindung, Datengewinnung)",
+                    "children": []
+                  },
+                  {
+                    "text": "Vorteile",
+                    "children": []
+                  },
+                  {
+                    "text": "Nachteile",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

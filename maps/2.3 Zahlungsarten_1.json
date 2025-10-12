@@ -1,0 +1,13 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Barzahlung"
+      },
+      {
+        "text": "Bargeldloser Zahlungsverkehr"
+      }
+    ]
+  }
+}

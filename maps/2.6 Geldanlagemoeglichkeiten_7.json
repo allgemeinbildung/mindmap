@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Anlageformen",
+        "children": [
+          {
+            "text": "Wertschriften",
+            "children": [
+              {
+                "text": "Fonds (Anlagefonds)",
+                "children": [
+                  {
+                    "text": "Bündelung von Anlegergeldern"
+                  },
+                  {
+                    "text": "Investition in diversifiziertes Portfolio"
+                  },
+                  {
+                    "text": "Ziel der Risikostreuung"
+                  },
+                  {
+                    "text": "Risiko abhängig von Zusammensetzung"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Kartenbasierte Zahlungen",
+            "children": [
+              {
+                "text": "Debitkarten",
+                "children": [
+                  {
+                    "text": "Funktionsweise (direkte Kontobelastung)"
+                  },
+                  {
+                    "text": "Vorteile",
+                    "children": []
+                  },
+                  {
+                    "text": "Nachteile",
+                    "children": []
+                  },
+                  {
+                    "text": "Gebühren",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

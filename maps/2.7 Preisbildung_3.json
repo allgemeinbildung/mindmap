@@ -1,0 +1,33 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Angebot",
+        "children": [
+          {
+            "text": "Güterarten",
+            "children": [
+              {
+                "text": "Wirtschaftliche vs. freie Güter"
+              },
+              {
+                "text": "Sachgüter vs. Dienstleistungen"
+              },
+              {
+                "text": "Konsumgüter vs. Investitionsgüter"
+              },
+              {
+                "text": "Gebrauchsgüter vs. Verbrauchsgüter"
+              }
+            ]
+          },
+          {
+            "text": "Angebotskurve",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

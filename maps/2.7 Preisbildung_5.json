@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Wirtschaftskreislauf",
+        "children": [
+          {
+            "text": "Einfacher Wirtschaftskreislauf",
+            "children": [
+              {
+                "text": "Akteure (Haushalte, Unternehmen)"
+              },
+              {
+                "text": "Ströme (Güterstrom, Geldstrom)"
+              }
+            ]
+          },
+          {
+            "text": "Erweiterter Wirtschaftskreislauf",
+            "children": [
+              {
+                "text": "Zusätzliche Akteure (Staat, Banken, Ausland)"
+              },
+              {
+                "text": "Hauptfunktionen & Geldflüsse",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

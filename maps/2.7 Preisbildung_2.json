@@ -1,0 +1,49 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Nachfrage",
+        "children": [
+          {
+            "text": "Bedürfnisse (Allgemein)",
+            "children": []
+          },
+          {
+            "text": "Bedürfnispyramide Maslow",
+            "children": [
+              {
+                "text": "Stufe 1: Grundbedürfnisse"
+              },
+              {
+                "text": "Stufe 2: Sicherheitsbedürfnisse"
+              },
+              {
+                "text": "Stufe 3: Soziale Bedürfnisse"
+              },
+              {
+                "text": "Stufe 4: Wertschätzungsbedürfnisse"
+              },
+              {
+                "text": "Stufe 5: Selbstverwirklichung"
+              }
+            ]
+          },
+          {
+            "text": "Bedürfnisarten",
+            "children": []
+          },
+          {
+            "text": "Nachfragekurve",
+            "children": [
+              {
+                "text": "Gesetz der Nachfrage",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

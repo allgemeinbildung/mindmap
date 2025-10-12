@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Markt",
+        "children": [
+          {
+            "text": "Preisbildung (Allgemein)",
+            "children": []
+          },
+          {
+            "text": "Marktgleichgewicht",
+            "children": [
+              {
+                "text": "Gleichgewichtspreis"
+              },
+              {
+                "text": "Gleichgewichtsmenge"
+              }
+            ]
+          },
+          {
+            "text": "Wettbewerb",
+            "children": []
+          },
+          {
+            "text": "Veränderung des Marktgleichgewichts",
+            "children": [
+              {
+                "text": "Zunahme der Nachfrage"
+              },
+              {
+                "text": "Abnahme der Nachfrage"
+              },
+              {
+                "text": "Zunahme des Angebots"
+              },
+              {
+                "text": "Abnahme des Angebots"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

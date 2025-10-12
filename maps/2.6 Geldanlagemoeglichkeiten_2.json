@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Grundbegriffe",
+        "children": [
+          {
+            "text": "Zins",
+            "children": []
+          },
+          {
+            "text": "Rendite",
+            "children": []
+          },
+          {
+            "text": "Liquidität",
+            "children": []
+          },
+          {
+            "text": "Risiko",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

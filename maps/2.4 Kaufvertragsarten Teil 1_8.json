@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Der Kaufvertrag (OR Art. 184ff)",
+        "children": [
+          {
+            "text": "Störungen (Käufersicht)",
+            "children": [
+              {
+                "text": "Lieferverzug (Mahnkauf OR Art. 107, Fixkauf OR Art. 108)"
+              },
+              {
+                "text": "Mangelhafte Lieferung (Prüfpflicht, Mängelrüge OR Art. 201, Optionen OR Art. 204)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

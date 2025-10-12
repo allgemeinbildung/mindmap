@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Wirtschaftssektoren",
+        "children": [
+          {
+            "text": "1. Sektor (Primär)",
+            "children": []
+          },
+          {
+            "text": "2. Sektor (Sekundär)",
+            "children": []
+          },
+          {
+            "text": "3. Sektor (Tertiär)",
+            "children": []
+          },
+          {
+            "text": "Strukturwandel",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

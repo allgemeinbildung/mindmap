@@ -1,0 +1,42 @@
+{
+  "root": {
+    "text": "Zahlungsarten",
+    "children": [
+      {
+        "text": "Bargeldloser Zahlungsverkehr",
+        "children": [
+          {
+            "text": "Online- & Mobile Zahlungssysteme",
+            "children": [
+              {
+                "text": "Mobile Zahlungssysteme",
+                "children": [
+                  {
+                    "text": "Twint",
+                    "children": [
+                      {
+                        "text": "Funktionsweise/Einsatzmöglichkeiten"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Apple/Samsung/Google Pay",
+                    "children": [
+                      {
+                        "text": "Notwendigkeit einer hinterlegten Karte"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Allgemeine Vor- und Nachteile",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

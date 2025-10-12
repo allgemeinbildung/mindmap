@@ -1,0 +1,18 @@
+{
+  "root": {
+    "text": "Kaufvertragsarten Teil 1",
+    "children": [
+      {
+        "text": "Der Kaufvertrag (OR Art. 184ff)",
+        "children": [
+          {
+            "text": "Quittung (OR Art. 88, Aufbewahrung OR Art. 127, 128)"
+          },
+          {
+            "text": "Internetkauf (CH-Shops UWG, Ausland-Shops)"
+          }
+        ]
+      }
+    ]
+  }
+}

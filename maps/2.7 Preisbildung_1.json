@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Preisbildung",
+    "children": [
+      {
+        "text": "Nachfrage"
+      },
+      {
+        "text": "Angebot"
+      },
+      {
+        "text": "Markt"
+      },
+      {
+        "text": "Wirtschaftskreislauf"
+      },
+      {
+        "text": "Produktionsfaktoren"
+      },
+      {
+        "text": "Wirtschaftssektoren"
+      }
+    ]
+  }
+}

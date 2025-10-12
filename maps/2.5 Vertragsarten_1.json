@@ -1,0 +1,13 @@
+{
+  "root": {
+    "text": "Vertragsarten",
+    "children": [
+      {
+        "text": "Werkvertrag"
+      },
+      {
+        "text": "Einfacher Auftrag"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Geldanlagemöglichkeiten",
+    "children": [
+      {
+        "text": "Magisches Dreieck",
+        "children": [
+          {
+            "text": "Rendite"
+          },
+          {
+            "text": "Sicherheit/Risiko"
+          },
+          {
+            "text": "Liquidität"
+          },
+          {
+            "text": "Kernkonflikt",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
