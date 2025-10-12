@@ -7,7 +7,34 @@
         "children": [
           {
             "text": "Bundesstaat",
-            "children": []
+            "children": [
+              {
+                "text": "Föderalismus in der Schweiz",
+                "children": [
+                  {
+                    "text": "Definition",
+                    "children": []
+                  },
+                  {
+                    "text": "Aufgabenteilung (Beispiele)",
+                    "children": [
+                      {
+                        "text": "Bundesaufgaben",
+                        "children": []
+                      },
+                      {
+                        "text": "Kantonsaufgaben",
+                        "children": []
+                      },
+                      {
+                        "text": "Gemeindeaufgaben",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             "text": "Einheitsstaat",
@@ -16,32 +43,6 @@
           {
             "text": "Staatenbund",
             "children": []
-          },
-          {
-            "text": "Föderalismus in der Schweiz",
-            "children": [
-              {
-                "text": "Definition",
-                "children": []
-              },
-              {
-                "text": "Aufgabenteilung (Beispiele)",
-                "children": [
-                  {
-                    "text": "Bundesaufgaben",
-                    "children": []
-                  },
-                  {
-                    "text": "Kantonsaufgaben",
-                    "children": []
-                  },
-                  {
-                    "text": "Gemeindeaufgaben",
-                    "children": []
-                  }
-                ]
-              }
-            ]
           }
         ]
       }
