@@ -4,55 +4,74 @@
     "children": [
       {
         "text": "Staatsformen und Föderalismus",
-        "children": []
-      },
-      {
-        "text": "Bundesstaat",
-        "children": []
-      },
-      {
-        "text": "Föderalismus in der Schweiz",
-        "children": []
-      },
-      {
-        "text": "Definition",
-        "children": []
-      },
-      {
-        "text": "Aufgabenteilung Beispiele",
-        "children": []
-      },
-      {
-        "text": "Bundesaufgaben",
-        "children": []
-      },
-      {
-        "text": "Kantonsaufgaben",
-        "children": []
-      },
-      {
-        "text": "Gemeindeaufgaben",
-        "children": []
-      },
-      {
-        "text": "Einheitsstaat",
-        "children": []
-      },
-      {
-        "text": "Staatenbund",
-        "children": []
-      },
-      {
-        "text": "Demokratie als Regierungsform",
-        "children": []
-      },
-      {
-        "text": "Konkordanzdemokratie vs Konkurrenzdemokratie",
-        "children": []
-      },
-      {
-        "text": "Abgrenzung Demokratie zur Diktatur",
-        "children": []
+        "children": [
+          {
+            "text": "Bundesstaat",
+            "children": [
+              {
+                "text": "Definition: Zusammenschluss von Teilstaaten zu einem Gesamtstaat (z.B. Schweiz, Deutschland, USA)"
+              }
+            ]
+          },
+          {
+            "text": "Einheitsstaat",
+            "children": [
+              {
+                "text": "Definition: Ein Staat wird von einem Zentrum aus regiert (z.B. Frankreich, Italien, Grossbritannien)"
+              }
+            ]
+          },
+          {
+            "text": "Staatenbund",
+            "children": [
+              {
+                "text": "Definition: Lockerer Zusammenschluss selbstständiger Staaten (z.B. UNO, NATO, OPEC)"
+              }
+            ]
+          },
+          {
+            "text": "Föderalismus in der Schweiz",
+            "children": [
+              {
+                "text": "Definition",
+                "children": [
+                  {
+                    "text": "Macht ist zwischen Bund, Kantonen und Gemeinden aufgeteilt. Jede Ebene hat eigene Aufgaben."
+                  }
+                ]
+              },
+              {
+                "text": "Aufgabenteilung (Beispiele)",
+                "children": [
+                  {
+                    "text": "Bundesaufgaben",
+                    "children": [
+                      {
+                        "text": "Beziehungen zum Ausland, Militär, Nationalstrassennetz, Kernenergie"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Kantonsaufgaben",
+                    "children": [
+                      {
+                        "text": "Polizeiwesen, Gesundheitswesen, Bildungswesen (mit Ausnahmen)"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Gemeindeaufgaben",
+                    "children": [
+                      {
+                        "text": "Ortsplanung, Kehrichtabfuhr, Feuerwehr, Primarschule"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }
