@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 1: Anstoss & Vorentwurf",
+        "children": [
+          {
+            "text": "Anstoss",
+            "children": [
+              {
+                "text": "Bundesrat (von sich aus)"
+              },
+              {
+                "text": "Parlament (mittels Motion)"
+              },
+              {
+                "text": "Aktuelles Beispiel..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

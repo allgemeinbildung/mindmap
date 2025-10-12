@@ -1,0 +1,34 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Medienkritik & Schutz",
+        "children": [
+          {
+            "text": "Medienethik",
+            "children": [
+              {
+                "text": "Grundfrage 1: Wer verschafft wem welchen Zugang..."
+              },
+              {
+                "text": "Grundfrage 2: Wie werden Informationen gewichtet..."
+              }
+            ]
+          },
+          {
+            "text": "Informationsselektion durch Redaktionen",
+            "children": [
+              {
+                "text": "Einfluss auf öffentliche Wahrnehmung"
+              },
+              {
+                "text": "Verantwortung der Medienschaffenden"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

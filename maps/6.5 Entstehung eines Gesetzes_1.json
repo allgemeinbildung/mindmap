@@ -1,0 +1,19 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 1: Anstoss & Vorentwurf"
+      },
+      {
+        "text": "Phase 2: Vernehmlassung & definitive Vorlage"
+      },
+      {
+        "text": "Phase 3: Parlamentarische Behandlung"
+      },
+      {
+        "text": "Phase 4: Referendum & Inkrafttreten"
+      }
+    ]
+  }
+}

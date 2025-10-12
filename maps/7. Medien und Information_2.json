@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Aufgaben & Rolle der Medien",
+        "children": [
+          {
+            "text": "Hauptaufgaben",
+            "children": [
+              {
+                "text": "Information"
+              },
+              {
+                "text": "Unterhaltung"
+              },
+              {
+                "text": "Kulturträger"
+              },
+              {
+                "text": "Kontrolle"
+              }
+            ]
+          },
+          {
+            "text": "Bedeutung für Demokratie",
+            "children": [
+              {
+                "text": "Meinungsbildung ermöglichen"
+              }
+            ]
+          },
+          {
+            "text": "Medien als 4. Gewalt",
+            "children": [
+              {
+                "text": "Kontrollfunktion beschreiben..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

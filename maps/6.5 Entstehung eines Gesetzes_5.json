@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 2: Vernehmlassung & definitive Vorlage",
+        "children": [
+          {
+            "text": "Definitiver Entwurf mit Botschaft",
+            "children": [
+              {
+                "text": "Überarbeitung durch Bundesverwaltung (nach Vernehmlassung)"
+              },
+              {
+                "text": "Vorlage an Parlament"
+              },
+              {
+                "text": "Inhalt & Zweck der Botschaft (z.B. Erläuterungen...)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

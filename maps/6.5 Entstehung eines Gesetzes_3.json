@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 1: Anstoss & Vorentwurf",
+        "children": [
+          {
+            "text": "Vorentwurf",
+            "children": [
+              {
+                "text": "Ausarbeitung durch Expertenkommission"
+              },
+              {
+                "text": "Einsetzung durch Bundesrat"
+              },
+              {
+                "text": "Kennzeichen (z.B. erster detaillierter Entwurf...)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

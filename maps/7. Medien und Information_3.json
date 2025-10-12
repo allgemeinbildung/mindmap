@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Rechtliche Grundlagen",
+        "children": [
+          {
+            "text": "Meinungsfreiheit (BV Art. 16)"
+          },
+          {
+            "text": "Informationsfreiheit (BV Art. 16)"
+          },
+          {
+            "text": "Medienfreiheit (BV Art. 17)"
+          },
+          {
+            "text": "Einschränkungen der Freiheiten",
+            "children": [
+              {
+                "text": "Persönlichkeitsschutz"
+              },
+              {
+                "text": "Antirassismusgesetz"
+              },
+              {
+                "text": "Jugendschutz"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

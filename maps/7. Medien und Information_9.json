@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Medienkritik & Schutz",
+        "children": [
+          {
+            "text": "Schutzmassnahmen gegen Manipulation",
+            "children": [
+              {
+                "text": "Presserat"
+              },
+              {
+                "text": "Rechtliche Grundlagen (BV Art. 16, BV Art. 17)"
+              },
+              {
+                "text": "Medienvielfalt (BAKOM, WEKO)"
+              },
+              {
+                "text": "Selbstschutz der Konsumenten",
+                "children": [
+                  {
+                    "text": "Quellenvergleich"
+                  },
+                  {
+                    "text": "Vertrauenswürdigkeit prüfen"
+                  },
+                  {
+                    "text": "Erkennen von Fake News"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

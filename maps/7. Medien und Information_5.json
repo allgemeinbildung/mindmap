@@ -1,0 +1,46 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Massenmedien",
+        "children": [
+          {
+            "text": "Definition Massenmedien"
+          },
+          {
+            "text": "Eigenschaften Massenmedien",
+            "children": [
+              {
+                "text": "erreichen schnell viele Menschen"
+              },
+              {
+                "text": "Empfänger nicht bekannt"
+              },
+              {
+                "text": "..."
+              },
+              {
+                "text": "..."
+              }
+            ]
+          },
+          {
+            "text": "Arten von Massenmedien",
+            "children": [
+              {
+                "text": "Printmedien (Beispiele...)"
+              },
+              {
+                "text": "elektronische Medien (Beispiele...)"
+              },
+              {
+                "text": "Internet (Beispiele...)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Rechtliche Grundlagen",
+        "children": [
+          {
+            "text": "Service Public (BV Art. 93 Abs. 2)",
+            "children": [
+              {
+                "text": "Aufgaben des Service Public",
+                "children": [
+                  {
+                    "text": "Bildung"
+                  },
+                  {
+                    "text": "kulturelle Entfaltung"
+                  },
+                  {
+                    "text": "freie Meinungsbildung"
+                  },
+                  {
+                    "text": "Unterhaltung"
+                  },
+                  {
+                    "text": "Besonderheiten des Landes berücksichtigen"
+                  }
+                ]
+              },
+              {
+                "text": "Träger (SRG)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

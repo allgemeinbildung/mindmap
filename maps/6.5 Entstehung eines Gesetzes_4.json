@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 2: Vernehmlassung & definitive Vorlage",
+        "children": [
+          {
+            "text": "Vernehmlassung",
+            "children": [
+              {
+                "text": "Adressaten",
+                "children": [
+                  {
+                    "text": "Kantone"
+                  },
+                  {
+                    "text": "Parteien"
+                  },
+                  {
+                    "text": "Verbände"
+                  },
+                  {
+                    "text": "Weitere interessierte Kreise"
+                  }
+                ]
+              },
+              {
+                "text": "Zweck (z.B. Akzeptanz prüfen...)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

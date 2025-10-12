@@ -1,0 +1,16 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Aufgaben & Rolle der Medien"
+      },
+      {
+        "text": "Rechtliche Grundlagen"
+      },
+      {
+        "text": "Medienkritik & Schutz"
+      }
+    ]
+  }
+}

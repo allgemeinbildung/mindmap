@@ -1,0 +1,42 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Medienkritik & Schutz",
+        "children": [
+          {
+            "text": "Formen der Medienmanipulation",
+            "children": [
+              {
+                "text": "Gewichtung von Themen"
+              },
+              {
+                "text": "Manipulative Sprache",
+                "children": [
+                  {
+                    "text": "Euphemismus"
+                  },
+                  {
+                    "text": "Pejoration"
+                  }
+                ]
+              },
+              {
+                "text": "Bildmanipulation",
+                "children": [
+                  {
+                    "text": "Arten (Bildaufbau, Symbolisierung, Retusche...)"
+                  },
+                  {
+                    "text": "Techniken (Fotomontage, inszenierte Fotografie...)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

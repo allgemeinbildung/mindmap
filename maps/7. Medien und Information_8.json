@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Medienlandschaft Schweiz",
+    "children": [
+      {
+        "text": "Medienkritik & Schutz",
+        "children": [
+          {
+            "text": "Zensur",
+            "children": [
+              {
+                "text": "Direkte Zensur"
+              },
+              {
+                "text": "Indirekte Zensur"
+              },
+              {
+                "text": "Zensurverbot Schweiz (BV Art. 17)",
+                "children": [
+                  {
+                    "text": "Beispiel für Ausnahme (Kinderpornografie)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

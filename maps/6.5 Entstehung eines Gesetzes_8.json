@@ -1,0 +1,53 @@
+{
+  "root": {
+    "text": "Entstehung eines Gesetzes",
+    "children": [
+      {
+        "text": "Phase 4: Referendum & Inkrafttreten",
+        "children": [
+          {
+            "text": "Veröffentlichung & Referendumsfrist",
+            "children": [
+              {
+                "text": "Veröffentlichung im Bundesblatt"
+              },
+              {
+                "text": "Beginn Referendumsfrist (100 Tage)"
+              },
+              {
+                "text": "Bedeutung (z.B. Möglichkeit für Abstimmung...)"
+              }
+            ]
+          },
+          {
+            "text": "Volksabstimmung (falls Referendum)",
+            "children": [
+              {
+                "text": "Bedingungen",
+                "children": [
+                  {
+                    "text": "50'000 Unterschriften"
+                  },
+                  {
+                    "text": "8 Kantone"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Inkrafttreten",
+            "children": [
+              {
+                "text": "Bedingung: Wenn kein Referendum ergriffen ODER Volk/Stände zustimmen"
+              },
+              {
+                "text": "Festlegung des Datums i.d.R. durch Bundesrat"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
