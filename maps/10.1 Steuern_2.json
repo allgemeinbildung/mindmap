@@ -6,15 +6,15 @@
         "text": "Steuerpflicht",
         "children": [
           {
-            "text": "Wer ist steuerpflichtig? (natürliche & juristische Personen)",
+            "text": "Wer ist steuerpflichtig?",
             "children": []
           },
           {
-            "text": "Ab wann beginnt die Pflicht? (z.B. Volljährigkeit)",
+            "text": "Ab wann beginnt die Pflicht?",
             "children": []
           },
           {
-            "text": "Sonderregelungen (Minderjährige, Erwerbstätige ohne Wohnsitz)",
+            "text": "Sonderregelungen",
             "children": []
           }
         ]
@@ -70,11 +70,11 @@
         "text": "Steuerbemessung",
         "children": [
           {
-            "text": "Steuerprogression (soziale Gerechtigkeit, Umverteilung)",
+            "text": "Steuerprogression",
             "children": []
           },
           {
-            "text": "Flat Rate Tax (Einheitssatz, Sozialabzug, Auswirkungen)",
+            "text": "Flat Rate Tax",
             "children": []
           }
         ]
