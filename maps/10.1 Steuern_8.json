@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Die wichtigsten Steuerarten",
+    "children": [
+      {
+        "text": "Verrechnungssteuer (VStG)",
+        "children": [
+          {
+            "text": "Zweck",
+            "children": []
+          },
+          {
+            "text": "Betroffene Erträge",
+            "children": []
+          },
+          {
+            "text": "Höhe",
+            "children": []
+          },
+          {
+            "text": "Prinzip der Rückerstattung",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
