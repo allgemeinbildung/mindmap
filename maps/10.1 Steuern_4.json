@@ -1,1 +1,39 @@
-1
+{
+  "root": {
+    "text": "Grundlagen der Besteuerung",
+    "children": [
+      {
+        "text": "Steuerzwecke",
+        "children": [
+          {
+            "text": "Fiskalpolitischer Zweck",
+            "children": [
+              {
+                "text": "Beispiele notieren",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Sozialpolitischer Zweck",
+            "children": [
+              {
+                "text": "Beispiele notieren",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Wirtschaftspolitischer Zweck",
+            "children": [
+              {
+                "text": "Beispiele notieren",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
