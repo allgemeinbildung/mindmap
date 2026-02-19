@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Grundlagen der Besteuerung",
+    "children": [
+      {
+        "text": "Steuerhoheit",
+        "children": [
+          {
+            "text": "Bund",
+            "children": [
+              {
+                "text": "Charakteristische Steuerarten auflisten",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Kantone",
+            "children": [
+              {
+                "text": "Charakteristische Steuerarten auflisten",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Gemeinden",
+            "children": [
+              {
+                "text": "Charakteristische Steuerarten auflisten",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
