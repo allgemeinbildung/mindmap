@@ -1,0 +1,42 @@
+{
+  "root": {
+    "text": "Grundlagen der Besteuerung",
+    "children": [
+      {
+        "text": "Steuerbemessung",
+        "children": [
+          {
+            "text": "Steuerprogression",
+            "children": [
+              {
+                "text": "Definition",
+                "children": []
+              },
+              {
+                "text": "Ziel",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Flat Rate Tax",
+            "children": [
+              {
+                "text": "Definition",
+                "children": []
+              },
+              {
+                "text": "Grundidee",
+                "children": []
+              },
+              {
+                "text": "Mögliche Auswirkungen",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
