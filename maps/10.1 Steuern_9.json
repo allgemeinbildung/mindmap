@@ -1,0 +1,28 @@
+{
+  "root": {
+    "text": "Indirekte Steuern",
+    "children": [
+      {
+        "text": "Mehrwertsteuer (MWST)",
+        "children": [
+          {
+            "text": "Definition",
+            "children": []
+          },
+          {
+            "text": "Steuersätze",
+            "children": []
+          },
+          {
+            "text": "Ausnahmen von der MWST",
+            "children": []
+          },
+          {
+            "text": "Prinzip der Erhebung",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
