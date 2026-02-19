@@ -1,0 +1,84 @@
+{
+  "root": {
+    "text": "Grundlagen der Besteuerung",
+    "children": [
+      {
+        "text": "Steuerpflicht",
+        "children": [
+          {
+            "text": "Wer ist steuerpflichtig? (natürliche & juristische Personen)",
+            "children": []
+          },
+          {
+            "text": "Ab wann beginnt die Pflicht? (z.B. Volljährigkeit)",
+            "children": []
+          },
+          {
+            "text": "Sonderregelungen (Minderjährige, Erwerbstätige ohne Wohnsitz)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Staatsfinanzierung (Bund)",
+        "children": [
+          {
+            "text": "Einnahmen Bund (wichtigste Quellen)",
+            "children": []
+          },
+          {
+            "text": "Ausgaben Bund (grösste Posten)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Steuerzwecke",
+        "children": [
+          {
+            "text": "Fiskalpolitischer Zweck (inkl. Beispiele)",
+            "children": []
+          },
+          {
+            "text": "Sozialpolitischer Zweck (inkl. Beispiele)",
+            "children": []
+          },
+          {
+            "text": "Wirtschaftspolitischer Zweck (inkl. Beispiele)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Steuerhoheit",
+        "children": [
+          {
+            "text": "Bund (charakteristische Steuerarten)",
+            "children": []
+          },
+          {
+            "text": "Kantone (charakteristische Steuerarten)",
+            "children": []
+          },
+          {
+            "text": "Gemeinden (charakteristische Steuerarten)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Steuerbemessung",
+        "children": [
+          {
+            "text": "Steuerprogression (soziale Gerechtigkeit, Umverteilung)",
+            "children": []
+          },
+          {
+            "text": "Flat Rate Tax (Einheitssatz, Sozialabzug, Auswirkungen)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
