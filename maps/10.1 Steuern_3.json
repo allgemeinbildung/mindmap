@@ -1,1 +1,20 @@
-1
+{
+  "root": {
+    "text": "Grundlagen der Besteuerung",
+    "children": [
+      {
+        "text": "Staatsfinanzierung (Bund)",
+        "children": [
+          {
+            "text": "Einnahmen Bund (wichtigste Einnahmequellen auflisten)",
+            "children": []
+          },
+          {
+            "text": "Ausgaben Bund (grösste Ausgabenposten notieren)",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
