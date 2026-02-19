@@ -1,0 +1,41 @@
+{
+  "root": {
+    "text": "Die wichtigsten Steuerarten",
+    "children": [
+      {
+        "text": "Direkte Steuern",
+        "children": [
+          {
+            "text": "Definition",
+            "children": []
+          },
+          {
+            "text": "Wichtigste Beispiele (Bund und Kantone)",
+            "children": []
+          },
+          {
+            "text": "Typische Tarifgestaltung",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Indirekte Steuern",
+        "children": [
+          {
+            "text": "Definition",
+            "children": []
+          },
+          {
+            "text": "Wichtigste Beispiele (Bund und Kantone)",
+            "children": []
+          },
+          {
+            "text": "Typische Tarifgestaltung",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
