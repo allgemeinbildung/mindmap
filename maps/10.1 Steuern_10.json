@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Das Steuerverfahren",
+    "children": [
+      {
+        "text": "Steuererklärung",
+        "children": [
+          {
+            "text": "Pflicht zur Selbstdeklaration",
+            "children": []
+          },
+          {
+            "text": "Unterscheidung: Steuerhinterziehung vs. Steuerbetrug",
+            "children": []
+          },
+          {
+            "text": "Benötigte Unterlagen",
+            "children": []
+          },
+          {
+            "text": "Grundlegender Aufbau",
+            "children": []
+          },
+          {
+            "text": "Administrative Aspekte",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
