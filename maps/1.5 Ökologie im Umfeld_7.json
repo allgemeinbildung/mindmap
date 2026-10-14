@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Abfallmanagement",
+    "children": [
+      {
+        "text": "Littering",
+        "children": [
+          {
+            "text": "Definition"
+          },
+          {
+            "text": "Ökonomische Folgen",
+            "children": [
+              {
+                "text": "Kostenangabe"
+              }
+            ]
+          },
+          {
+            "text": "Ökologische Folgen"
+          },
+          {
+            "text": "Gesellschaftliche Folgen"
+          },
+          {
+            "text": "Typische gelitterte Gegenstände"
+          }
+        ]
+      }
+    ]
+  }
+}

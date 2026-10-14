@@ -1,0 +1,51 @@
+{
+  "root": {
+    "text": "Mobilität Schweiz: Status & Prognosen",
+    "children": [
+      {
+        "text": "Innovative Mobilitätskonzepte",
+        "children": [
+          {
+            "text": "Veloschnellrouten",
+            "children": [
+              {
+                "text": "Ziele"
+              },
+              {
+                "text": "Anforderungen"
+              }
+            ]
+          },
+          {
+            "text": "Carsharing",
+            "children": [
+              {
+                "text": "Prinzip"
+              },
+              {
+                "text": "Eignung"
+              },
+              {
+                "text": "Zielgruppe"
+              }
+            ]
+          },
+          {
+            "text": "Autonomes Fahren",
+            "children": [
+              {
+                "text": "Level 0-4"
+              },
+              {
+                "text": "Mehrwert"
+              },
+              {
+                "text": "Anforderungen an die Infrastruktur"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Mobilität Schweiz: Status & Prognosen",
+    "children": [
+      {
+        "text": "Verkehrswachstum",
+        "children": [
+          {
+            "text": "ÖV"
+          },
+          {
+            "text": "MIV"
+          },
+          {
+            "text": "Langsamverkehr"
+          }
+        ]
+      },
+      {
+        "text": "Städtische Herausforderungen",
+        "children": [
+          {
+            "text": "Konkrete Beispiele"
+          },
+          {
+            "text": "Zusätzliches Einwohnerwachstum"
+          }
+        ]
+      },
+      {
+        "text": "Trend Nachhaltigkeit/E-Mobilität",
+        "children": [
+          {
+            "text": "Geben den Takt an"
+          }
+        ]
+      }
+    ]
+  }
+}

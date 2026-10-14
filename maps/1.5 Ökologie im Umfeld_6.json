@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Abfallmanagement",
+    "children": [
+      {
+        "text": "Abfallverbrennung (KVA)",
+        "children": [
+          {
+            "text": "Vorteile"
+          },
+          {
+            "text": "Nachteile"
+          },
+          {
+            "text": "Anteil der Energiegewinnung"
+          },
+          {
+            "text": "Prozentsatz der CO2-Emissionen"
+          }
+        ]
+      }
+    ]
+  }
+}

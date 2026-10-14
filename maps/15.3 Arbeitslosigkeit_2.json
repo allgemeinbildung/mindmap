@@ -1,0 +1,65 @@
+{
+  "root": {
+    "text": "Arbeitslosigkeit",
+    "children": [
+      {
+        "text": "Definition & Messung",
+        "children": [
+          {
+            "text": "RAV-gemeldete Personen",
+            "children": [
+              {
+                "text": "Wer wird gezählt, wer nicht"
+              }
+            ]
+          },
+          {
+            "text": "ILO-Erhebung",
+            "children": [
+              {
+                "text": "Unterschied zur RAV-Zählung"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Unterstützungssysteme Schweiz",
+        "children": [
+          {
+            "text": "ALV",
+            "children": [
+              {
+                "text": "Art der Unterstützung"
+              }
+            ]
+          },
+          {
+            "text": "RAV",
+            "children": [
+              {
+                "text": "Art der Unterstützung"
+              }
+            ]
+          },
+          {
+            "text": "Kurzarbeitsentschädigung",
+            "children": [
+              {
+                "text": "Art der Unterstützung"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Schweiz im internationalen Vergleich",
+        "children": [
+          {
+            "text": "Kategorie von Ländern"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Mobilität Schweiz: Status & Prognosen",
+    "children": [
+      {
+        "text": "Zukunft der Mobilität: Finanzierung & Steuerung",
+        "children": [
+          {
+            "text": "Gründe für Finanzierungsbedarf",
+            "children": [
+              {
+                "text": "Verkehrszunahme"
+              },
+              {
+                "text": "Tendenz weg von Diesel/Benzin"
+              }
+            ]
+          },
+          {
+            "text": "Mobility Pricing",
+            "children": [
+              {
+                "text": "Grundprinzip"
+              },
+              {
+                "text": "Ziele"
+              },
+              {
+                "text": "Status der Pilotprojekte",
+                "children": [
+                  {
+                    "text": "Bund"
+                  },
+                  {
+                    "text": "Kantone/Gemeinden"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

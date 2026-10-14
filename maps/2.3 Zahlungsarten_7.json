@@ -1,29 +1,21 @@
 {
   "root": {
-    "text": "Zahlungsarten",
+    "text": "Bargeldloser Zahlungsverkehr",
     "children": [
       {
-        "text": "Bargeldloser Zahlungsverkehr",
+        "text": "Online- & Mobile Zahlungssysteme",
         "children": [
           {
-            "text": "Kartenbasierte Zahlungen",
+            "text": "PayPal",
             "children": [
               {
-                "text": "Kundenkarten",
-                "children": [
-                  {
-                    "text": "Hauptzweck (Kundenbindung, Datengewinnung)",
-                    "children": []
-                  },
-                  {
-                    "text": "Vorteile",
-                    "children": []
-                  },
-                  {
-                    "text": "Nachteile",
-                    "children": []
-                  }
-                ]
+                "text": "Funktionsweise"
+              },
+              {
+                "text": "Vorteile"
+              },
+              {
+                "text": "Nachteile"
               }
             ]
           }

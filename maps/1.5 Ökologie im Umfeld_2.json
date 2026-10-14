@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Bewusster Konsum",
+    "children": [
+      {
+        "text": "Ökologische Kriterien",
+        "children": [
+          {
+            "text": "Schlüsselbegriffe und Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Ethische Kriterien",
+        "children": [
+          {
+            "text": "Schlüsselbegriffe und Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Produktlabels",
+        "children": [
+          {
+            "text": "Fairtrade"
+          },
+          {
+            "text": "Bio"
+          },
+          {
+            "text": "IP-Suisse"
+          },
+          {
+            "text": "FSC"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Arten der Arbeitslosigkeit",
+    "children": [
+      {
+        "text": "Konjunkturelle Arbeitslosigkeit",
+        "children": [
+          {
+            "text": "Ursache: Rückgang der gesamtwirtschaftlichen Nachfrage"
+          },
+          {
+            "text": "Dauer: mittelfristig (kann langfristig werden)"
+          },
+          {
+            "text": "Betrifft: alle Wirtschaftsbereiche"
+          },
+          {
+            "text": "Instrument: Kurzarbeitsentschädigung (Ziel, Wirkung)"
+          }
+        ]
+      }
+    ]
+  }
+}

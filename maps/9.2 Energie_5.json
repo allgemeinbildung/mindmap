@@ -1,0 +1,32 @@
+{
+  "root": {
+    "text": "Nachhaltigkeitsaspekte (Graue Energie & Ökobilanz)",
+    "children": [
+      {
+        "text": "Graue Energie",
+        "children": [
+          {
+            "text": "Definition"
+          },
+          {
+            "text": "Beispiele mit Energiewerten"
+          }
+        ]
+      },
+      {
+        "text": "Ökobilanz",
+        "children": [
+          {
+            "text": "Hauptzweck"
+          },
+          {
+            "text": "Betrachtete Phasen des Produktlebenszyklus"
+          },
+          {
+            "text": "Arten von Umweltbelastungen und Ressourcenverbrauch"
+          }
+        ]
+      }
+    ]
+  }
+}

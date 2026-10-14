@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Politische Instrumente",
+    "children": [
+      {
+        "text": "Appelle",
+        "children": [
+          {
+            "text": "Mindestens ein konkretes Beispiel"
+          }
+        ]
+      },
+      {
+        "text": "Anreize",
+        "children": [
+          {
+            "text": "Mindestens ein konkretes Beispiel"
+          }
+        ]
+      },
+      {
+        "text": "Verbote/Beschränkungen",
+        "children": [
+          {
+            "text": "Mindestens ein konkretes Beispiel"
+          }
+        ]
+      },
+      {
+        "text": "Nachsorge",
+        "children": [
+          {
+            "text": "Mindestens ein konkretes Beispiel"
+          }
+        ]
+      }
+    ]
+  }
+}

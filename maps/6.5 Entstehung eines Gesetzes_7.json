@@ -1,23 +1,18 @@
 {
   "root": {
-    "text": "Entstehung eines Gesetzes",
+    "text": "Phase 3: Parlamentarische Behandlung",
     "children": [
       {
-        "text": "Phase 3: Parlamentarische Behandlung",
+        "text": "Differenzbereinigungsverfahren",
         "children": [
           {
-            "text": "Differenzbereinigungsverfahren",
-            "children": [
-              {
-                "text": "Auslöser: Bei abweichenden Beschlüssen von National- & Ständerat"
-              },
-              {
-                "text": "Ziel: Einigung bei strittigen Punkten"
-              },
-              {
-                "text": "Konsequenz: Scheitern des Gesetzes bei Nichteinigung"
-              }
-            ]
+            "text": "Bei abweichenden Beschlüssen von National- & Ständerat"
+          },
+          {
+            "text": "Einigung bei strittigen Punkten"
+          },
+          {
+            "text": "Scheitern des Gesetzes bei Nichteinigung"
           }
         ]
       }

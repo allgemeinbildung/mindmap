@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Arten der Arbeitslosigkeit",
+    "children": [
+      {
+        "text": "Friktionelle Arbeitslosigkeit",
+        "children": [
+          {
+            "text": "Definition: Übergang zwischen zwei Stellen"
+          },
+          {
+            "text": "Dauer: meist kurz"
+          },
+          {
+            "text": "Reduzierbar durch: effiziente Arbeitsvermittlung"
+          },
+          {
+            "text": "In gut laufender Wirtschaft immer vorhanden"
+          }
+        ]
+      }
+    ]
+  }
+}

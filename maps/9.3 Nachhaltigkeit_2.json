@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Grundlagen & Dimensionen",
+    "children": [
+      {
+        "text": "Definition (UNO)",
+        "children": [
+          {
+            "text": "Kernbotschaft"
+          }
+        ]
+      },
+      {
+        "text": "Ökologische Nachhaltigkeit",
+        "children": [
+          {
+            "text": "Mindestens zwei Schlüsselbegriffe oder Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Ökonomische Nachhaltigkeit",
+        "children": [
+          {
+            "text": "Mindestens zwei Schlüsselbegriffe oder Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Soziale Nachhaltigkeit",
+        "children": [
+          {
+            "text": "Mindestens zwei Schlüsselbegriffe oder Beispiele"
+          }
+        ]
+      }
+    ]
+  }
+}

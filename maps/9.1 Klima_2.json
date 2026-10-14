@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "9.1 Klima",
+    "children": [
+      {
+        "text": "Treibhauseffekt",
+        "children": [
+          {
+            "text": "Natürlicher Treibhauseffekt",
+            "children": [
+              {
+                "text": "Funktionsweise"
+              },
+              {
+                "text": "Durchschnittliche Erdtemperatur mit und ohne ihn"
+              },
+              {
+                "text": "Wichtigste natürliche Treibhausgase"
+              }
+            ]
+          },
+          {
+            "text": "Anthropogener Treibhauseffekt",
+            "children": [
+              {
+                "text": "Wodurch verursacht"
+              },
+              {
+                "text": "Seit wann"
+              },
+              {
+                "text": "Wichtigste Ursache"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

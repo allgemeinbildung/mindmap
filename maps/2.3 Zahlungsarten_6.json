@@ -1,37 +1,24 @@
 {
   "root": {
-    "text": "Zahlungsarten",
+    "text": "Kartenbasierte Zahlungen",
     "children": [
       {
-        "text": "Bargeldloser Zahlungsverkehr",
+        "text": "Kreditkarten",
         "children": [
           {
-            "text": "Kartenbasierte Zahlungen",
+            "text": "Kernfunktion"
+          },
+          {
+            "text": "Vor- und Nachteile"
+          },
+          {
+            "text": "Kontaktloses Zahlen",
             "children": [
               {
-                "text": "Kreditkarten",
-                "children": [
-                  {
-                    "text": "Kernfunktion (monatliche Abrechnung)",
-                    "children": []
-                  },
-                  {
-                    "text": "Vor- und Nachteile",
-                    "children": []
-                  },
-                  {
-                    "text": "Kontaktloses Zahlen",
-                    "children": [
-                      {
-                        "text": "Limite (Fr. 80.-)"
-                      },
-                      {
-                        "text": "Vor- oder Nachteil",
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
+                "text": "Limite"
+              },
+              {
+                "text": "Vor- oder Nachteil"
               }
             ]
           }

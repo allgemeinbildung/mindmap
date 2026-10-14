@@ -1,0 +1,40 @@
+{
+  "root": {
+    "text": "Energiestrategie 2050 (CH)",
+    "children": [
+      {
+        "text": "Energieverbrauch senken",
+        "children": [
+          {
+            "text": "Ziel"
+          },
+          {
+            "text": "Massnahme"
+          }
+        ]
+      },
+      {
+        "text": "Erneuerbare Energien fördern",
+        "children": [
+          {
+            "text": "Ziel"
+          },
+          {
+            "text": "Massnahme"
+          }
+        ]
+      },
+      {
+        "text": "Keine neuen Kernkraftwerke",
+        "children": [
+          {
+            "text": "Ziel"
+          },
+          {
+            "text": "Massnahme"
+          }
+        ]
+      }
+    ]
+  }
+}

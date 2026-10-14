@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "Folgen des Klimawandels",
+    "children": [
+      {
+        "text": "Folgen im Alpenraum",
+        "children": [
+          {
+            "text": "Gletscherschmelze",
+            "children": [
+              {
+                "text": "Verluste an Eisvolumen seit 1850"
+              },
+              {
+                "text": "Zukünftige Prognose"
+              }
+            ]
+          },
+          {
+            "text": "Permafrost",
+            "children": [
+              {
+                "text": "Was Permafrost ist"
+              },
+              {
+                "text": "Wo er vorkommt"
+              },
+              {
+                "text": "Konkrete Gefahren"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

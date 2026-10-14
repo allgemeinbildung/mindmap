@@ -1,0 +1,13 @@
+{
+  "root": {
+    "text": "Ökologie im Umfeld",
+    "children": [
+      {
+        "text": "Bewusster Konsum"
+      },
+      {
+        "text": "Abfallmanagement"
+      }
+    ]
+  }
+}

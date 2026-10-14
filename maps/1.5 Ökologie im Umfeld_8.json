@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Abfallmanagement",
+    "children": [
+      {
+        "text": "Gesetzliche Grundlagen & Lösungsansätze",
+        "children": [
+          {
+            "text": "USG (Umweltschutz-Gesetz)",
+            "children": [
+              {
+                "text": "Verursacherprinzip"
+              }
+            ]
+          },
+          {
+            "text": "BAFU-Strategie",
+            "children": [
+              {
+                "text": "Vermeiden"
+              },
+              {
+                "text": "Vermindern"
+              },
+              {
+                "text": "Verwerten"
+              }
+            ]
+          },
+          {
+            "text": "Massnahmen gegen Littering",
+            "children": [
+              {
+                "text": "Gesetzliche Bussen"
+              },
+              {
+                "text": "Prävention/Sensibilisierung"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

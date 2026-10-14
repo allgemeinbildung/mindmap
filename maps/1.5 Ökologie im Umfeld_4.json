@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "Abfallmanagement",
+    "children": [
+      {
+        "text": "Abfallarten in der Schweiz",
+        "children": [
+          {
+            "text": "Siedlungsabfall"
+          },
+          {
+            "text": "Bauabfall"
+          }
+        ]
+      },
+      {
+        "text": "Ursachen für Abfallzunahme",
+        "children": [
+          {
+            "text": "Genannte Gründe"
+          }
+        ]
+      },
+      {
+        "text": "Recyclingpotenzial"
+      }
+    ]
+  }
+}

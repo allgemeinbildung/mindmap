@@ -1,0 +1,39 @@
+{
+  "root": {
+    "text": "Internationale Klimapolitik",
+    "children": [
+      {
+        "text": "Erdgipfel Rio 1992",
+        "children": [
+          {
+            "text": "Hauptziel oder zentraler Beschluss"
+          }
+        ]
+      },
+      {
+        "text": "Kyoto-Protokoll",
+        "children": [
+          {
+            "text": "Hauptziel oder zentraler Beschluss"
+          }
+        ]
+      },
+      {
+        "text": "Pariser Abkommen 2015",
+        "children": [
+          {
+            "text": "Hauptziel oder zentraler Beschluss"
+          }
+        ]
+      },
+      {
+        "text": "Glasgow Climate Pact 2021",
+        "children": [
+          {
+            "text": "Hauptziel oder zentraler Beschluss"
+          }
+        ]
+      }
+    ]
+  }
+}

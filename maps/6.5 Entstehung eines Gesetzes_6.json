@@ -1,69 +1,44 @@
 {
   "root": {
-    "text": "Entstehung eines Gesetzes",
+    "text": "Phase 3: Parlamentarische Behandlung",
     "children": [
       {
-        "text": "Phase 3: Parlamentarische Behandlung",
+        "text": "Behandlung im Nationalrat",
         "children": [
           {
-            "text": "Behandlung im Nationalrat",
-            "children": [
-              {
-                "text": "Ablauf",
-                "children": [
-                  {
-                    "text": "Vorberatende Kommission"
-                  },
-                  {
-                    "text": "Detailberatung im Rat"
-                  },
-                  {
-                    "text": "Abstimmung im Rat"
-                  }
-                ]
-              },
-              {
-                "text": "Mögliche Ausgänge",
-                "children": [
-                  {
-                    "text": "Nichteintreten"
-                  },
-                  {
-                    "text": "Rückweisung an Bundesrat"
-                  }
-                ]
-              }
-            ]
+            "text": "Vorberatende Kommission"
           },
           {
-            "text": "Behandlung im Ständerat",
-            "children": [
-              {
-                "text": "Ablauf",
-                "children": [
-                  {
-                    "text": "Vorberatende Kommission"
-                  },
-                  {
-                    "text": "Detailberatung im Rat"
-                  },
-                  {
-                    "text": "Abstimmung im Rat"
-                  }
-                ]
-              },
-              {
-                "text": "Mögliche Ausgänge",
-                "children": [
-                  {
-                    "text": "Nichteintreten"
-                  },
-                  {
-                    "text": "Rückweisung an Bundesrat"
-                  }
-                ]
-              }
-            ]
+            "text": "Detailberatung im Rat"
+          },
+          {
+            "text": "Abstimmung im Rat"
+          },
+          {
+            "text": "Nichteintreten"
+          },
+          {
+            "text": "Rückweisung an Bundesrat"
+          }
+        ]
+      },
+      {
+        "text": "Behandlung im Ständerat",
+        "children": [
+          {
+            "text": "Vorberatende Kommission"
+          },
+          {
+            "text": "Detailberatung im Rat"
+          },
+          {
+            "text": "Abstimmung im Rat"
+          },
+          {
+            "text": "Nichteintreten"
+          },
+          {
+            "text": "Rückweisung an Bundesrat"
           }
         ]
       }

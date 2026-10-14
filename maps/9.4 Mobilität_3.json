@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Mobilität Schweiz: Status & Prognosen",
+    "children": [
+      {
+        "text": "Auswirkungen der Mobilität",
+        "children": [
+          {
+            "text": "Bodenbeanspruchung"
+          },
+          {
+            "text": "Energieverbrauch"
+          },
+          {
+            "text": "Luftschadstoff-Emissionen"
+          },
+          {
+            "text": "Lärmbelastung"
+          }
+        ]
+      }
+    ]
+  }
+}

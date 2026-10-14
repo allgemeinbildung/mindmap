@@ -1,31 +1,28 @@
 {
   "root": {
-    "text": "Zahlungsarten",
+    "text": "Online- & Mobile Zahlungssysteme",
     "children": [
       {
-        "text": "Bargeldloser Zahlungsverkehr",
+        "text": "Mobile Zahlungssysteme",
         "children": [
           {
-            "text": "Kartenbasierte Zahlungen",
+            "text": "Twint",
             "children": [
               {
-                "text": "Travel-Prepaid-Karte",
-                "children": [
-                  {
-                    "text": "Kernfunktion (aufladbar, für Reisen)",
-                    "children": []
-                  },
-                  {
-                    "text": "Vorteile",
-                    "children": []
-                  },
-                  {
-                    "text": "Nachteile/Gebühren",
-                    "children": []
-                  }
-                ]
+                "text": "Funktionsweise/Einsatzmöglichkeiten"
               }
             ]
+          },
+          {
+            "text": "Apple/Samsung/Google Pay",
+            "children": [
+              {
+                "text": "Notwendigkeit einer hinterlegten Karte"
+              }
+            ]
+          },
+          {
+            "text": "Vor- und Nachteile von Smartphone-Zahlungen"
           }
         ]
       }

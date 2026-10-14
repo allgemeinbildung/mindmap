@@ -1,0 +1,26 @@
+{
+  "root": {
+    "text": "Qualifizierung für den Arbeitsmarkt",
+    "children": [
+      {
+        "text": "Motivation & Nutzen von Weiterbildung",
+        "children": [
+          {
+            "text": "Wichtigste genannte Gründe"
+          },
+          {
+            "text": "Lohnentwicklung",
+            "children": [
+              {
+                "text": "Mehrverdienst"
+              },
+              {
+                "text": "Amortisationszeit"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

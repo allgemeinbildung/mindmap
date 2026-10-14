@@ -1,0 +1,80 @@
+{
+  "root": {
+    "text": "Zukunft der Mobilität: Finanzierung & Steuerung",
+    "children": [
+      {
+        "text": "E-Mobilität: Technologien & Fahrzeuge",
+        "children": [
+          {
+            "text": "Zweirädrige Kleinfahrzeuge",
+            "children": [
+              {
+                "text": "Beispiele"
+              },
+              {
+                "text": "Merkmale"
+              },
+              {
+                "text": "Entwicklungen"
+              },
+              {
+                "text": "Typische Einsatzgebiete"
+              }
+            ]
+          },
+          {
+            "text": "Elektrische Autos (PKW)",
+            "children": [
+              {
+                "text": "Beispiele"
+              },
+              {
+                "text": "Merkmale"
+              },
+              {
+                "text": "Entwicklungen"
+              },
+              {
+                "text": "Typische Einsatzgebiete"
+              }
+            ]
+          },
+          {
+            "text": "Weitere vierrädrige E-Fahrzeuge",
+            "children": [
+              {
+                "text": "Beispiele"
+              },
+              {
+                "text": "Merkmale"
+              },
+              {
+                "text": "Entwicklungen"
+              },
+              {
+                "text": "Typische Einsatzgebiete"
+              }
+            ]
+          },
+          {
+            "text": "E-Systeme Schienenverkehr",
+            "children": [
+              {
+                "text": "Beispiele"
+              },
+              {
+                "text": "Merkmale"
+              },
+              {
+                "text": "Entwicklungen"
+              },
+              {
+                "text": "Typische Einsatzgebiete"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "root": {
+    "text": "Arten der Arbeitslosigkeit",
+    "children": [
+      {
+        "text": "Saisonale Arbeitslosigkeit",
+        "children": [
+          {
+            "text": "Definition: Nachfrageschwankungen je nach Jahreszeit"
+          },
+          {
+            "text": "Betroffene Branchen: Baugewerbe, Forstwirtschaft, Tourismus"
+          }
+        ]
+      }
+    ]
+  }
+}

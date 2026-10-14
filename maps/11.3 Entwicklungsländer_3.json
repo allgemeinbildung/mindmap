@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Ursachen der Unterentwicklung",
+    "children": [
+      {
+        "text": "Endogene Ursachen",
+        "children": [
+          {
+            "text": "Hauptfaktoren"
+          }
+        ]
+      },
+      {
+        "text": "Exogene Ursachen",
+        "children": [
+          {
+            "text": "Hauptfaktoren"
+          }
+        ]
+      },
+      {
+        "text": "Verantwortung der Industrieländer",
+        "children": [
+          {
+            "text": "Kernpunkte"
+          }
+        ]
+      }
+    ]
+  }
+}

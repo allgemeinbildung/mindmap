@@ -1,0 +1,29 @@
+{
+  "root": {
+    "text": "9.1 Klima",
+    "children": [
+      {
+        "text": "Ozon/Ozonschicht",
+        "children": [
+          {
+            "text": "Definition Ozon (O3)"
+          },
+          {
+            "text": "Funktion der Ozonschicht"
+          },
+          {
+            "text": "Ursachen Ozonloch",
+            "children": [
+              {
+                "text": "Verursacherstoffe"
+              }
+            ]
+          },
+          {
+            "text": "Folgen des Ozonlochs"
+          }
+        ]
+      }
+    ]
+  }
+}

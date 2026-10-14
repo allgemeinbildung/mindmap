@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Qualifizierung für den Arbeitsmarkt",
+    "children": [
+      {
+        "text": "Höhere Berufsbildung",
+        "children": [
+          {
+            "text": "Fach-/Führungsverantwortung"
+          },
+          {
+            "text": "eidg. Fachausweis/Diplom"
+          }
+        ]
+      },
+      {
+        "text": "Berufsmaturität (BM)",
+        "children": [
+          {
+            "text": "BM1",
+            "children": [
+              {
+                "text": "Zugangsvoraussetzungen"
+              },
+              {
+                "text": "Ziel"
+              }
+            ]
+          },
+          {
+            "text": "BM2",
+            "children": [
+              {
+                "text": "Zugangsvoraussetzungen"
+              },
+              {
+                "text": "Ziel"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

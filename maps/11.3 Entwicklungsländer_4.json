@@ -1,0 +1,53 @@
+{
+  "root": {
+    "text": "Entwicklungspolitik und -zusammenarbeit",
+    "children": [
+      {
+        "text": "Ziele der Entwicklungspolitik (allgemein)",
+        "children": [
+          {
+            "text": "Kernaussagen"
+          }
+        ]
+      },
+      {
+        "text": "Schweizer Verfassungsauftrag (BV Art. 54)",
+        "children": [
+          {
+            "text": "Kernaussagen"
+          }
+        ]
+      },
+      {
+        "text": "UNO Ziele (Agenda 2030)",
+        "children": [
+          {
+            "text": "Kernaussagen"
+          }
+        ]
+      },
+      {
+        "text": "Schweizer EZA / DEZA",
+        "children": [
+          {
+            "text": "Auftrag/Ziele der EZA"
+          },
+          {
+            "text": "Formen der EZA (bilateral/multilateral)"
+          },
+          {
+            "text": "Hilfe zur Selbsthilfe"
+          },
+          {
+            "text": "Themenbereiche der DEZA",
+            "children": [
+              {
+                "text": "Mindestens vier"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

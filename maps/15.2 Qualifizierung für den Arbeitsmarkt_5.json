@@ -1,0 +1,36 @@
+{
+  "root": {
+    "text": "Qualifizierung für den Arbeitsmarkt",
+    "children": [
+      {
+        "text": "Auswahlkriterien Weiterbildung",
+        "children": [
+          {
+            "text": "Berufliche Ziele definieren",
+            "children": [
+              {
+                "text": "Leitfrage"
+              }
+            ]
+          },
+          {
+            "text": "Eigene Berufung/Leidenschaft/Stärken finden",
+            "children": [
+              {
+                "text": "Leitfrage"
+              }
+            ]
+          },
+          {
+            "text": "Arbeitsmarkt analysieren",
+            "children": [
+              {
+                "text": "Leitfrage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

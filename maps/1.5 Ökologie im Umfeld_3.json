@@ -1,0 +1,24 @@
+{
+  "root": {
+    "text": "Ethische Kriterien",
+    "children": [
+      {
+        "text": "Fairtrade",
+        "children": [
+          {
+            "text": "Kernprinzipien"
+          },
+          {
+            "text": "Relevante Standards"
+          },
+          {
+            "text": "Beispiele für Produkte/Sektoren"
+          },
+          {
+            "text": "Max-Havelaar-Stiftung"
+          }
+        ]
+      }
+    ]
+  }
+}

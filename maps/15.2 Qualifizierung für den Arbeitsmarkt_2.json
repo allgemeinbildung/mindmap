@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Qualifizierung für den Arbeitsmarkt",
+    "children": [
+      {
+        "text": "Angebotstypen Weiterbildung Schweiz",
+        "children": [
+          {
+            "text": "Nicht-formale Kurse",
+            "children": [
+              {
+                "text": "Abschlussart"
+              },
+              {
+                "text": "Staatliche Anerkennung"
+              }
+            ]
+          },
+          {
+            "text": "Lehrgänge der höheren Berufsbildung",
+            "children": [
+              {
+                "text": "Abschlussart"
+              },
+              {
+                "text": "Staatliche Anerkennung"
+              }
+            ]
+          },
+          {
+            "text": "Weiterbildungsformate der Hochschulen",
+            "children": [
+              {
+                "text": "Abschlussart"
+              },
+              {
+                "text": "Staatliche Anerkennung"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

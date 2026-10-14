@@ -1,0 +1,23 @@
+{
+  "root": {
+    "text": "Abfallmanagement",
+    "children": [
+      {
+        "text": "Recycling",
+        "children": [
+          {
+            "text": "Recyclingmaterialien"
+          },
+          {
+            "text": "Herausforderungen beim Recycling",
+            "children": [
+              {
+                "text": "Kunststoffrecycling"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

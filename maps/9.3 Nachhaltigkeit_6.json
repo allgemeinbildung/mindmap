@@ -1,0 +1,21 @@
+{
+  "root": {
+    "text": "2000-Watt-Gesellschaft",
+    "children": [
+      {
+        "text": "Ziel (2000 Watt)"
+      },
+      {
+        "text": "Aktueller Verbrauch CH (ca. 6500 Watt)"
+      },
+      {
+        "text": "Persönliche Handlungsmöglichkeiten",
+        "children": [
+          {
+            "text": "Mindestens drei Bereiche oder Beispiele"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "root": {
+    "text": "Energieverbrauch",
+    "children": [
+      {
+        "text": "Globaler Energieverbrauch",
+        "children": [
+          {
+            "text": "Ursachen für den weltweiten Anstieg"
+          },
+          {
+            "text": "Dominierende globale Energiequellen"
+          },
+          {
+            "text": "Ökologische und ökonomische Folgen"
+          }
+        ]
+      },
+      {
+        "text": "Energieverbrauch Schweiz",
+        "children": [
+          {
+            "text": "Hauptenergieträger und ihre Anteile"
+          },
+          {
+            "text": "Bedeutung der Wasserkraft"
+          },
+          {
+            "text": "Dominanz fossiler Energien"
+          }
+        ]
+      }
+    ]
+  }
+}

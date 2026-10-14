@@ -1,0 +1,60 @@
+{
+  "root": {
+    "text": "Länderkategorien und Indikatoren",
+    "children": [
+      {
+        "text": "Industrieländer",
+        "children": [
+          {
+            "text": "Zentrale Merkmale"
+          },
+          {
+            "text": "Typische Wirtschaftssektoren"
+          },
+          {
+            "text": "Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Schwellenländer",
+        "children": [
+          {
+            "text": "Zentrale Merkmale"
+          },
+          {
+            "text": "Typische Wirtschaftssektoren"
+          },
+          {
+            "text": "Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Entwicklungsländer",
+        "children": [
+          {
+            "text": "Zentrale Merkmale"
+          },
+          {
+            "text": "Typische Wirtschaftssektoren"
+          },
+          {
+            "text": "Beispiele"
+          }
+        ]
+      },
+      {
+        "text": "Messung von Entwicklung/Ungleichheit",
+        "children": [
+          {
+            "text": "Wichtigste Indikatoren"
+          },
+          {
+            "text": "absolut Arme"
+          }
+        ]
+      }
+    ]
+  }
+}

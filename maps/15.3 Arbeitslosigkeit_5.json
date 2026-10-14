@@ -1,0 +1,27 @@
+{
+  "root": {
+    "text": "Arten der Arbeitslosigkeit",
+    "children": [
+      {
+        "text": "Strukturelle Arbeitslosigkeit",
+        "children": [
+          {
+            "text": "1. Sektoraler Wandel (Anforderungen ändern sich)"
+          },
+          {
+            "text": "2. Technologischer Fortschritt (Maschinen/Computer ersetzen Menschen)"
+          },
+          {
+            "text": "3. Regionale Verschiebungen (Unternehmen wandern ab, räumliche Immobilität)"
+          },
+          {
+            "text": "4. Langzeitarbeitslosigkeit (Qualifikationen gehen verloren, Vorurteile)"
+          },
+          {
+            "text": "Umorientierung und Weiterbildung"
+          }
+        ]
+      }
+    ]
+  }
+}

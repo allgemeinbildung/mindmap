@@ -1,0 +1,45 @@
+{
+  "root": {
+    "text": "Energiequellen",
+    "children": [
+      {
+        "text": "Erneuerbare Energiequellen",
+        "children": [
+          {
+            "text": "Konkrete Energieformen",
+            "children": [
+              {
+                "text": "Hauptmerkmale"
+              },
+              {
+                "text": "Vorteile"
+              },
+              {
+                "text": "Nachteile"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Nicht erneuerbare Energiequellen",
+        "children": [
+          {
+            "text": "Konkrete Energieformen",
+            "children": [
+              {
+                "text": "Hauptmerkmale"
+              },
+              {
+                "text": "Vorteile"
+              },
+              {
+                "text": "Nachteile"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

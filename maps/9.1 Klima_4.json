@@ -1,0 +1,37 @@
+{
+  "root": {
+    "text": "9.1 Klima",
+    "children": [
+      {
+        "text": "Folgen des Klimawandels",
+        "children": [
+          {
+            "text": "Globale Folgen",
+            "children": [
+              {
+                "text": "Mindestens vier Auswirkungen"
+              }
+            ]
+          },
+          {
+            "text": "Folgen für die Schweiz",
+            "children": [
+              {
+                "text": "Temperaturanstieg seit 1864"
+              },
+              {
+                "text": "Prognose bis 2060"
+              },
+              {
+                "text": "Trocken-/Hitzeperioden"
+              },
+              {
+                "text": "Pollensaison"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
