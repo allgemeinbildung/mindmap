@@ -5,8 +5,10 @@
     <title>Mermaid Renderer</title>
     <style>
         /* Base and Control Styles from the newer version */
-        body { text-align: center; margin: 0; padding: 10px; font-family: sans-serif; }
-        #mermaid-container { margin-top: 5px; }
+        html, body { height: 100%; }
+        body { text-align: center; margin: 0; padding: 10px 56px 10px 10px; box-sizing: border-box; font-family: sans-serif; }
+        /* Mindmap passt sich dem iframe an: verkleinert, nie vergroessert (siehe fitDiagram) */
+        #mermaid-container { height: 100%; display: flex; align-items: center; justify-content: center; }
         .controls {
             position: fixed; top: 10px; right: 10px; display: flex;
             flex-direction: column; gap: 5px;
@@ -22,7 +24,7 @@
         /* Modal / Popup Styles from the older version */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
         .modal-content {
-            background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888;
+            background-color: #fefefe; margin: 10px auto; padding: 20px; border: 1px solid #888;
             width: 80%; max-width: 500px; border-radius: 8px; position: relative;
             text-align: left; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
@@ -33,7 +35,7 @@
         .modal-button:hover { background-color: #0056b3; }
 
         /* Hide controls when printing */
-        @media print { .controls { display: none; } }
+        @media print { .controls { display: none; } body { padding: 0; } }
     </style>
 </head>
 <body>
@@ -103,8 +105,23 @@
 
                 const { svg } = await mermaid.render('mermaid-graph', mermaidCode);
                 container.innerHTML = svg;
+                fitDiagram(container.querySelector('svg'));
                 setupButtons(svg);
             } catch (error) { console.error("Error:", error); }
+        };
+
+        // Fill the frame, but never beyond the diagram's natural size:
+        // a large map shrinks to fit the iframe, a small one stays as drawn.
+        const fitDiagram = (svgEl) => {
+            if (!svgEl) return;
+            const vb = svgEl.viewBox.baseVal;
+            svgEl.setAttribute('width', '100%');
+            svgEl.setAttribute('height', '100%');
+            svgEl.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            if (vb && vb.width && vb.height) {
+                svgEl.style.maxWidth = vb.width + 'px';
+                svgEl.style.maxHeight = vb.height + 'px';
+            }
         };
 
         const setupButtons = (svgCode) => {
