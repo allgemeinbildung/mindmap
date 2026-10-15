@@ -1,0 +1,47 @@
+{
+  "root": {
+    "text": "Beendigung",
+    "children": [
+      {
+        "text": "Kündigungsfristen",
+        "children": [
+          {
+            "text": "OR 335a-c",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Form",
+        "children": []
+      },
+      {
+        "text": "Missbräuchliche Kündigung",
+        "children": [
+          {
+            "text": "OR 336ff.",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Sperrfristen",
+        "children": [
+          {
+            "text": "OR 336c",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Fristlose Auflösung",
+        "children": [
+          {
+            "text": "OR 337",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

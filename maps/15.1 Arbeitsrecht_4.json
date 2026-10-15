@@ -1,0 +1,60 @@
+{
+  "root": {
+    "text": "Pflichten AG",
+    "children": [
+      {
+        "text": "Lohnzahlung",
+        "children": [
+          {
+            "text": "OR 322/323",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Gratifikation & 13. ML",
+        "children": []
+      },
+      {
+        "text": "Lohnfortzahlung",
+        "children": [
+          {
+            "text": "OR 324a",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Ferien",
+        "children": [
+          {
+            "text": "OR 329a",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Mutterschaft/Vaterschaft",
+        "children": [
+          {
+            "text": "______ Wochen Mutter",
+            "children": []
+          },
+          {
+            "text": "______ Wochen Vater ab 2021",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Arbeitszeugnis",
+        "children": [
+          {
+            "text": "OR 330a",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

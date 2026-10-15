@@ -1,0 +1,46 @@
+{
+  "root": {
+    "text": "GAV",
+    "children": [
+      {
+        "text": "Vertragsparteien",
+        "children": []
+      },
+      {
+        "text": "Inhalte",
+        "children": [
+          {
+            "text": "Mindestlohn, Teuerungsausgleich",
+            "children": []
+          },
+          {
+            "text": "Ferien, Kündigungsfristen",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Verhältnis zu EAV",
+        "children": [
+          {
+            "text": "OR 357",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Allgemeinverbindlicherklärung",
+        "children": []
+      },
+      {
+        "text": "Friedenspflicht",
+        "children": [
+          {
+            "text": "OR 357a",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

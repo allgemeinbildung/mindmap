@@ -1,0 +1,52 @@
+{
+  "root": {
+    "text": "Pflichten AN",
+    "children": [
+      {
+        "text": "Persönliche Arbeitsleistung",
+        "children": [
+          {
+            "text": "OR 321",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Sorgfaltspflicht",
+        "children": [
+          {
+            "text": "OR 321a",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Treuepflicht",
+        "children": [
+          {
+            "text": "OR 321a",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Überstunden",
+        "children": [
+          {
+            "text": "OR 321c",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Weisungsbefolgung",
+        "children": [
+          {
+            "text": "OR 321d",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

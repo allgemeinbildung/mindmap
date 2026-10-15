@@ -1,0 +1,27 @@
+{
+  "root": {
+    "text": "Grundlagen",
+    "children": [
+      {
+        "text": "OR",
+        "children": []
+      },
+      {
+        "text": "ArG",
+        "children": []
+      },
+      {
+        "text": "EAV",
+        "children": []
+      },
+      {
+        "text": "GAV",
+        "children": []
+      },
+      {
+        "text": "Betriebsreglement",
+        "children": []
+      }
+    ]
+  }
+}

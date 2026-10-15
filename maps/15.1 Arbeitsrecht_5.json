@@ -1,0 +1,56 @@
+{
+  "root": {
+    "text": "Arbeitszeit",
+    "children": [
+      {
+        "text": "Höchstarbeitszeiten",
+        "children": [
+          {
+            "text": "ArG 9",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Überstunden vs. Überzeit",
+        "children": [
+          {
+            "text": "OR 321c / ArG 12",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Nacht- und Sonntagsarbeit",
+        "children": [
+          {
+            "text": "ArG 16-18",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Pausen",
+        "children": [
+          {
+            "text": "ArG 15",
+            "children": []
+          },
+          {
+            "text": "je nach Arbeitsdauer",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Jugendliche",
+        "children": [
+          {
+            "text": "ArG 29-32",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

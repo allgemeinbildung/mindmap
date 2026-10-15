@@ -1,0 +1,31 @@
+{
+  "root": {
+    "text": "Arbeitsrecht",
+    "children": [
+      {
+        "text": "Grundlagen",
+        "children": []
+      },
+      {
+        "text": "Pflichten AN",
+        "children": []
+      },
+      {
+        "text": "Pflichten AG",
+        "children": []
+      },
+      {
+        "text": "Arbeitszeit",
+        "children": []
+      },
+      {
+        "text": "Beendigung",
+        "children": []
+      },
+      {
+        "text": "GAV",
+        "children": []
+      }
+    ]
+  }
+}
