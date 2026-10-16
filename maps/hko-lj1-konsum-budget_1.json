@@ -1,0 +1,68 @@
+{
+  "root": {
+    "text": "Wunsch, Mittel, Entscheid",
+    "children": [
+      {
+        "text": "Bedürfnisarten",
+        "children": [
+          {
+            "text": "Existenz und Wahl"
+          },
+          {
+            "text": "materiell und immateriell"
+          }
+        ]
+      },
+      {
+        "text": "Einflüsse",
+        "children": [
+          {
+            "text": "Familie"
+          },
+          {
+            "text": "Gruppe"
+          },
+          {
+            "text": "Werbung"
+          }
+        ]
+      },
+      {
+        "text": "Kosten hochrechnen",
+        "children": [
+          {
+            "text": "Tag"
+          },
+          {
+            "text": "Monat"
+          },
+          {
+            "text": "Jahr"
+          }
+        ]
+      },
+      {
+        "text": "Mein Massstab",
+        "children": [
+          {
+            "text": "Was zählt für mich?"
+          }
+        ]
+      },
+      {
+        "text": "Gilt auch bei",
+        "children": [
+          {
+            "text": "Ausgang am Wochenende"
+          },
+          {
+            "text": "Geschenk für einen Geburtstag"
+          },
+          {
+            "text": "Kleidung für den Betrieb"
+          }
+        ]
+      }
+    ]
+  }
+}

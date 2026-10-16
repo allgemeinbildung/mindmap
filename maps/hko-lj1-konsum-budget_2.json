@@ -1,0 +1,64 @@
+{
+  "root": {
+    "text": "Wunsch, Mittel, Entscheid",
+    "children": [
+      {
+        "text": "Bedürfnisarten"
+      },
+      {
+        "text": "Einflüsse"
+      },
+      {
+        "text": "Kosten hochrechnen"
+      },
+      {
+        "text": "Mein Massstab"
+      },
+      {
+        "text": "Einnahmen",
+        "children": [
+          {
+            "text": "der Nettolohn"
+          }
+        ]
+      },
+      {
+        "text": "Fixe und variable Kosten"
+      },
+      {
+        "text": "Rückstellung und Saldo"
+      },
+      {
+        "text": "Vom Verzug zur Betreibung"
+      },
+      {
+        "text": "Wege aus den Schulden",
+        "children": [
+          {
+            "text": "Plan"
+          },
+          {
+            "text": "Gespräch"
+          },
+          {
+            "text": "Beratung"
+          }
+        ]
+      },
+      {
+        "text": "Gilt auch bei",
+        "children": [
+          {
+            "text": "erste eigene Steuererklärung"
+          },
+          {
+            "text": "Prämie der Krankenkasse"
+          },
+          {
+            "text": "Klassenlager oder Sprachaufenthalt"
+          }
+        ]
+      }
+    ]
+  }
+}
