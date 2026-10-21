@@ -13,13 +13,41 @@
             position: fixed; top: 10px; right: 10px; display: flex;
             flex-direction: column; gap: 5px;
         }
-        .controls a, .controls button { 
-            display: inline-block; padding: 5px 10px; font-size: 1em; 
+        .controls a, .controls button {
+            display: inline-block; padding: 5px 10px; font-size: 1em;
             cursor: pointer; border: 1px solid #ccc; border-radius: 5px;
             background-color: #f0f0f0; transition: background-color 0.2s;
             color: black; text-decoration: none; font-family: sans-serif;
         }
         .controls a:hover, .controls button:hover { background-color: #e0e0e0; }
+        .controls button[aria-pressed="true"] { background-color: #cfe2ff; border-color: #7aa7e8; }
+        .controls button[hidden] { display: none; }
+
+        /* Eigene Äste der Lernenden: gestrichelt, damit sie sich vom Gerüst abheben */
+        #mermaid-container .own rect, #mermaid-container .own path { stroke-dasharray: 5 3; stroke-width: 2px; }
+
+        /* Bearbeiten: Gliederung links, Mindmap rechts */
+        #editor { display: none; }
+        body.editing #editor {
+            display: flex; flex-direction: column;
+            position: fixed; top: 0; left: 0; bottom: 0; width: 45%; min-width: 220px;
+            border-right: 1px solid #ddd; background: #fafafa; text-align: left; font-size: 14px;
+        }
+        body.editing { padding-left: calc(max(45%, 220px) + 10px); }
+        #editor-status { padding: 6px 8px; font-size: 12px; color: #555; border-bottom: 1px solid #eee; }
+        #editor-status[data-state="error"] { color: #b94a48; }
+        #editor-status a { color: #007bff; cursor: pointer; }
+        #editor-rows { flex: 1; overflow-y: auto; padding: 4px 0; }
+        #editor-help { padding: 4px 8px; font-size: 11px; color: #777; border-top: 1px solid #eee; }
+        .row { display: flex; align-items: center; min-height: 26px; padding-right: 6px; }
+        .row::before { content: "•"; color: #999; width: 14px; flex: none; text-align: center; }
+        .row .locked { padding: 3px 4px; color: #333; border-radius: 3px; outline: none; }
+        .row .locked:focus { background: #e8f0fe; box-shadow: 0 0 0 2px #7aa7e8; }
+        .row input {
+            flex: 1; min-width: 0; font: inherit; padding: 3px 4px; color: #0b5394;
+            border: 1px dashed #b7c9e2; border-radius: 3px; background: white;
+        }
+        .row input:focus { outline: none; border-style: solid; border-color: #4a86e8; }
 
         /* Modal / Popup Styles from the older version */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
@@ -35,12 +63,18 @@
         .modal-button:hover { background-color: #0056b3; }
 
         /* Hide controls when printing */
-        @media print { .controls { display: none; } body { padding: 0; } }
+        @media print { .controls, #editor { display: none !important; } body, body.editing { padding: 0; } }
     </style>
 </head>
 <body>
     <div id="mermaid-container"></div>
+    <div id="editor" aria-label="Eigene Äste">
+        <div id="editor-status" role="status" aria-live="polite"></div>
+        <div id="editor-rows"></div>
+        <div id="editor-help">Enter: neuer Ast · Tab: einrücken · Shift+Tab: ausrücken · Backspace im leeren Ast: löschen · Esc: fertig</div>
+    </div>
     <div class="controls">
+        <button id="edit-map" title="Eigene Äste ergänzen" aria-pressed="false" hidden>✏️</button>
         <button id="copy-svg" title="Als SVG-Code kopieren">📋</button>
         <button id="print-page" title="Drucken / Als PDF speichern">🖨️</button>
     </div>
@@ -63,50 +97,150 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    
+
     <script>
         mermaid.initialize({ startOnLoad: false });
 
-        // Helper function to convert hierarchical JSON to a Mermaid string (from newer version)
-        function jsonToMermaidString(jsonData) {
-            let mermaidString = 'mindmap\n';
-            
-            function buildBranch(node, indentLevel) {
-                const indent = '    '.repeat(indentLevel); // 4 spaces per level
-                mermaidString += `${indent}${node.text}\n`;
-                
-                if (node.children && node.children.length > 0) {
-                    node.children.forEach(child => {
-                        buildBranch(child, indentLevel + 1);
-                    });
-                }
+        // ---- the tree ---------------------------------------------------------------
+        //
+        // A node is { id, text, own, children, parent }. `own` marks a branch the student
+        // added; teacher nodes (from maps/<name>.json) can't be edited. Among siblings the
+        // student's nodes always come after the teacher's (see normalize).
+        //
+        // Saving (lms_box, backend/CONTRACT.md «Mindmap editor»): only the own branches are
+        // stored, each list hung under the path of teacher texts it belongs to.
+
+        const LIMITS = { nodes: 200, text: 120, depth: 6 };
+        let nextId = 1;
+        let tree = null;            // root node
+
+        function makeNode(text, own, parent) {
+            return { id: nextId++, text, own, children: [], parent };
+        }
+
+        function fromJson(json, parent = null) {
+            const node = makeNode(String(json.text ?? ''), false, parent);
+            for (const c of json.children || []) node.children.push(fromJson(c, node));
+            return node;
+        }
+
+        const ownCount = (node = tree) => node.children.reduce((n, c) => n + (c.own ? 1 : 0) + ownCount(c), 0);
+        const ownDepth = (node) => { let d = 0; for (let n = node; n && n.own; n = n.parent) d++; return d; };
+        const subtreeDepth = (node) => 1 + Math.max(0, ...node.children.map(subtreeDepth));
+
+        function normalize(node) {
+            node.children.sort((a, b) => (a.own === b.own ? 0 : a.own ? 1 : -1));   // stable
+        }
+
+        // What is read from the database is untrusted: keep only what fits the shape.
+        function cleanOwn(list, depth, budget) {
+            if (!Array.isArray(list) || depth > LIMITS.depth) return [];
+            const out = [];
+            for (const item of list) {
+                if (budget.left <= 0 || !item || typeof item.t !== 'string') continue;
+                const t = item.t.replace(/\s+/g, ' ').trim().slice(0, LIMITS.text);
+                if (!t) continue;
+                budget.left--;
+                out.push({ t, c: cleanOwn(item.c, depth + 1, budget) });
             }
-            
-            buildBranch(jsonData.root, 1); // Start building from the root node
-            return mermaidString;
+            return out;
+        }
+
+        function attach(parent, saved) {
+            for (const s of saved) {
+                const node = makeNode(s.t, true, parent);
+                parent.children.push(node);
+                attach(node, s.c);
+            }
+        }
+
+        function findTeacherNode(path) {
+            if (!Array.isArray(path) || path[0] !== tree.text) return null;
+            let node = tree;
+            for (const text of path.slice(1)) {
+                node = node.children.find((c) => !c.own && c.text === text);
+                if (!node) return null;
+            }
+            return node;
+        }
+
+        function mergeSaved(data) {
+            if (!data || data.v !== 1 || !Array.isArray(data.add)) return;
+            const budget = { left: LIMITS.nodes };
+            for (const entry of data.add) {
+                if (!entry || typeof entry !== 'object') continue;
+                const anchor = findTeacherNode(entry.at) || tree;   // skeleton changed: under the root
+                attach(anchor, cleanOwn(entry.nodes, 1, budget));
+            }
+        }
+
+        function extractSaved() {
+            const add = [];
+            const keep = (n) => n.text.trim() || n.children.some(keep);
+            const toSaved = (n) => ({ t: n.text.trim() || '…', c: n.children.filter(keep).map(toSaved) });
+            (function walk(node, path) {
+                const mine = node.children.filter((c) => c.own && keep(c));
+                if (mine.length) add.push({ at: path, nodes: mine.map(toSaved) });
+                for (const c of node.children) if (!c.own) walk(c, [...path, c.text]);
+            })(tree, [tree.text]);
+            return { v: 1, add };
+        }
+
+        // Teacher nodes go in as before. Own text goes in quoted, never as Mermaid syntax.
+        function toMermaid() {
+            let out = 'mindmap\n';
+            (function walk(node, level) {
+                const indent = '    '.repeat(level);
+                if (node.own) {
+                    const safe = (node.text.trim() || '…').replace(/["`]/g, "'").replace(/[\r\n]+/g, ' ');
+                    out += `${indent}u${node.id}["${safe}"]\n${indent}:::own\n`;
+                } else {
+                    out += `${indent}${node.text}\n`;
+                }
+                for (const c of node.children) walk(c, level + 1);
+            })(tree, 1);
+            return out;
+        }
+
+        // ---- drawing ------------------------------------------------------------------
+
+        let renderCount = 0;
+        let currentSvg = '';
+        let drawing = Promise.resolve();
+
+        function draw() {
+            drawing = drawing.then(async () => {
+                const container = document.getElementById('mermaid-container');
+                try {
+                    const { svg } = await mermaid.render(`mermaid-graph-${++renderCount}`, toMermaid());
+                    container.innerHTML = svg;
+                    fitDiagram(container.querySelector('svg'));
+                    currentSvg = svg;
+                } catch (error) { console.error('Mindmap:', error); }
+            });
+            return drawing;
+        }
+
+        let drawTimer = null;
+        function drawSoon() {
+            clearTimeout(drawTimer);
+            drawTimer = setTimeout(draw, 400);
         }
 
         const renderDiagram = async () => {
-            const container = document.getElementById('mermaid-container');
             const urlParams = new URLSearchParams(window.location.search);
-            const mindmapName = urlParams.get('mindmap'); 
+            const mindmapName = urlParams.get('mindmap');
 
             if (!mindmapName) { return; }
             const filePath = `./maps/${mindmapName}.json`;
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`File not found`);
-                
-                // Fetch the structured JSON data
                 const jsonData = await response.json();
-                
-                // Convert the JSON to a Mermaid-compatible string
-                const mermaidCode = jsonToMermaidString(jsonData);
-
-                const { svg } = await mermaid.render('mermaid-graph', mermaidCode);
-                container.innerHTML = svg;
-                fitDiagram(container.querySelector('svg'));
-                setupButtons(svg);
+                tree = fromJson(jsonData.root);
+                await draw();
+                setupButtons();
+                startEditor(mindmapName);
             } catch (error) { console.error("Error:", error); }
         };
 
@@ -124,7 +258,7 @@
             }
         };
 
-        const setupButtons = (svgCode) => {
+        const setupButtons = () => {
             const copyBtn = document.getElementById('copy-svg');
             const printBtn = document.getElementById('print-page');
             const modal = document.getElementById("copyModal");
@@ -132,7 +266,7 @@
             const okButton = document.getElementById("modal-ok-button");
 
             copyBtn.onclick = () => {
-                navigator.clipboard.writeText(svgCode).then(() => {
+                navigator.clipboard.writeText(currentSvg).then(() => {
                     copyBtn.innerHTML = "✅";
                     copyBtn.disabled = true;
                     setTimeout(() => {
@@ -158,6 +292,257 @@
                 }
             };
         };
+
+        // ---- editor -------------------------------------------------------------------
+        //
+        // Behind ✏️, for a signed-in student (LMS Box login). Saving goes through
+        // ../lms_box/js/mindmap.js; without it (module not reachable) the page stays a viewer.
+
+        const editBtn = document.getElementById('edit-map');
+        const statusEl = document.getElementById('editor-status');
+        const rowsEl = document.getElementById('editor-rows');
+
+        let store = null;           // ../lms_box/js/mindmap.js
+        let mapId = null;
+        let account = null;         // { canSave, email } once known
+        let loadedFor;              // email the own branches were loaded for (undefined: not yet)
+        let wantEdit = false;       // ✏️ pressed while signed out: edit once signed in
+        let dirty = false;
+        let saving = null;
+        let saveError = null;
+        let saveTimer = null;
+
+        function link(text, onClick) {
+            const a = document.createElement('a');
+            a.href = '#';
+            a.textContent = text;
+            a.addEventListener('click', (e) => { e.preventDefault(); onClick(); });
+            return a;
+        }
+
+        function showStatus(message) {
+            statusEl.replaceChildren();
+            statusEl.dataset.state = saveError || message ? 'error' : 'ok';
+            if (message) {
+                statusEl.append(message + ' ');
+            } else {
+                const who = (account?.email || '').replace(/@lernende\.bbw\.ch$/i, '');
+                if (saveError) statusEl.append('Nicht gespeichert – bitte Verbindung prüfen. ');
+                else if (saving || dirty) statusEl.append('Speichert … ');
+                else statusEl.append(`Gespeichert für ${who} · `);
+            }
+            statusEl.append(link('Abmelden', signOut));
+        }
+
+        async function signOut() {
+            await flushSave();
+            store.logout();
+        }
+
+        function editing() { return document.body.classList.contains('editing'); }
+
+        function setEditing(on) {
+            document.body.classList.toggle('editing', on);
+            editBtn.setAttribute('aria-pressed', String(on));
+            if (on && !account?.canSave) {
+                rowsEl.replaceChildren();
+                showStatus(`Mit diesem Konto (${account?.email || 'unbekannt'}) werden keine Äste gespeichert.`);
+            } else if (on) {
+                renderRows();
+                showStatus();
+                rowsEl.querySelector('.row > *')?.focus();
+            } else {
+                flushSave();
+                editBtn.focus();
+            }
+            draw();     // the frame for the map changed
+        }
+
+        editBtn.addEventListener('click', () => {
+            if (editing()) return setEditing(false);
+            if (!account) return;                   // session not known yet
+            if (account.canSave && loadedFor === account.email) return setEditing(true);
+            if (account.email) return setEditing(true);     // another kind of account: says so
+            wantEdit = true;
+            store.showLogin();
+        });
+
+        async function startEditor(name) {
+            try {
+                store = await import('../lms_box/js/mindmap.js');
+            } catch (error) {
+                console.warn('Mindmap: Speichern nicht verfügbar.', error);
+                return;
+            }
+            if (!store.validMapId(name)) return;
+            mapId = name;
+            editBtn.hidden = false;
+            store.onAccount(async (acc) => {
+                // Another account (or a logout) after the branches were loaded: start over.
+                if (loadedFor !== undefined && acc.email !== loadedFor) { location.reload(); return; }
+                account = acc;
+                if (!acc.canSave) return;
+                try {
+                    mergeSaved(await store.loadMap(mapId));
+                } catch (error) {
+                    console.error('Mindmap laden:', error);
+                    saveError = error?.code || 'error';
+                }
+                loadedFor = acc.email;
+                await draw();
+                if (wantEdit) { wantEdit = false; setEditing(true); }
+            });
+        }
+
+        // -- saving
+
+        function changed({ structure = false } = {}) {
+            dirty = true;
+            if (structure) renderRows();
+            drawSoon();
+            clearTimeout(saveTimer);
+            saveTimer = setTimeout(flushSave, 1200);
+            showStatus();
+        }
+
+        async function flushSave() {
+            clearTimeout(saveTimer);
+            if (saving) await saving;
+            if (!dirty || !account?.canSave) return;
+            dirty = false;
+            saving = store.saveMap(mapId, extractSaved())
+                .then(() => { saveError = null; })
+                .catch((error) => {
+                    console.error('Mindmap speichern:', error);
+                    saveError = error?.code || 'error';
+                    dirty = true;   // try again with the next change or on leaving
+                })
+                .finally(() => { saving = null; if (editing()) showStatus(); });
+            return saving;
+        }
+
+        addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushSave(); });
+        addEventListener('pagehide', () => { flushSave(); });
+
+        // -- the outline
+
+        function renderRows() {
+            const active = Number(document.activeElement?.closest?.('.row')?.dataset.id);
+            rowsEl.replaceChildren();
+            (function walk(node, depth) {
+                const row = document.createElement('div');
+                row.className = 'row';
+                row.dataset.id = node.id;
+                row.style.paddingLeft = (4 + depth * 16) + 'px';
+                let field;
+                if (node.own) {
+                    field = document.createElement('input');
+                    field.type = 'text';
+                    field.value = node.text;
+                    field.maxLength = LIMITS.text;
+                    field.placeholder = 'Neuer Ast';
+                    field.setAttribute('aria-label', 'Eigener Ast');
+                    field.addEventListener('input', () => { node.text = field.value; changed(); });
+                } else {
+                    field = document.createElement('span');
+                    field.className = 'locked';
+                    field.tabIndex = 0;
+                    field.textContent = node.text;    // as text, never as HTML
+                    field.title = 'Vorgegeben – Enter fügt einen eigenen Ast darunter an';
+                }
+                field.addEventListener('keydown', (e) => onKey(e, node));
+                row.appendChild(field);
+                rowsEl.appendChild(row);
+                for (const c of node.children) walk(c, depth + 1);
+            })(tree, 0);
+            if (active) focusRow(active);
+        }
+
+        function focusRow(id) {
+            const field = rowsEl.querySelector(`.row[data-id="${id}"] > *`);
+            if (!field) return;
+            field.focus();
+            if (field.setSelectionRange) field.setSelectionRange(field.value.length, field.value.length);
+        }
+
+        function neighbourRow(node, step) {
+            const rows = [...rowsEl.querySelectorAll('.row')];
+            const i = rows.findIndex((r) => Number(r.dataset.id) === node.id);
+            return rows[i + step] ? Number(rows[i + step].dataset.id) : null;
+        }
+
+        function room() {
+            if (ownCount() < LIMITS.nodes) return true;
+            showStatus(`Höchstens ${LIMITS.nodes} eigene Äste.`);
+            return false;
+        }
+
+        function addChild(parent) {
+            if (!room() || ownDepth(parent) + 1 > LIMITS.depth) return;
+            const node = makeNode('', true, parent);
+            parent.children.push(node);
+            changed({ structure: true });
+            focusRow(node.id);
+        }
+
+        function addSiblingAfter(node) {
+            if (!room()) return;
+            const siblings = node.parent.children;
+            const fresh = makeNode('', true, node.parent);
+            siblings.splice(siblings.indexOf(node) + 1, 0, fresh);
+            changed({ structure: true });
+            focusRow(fresh.id);
+        }
+
+        function indent(node) {
+            const siblings = node.parent.children;
+            const prev = siblings[siblings.indexOf(node) - 1];
+            if (!prev || ownDepth(prev) + subtreeDepth(node) > LIMITS.depth) return;
+            siblings.splice(siblings.indexOf(node), 1);
+            node.parent = prev;
+            prev.children.push(node);
+            changed({ structure: true });
+            focusRow(node.id);
+        }
+
+        function outdent(node) {
+            const parent = node.parent;
+            const grand = parent.parent;
+            if (!grand) return;     // already directly under the root
+            parent.children.splice(parent.children.indexOf(node), 1);
+            node.parent = grand;
+            grand.children.splice(grand.children.indexOf(parent) + 1, 0, node);
+            normalize(grand);
+            changed({ structure: true });
+            focusRow(node.id);
+        }
+
+        function remove(node) {
+            if (node.children.length) return;   // empty its branches first
+            const target = neighbourRow(node, -1);
+            node.parent.children.splice(node.parent.children.indexOf(node), 1);
+            changed({ structure: true });
+            if (target) focusRow(target);
+        }
+
+        function onKey(e, node) {
+            const key = e.key;
+            if (key === 'Escape') { e.preventDefault(); setEditing(false); return; }
+            if (key === 'ArrowUp' || key === 'ArrowDown') {
+                const id = neighbourRow(node, key === 'ArrowUp' ? -1 : 1);
+                if (id) { e.preventDefault(); focusRow(id); }
+                return;
+            }
+            if (e.isComposing) return;
+            if (!node.own) {
+                if (key === 'Enter') { e.preventDefault(); addChild(node); }
+                return;
+            }
+            if (key === 'Enter') { e.preventDefault(); addSiblingAfter(node); }
+            else if (key === 'Tab') { e.preventDefault(); e.shiftKey ? outdent(node) : indent(node); }
+            else if (key === 'Backspace' && node.text === '' && !node.children.length) { e.preventDefault(); remove(node); }
+        }
+
         renderDiagram();
     </script>
 </body>
