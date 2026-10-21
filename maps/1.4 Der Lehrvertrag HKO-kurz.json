@@ -1,0 +1,33 @@
+{
+  "root": {
+    "text": "Der Lehrvertrag",
+    "children": [
+      {
+        "text": "Abschluss und Inhalt",
+        "children": [
+          { "text": "Vertragsparteien inkl. Regel für Minderjährige: …", "children": [] },
+          { "text": "Form und Genehmigung: …", "children": [] },
+          { "text": "Obligatorischer Inhalt, 5 Punkte: …", "children": [] },
+          { "text": "Freiwilliger Inhalt, Beispiele: …", "children": [] }
+        ]
+      },
+      {
+        "text": "Probezeit und Beendigung",
+        "children": [
+          { "text": "Probezeit - Zweck, Dauer, Kündigungsfrist: …", "children": [] },
+          { "text": "Ordentliches Ende: …", "children": [] },
+          { "text": "Fristlose Auflösung, Beispiele beider Seiten: …", "children": [] },
+          { "text": "Verlängerung der Lehrzeit - wer bewilligt? …", "children": [] }
+        ]
+      },
+      {
+        "text": "Pflichten Lernende",
+        "children": []
+      },
+      {
+        "text": "Rechte Lernende",
+        "children": []
+      }
+    ]
+  }
+}

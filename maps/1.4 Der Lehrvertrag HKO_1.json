@@ -1,0 +1,68 @@
+{
+  "root": {
+    "text": "Der Lehrvertrag",
+    "children": [
+      {
+        "text": "Abschluss und Inhalt",
+        "children": [
+          {
+            "text": "Wozu ist der Vertrag die Spielregel? …",
+            "children": []
+          },
+          {
+            "text": "Was legt der Bildungsplan fest? …",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Probezeit und Beendigung",
+        "children": [
+          {
+            "text": "Wem dient die Probezeit? …",
+            "children": []
+          },
+          {
+            "text": "Was gilt bei einer Kündigung? …",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Rechte Lernende",
+        "children": [
+          {
+            "text": "Lohnabzüge AHV, ALV, NBU - wofür? …",
+            "children": []
+          },
+          {
+            "text": "Überstunden - wie ausgeglichen? …",
+            "children": []
+          },
+          {
+            "text": "Berufsfremde Arbeiten - wann in Ordnung? …",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Pflichten Lernende",
+        "children": [
+          {
+            "text": "Überstunden - muss ich immer Ja sagen? …",
+            "children": []
+          }
+        ]
+      },
+      {
+        "text": "Hilfe bei Problemen",
+        "children": [
+          {
+            "text": "Wer unterstützt mich, intern und extern? …",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
