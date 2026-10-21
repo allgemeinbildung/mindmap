@@ -75,11 +75,16 @@
             padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
             border: 1px solid #7aa7e8; border-radius: 14px; background: #eef4ff; color: #0b5394;
         }
+        body.mode-button {
+            display: flex; align-items: center; gap: 12px; height: 100%;
+            padding: 0 4px; box-sizing: border-box; text-align: left; overflow: hidden;
+        }
         body.mode-button #open-pad {
-            display: block; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%);
-            padding: 12px 22px; font: inherit; font-size: 16px; cursor: pointer;
+            display: block; flex: none; padding: 8px 16px; font: inherit; font-size: 15px; cursor: pointer;
             border: 1px solid #7aa7e8; border-radius: 8px; background: #eef4ff; color: #0b5394;
         }
+        body.mode-button #open-pad-hint { display: block; font-size: 13px; color: #666; line-height: 1.3; }
+        #open-pad-hint { display: none; }
         body.mode-button #open-pad:hover, body.mode-preview #open-pad:hover { background: #dce8fd; }
         body.mode-button #mermaid-container { display: none; }
         body.mode-pad #edit-map { display: none !important; }
@@ -90,6 +95,19 @@
             body.editing { padding: calc(50vh + 10px) 56px 10px 10px; }
             body.editing .controls { top: auto; bottom: 10px; }
         }
+
+        /* Notizblock: eine Spalte. Gliederung so hoch wie nötig (höchstens die Hälfte),
+           die Karte füllt den Rest. Geht vor den Regeln für «schmal» oben. */
+        body.mode-pad { display: flex; flex-direction: column; height: 100%; padding: 0; }
+        body.mode-pad.editing { padding: 0; }
+        body.mode-pad.editing #editor {
+            position: static; order: -1; flex: 0 1 auto; max-height: 50%; height: auto;
+            width: auto; min-width: 0; border-right: none; border-bottom: 1px solid #ddd;
+        }
+        body.mode-pad #editor-rows { flex: 0 1 auto; min-height: 0; }
+        body.mode-pad #mermaid-container { flex: 1 1 auto; min-height: 0; height: auto; padding: 8px 56px 8px 8px; box-sizing: border-box; }
+        body.mode-pad .controls { top: auto; bottom: 10px; }
+        body.mode-pad #editor-help { font-size: 10.5px; }
 
         @media print { .controls, #editor { display: none !important; } body, body.editing { padding: 0; } }
     </style>
@@ -102,6 +120,7 @@
         <div id="editor-help">Enter: neuer Ast · Tab: einrücken · Shift+Tab: ausrücken · Backspace im leeren Ast: löschen · Esc: fertig</div>
     </div>
     <button id="open-pad" type="button">🗺️ Meine Mindmap öffnen</button>
+    <span id="open-pad-hint">Ergänze dort, was der Auftrag oben verlangt.</span>
     <div class="controls">
         <button id="edit-map" title="Eigene Äste ergänzen" aria-pressed="false" hidden>✏️</button>
         <button id="copy-svg" title="Als SVG-Code kopieren">📋</button>
