@@ -412,11 +412,25 @@
         let mapId = null;
         let account = null;         // { canSave, email } once known
         let loadedFor;              // email the own branches were loaded for (undefined: not yet)
-        let wantEdit = false;       // ✏️ pressed while signed out: edit once signed in
+        let wantEdit = false;       // notepad: open the editor once the session is known
         let dirty = false;
         let saving = null;
         let saveError = null;
         let saveTimer = null;
+
+        // Gastmodus: ohne Anmeldung bleibt die Mindmap in diesem Browser (localStorage), wie die
+        // Gast-Antworten der LMS Box. Sie wird nie hochgeladen und nach einer Anmeldung nicht
+        // ins Konto übernommen; das Konto zeigt seine eigene Mindmap.
+        const GUEST_KEY = 'lmsbox-mindmap-gast:';
+        const isGuest = () => !!account && !account.email;
+        function guestLoad() {
+            try { return JSON.parse(localStorage.getItem(GUEST_KEY + mapId) || 'null'); }
+            catch { return null; }
+        }
+        function guestSave(data) {
+            localStorage.setItem(GUEST_KEY + mapId, JSON.stringify(data));     // wirft, wenn gesperrt
+        }
+        const canEdit = () => !!account && (account.canSave || isGuest());
 
         function link(text, onClick) {
             const a = document.createElement('a');
@@ -431,6 +445,9 @@
             statusEl.dataset.state = saveError || message ? 'error' : 'ok';
             if (message) {
                 statusEl.append(message + ' ');
+            } else if (isGuest()) {
+                if (saveError) statusEl.append('In diesem Browser kann nicht gespeichert werden. ');
+                else statusEl.append('Nur in diesem Browser gespeichert · ');
             } else {
                 const who = (account?.email || '').replace(/@lernende\.bbw\.ch$/i, '');
                 if (saveError) statusEl.append('Nicht gespeichert – bitte Verbindung prüfen. ');
@@ -438,7 +455,8 @@
                 else statusEl.append(`Gespeichert für ${who} · `);
             }
             if (account?.email) statusEl.append(link('Abmelden', signOut));
-            else statusEl.append(link('Anmelden', () => store.showLogin()));
+            else statusEl.append(link('Anmelden', () => store.showLogin()),
+                isGuest() && !message ? ', dann ist sie auf jedem Gerät da.' : '');
         }
 
         async function signOut() {
@@ -452,10 +470,8 @@
         function setEditing(on, blocked = null) {
             document.body.classList.toggle('editing', on);
             editBtn.setAttribute('aria-pressed', String(on));
-            if (on && !account?.canSave) {
-                blocked = account?.email
-                    ? `Mit diesem Konto (${account.email}) werden keine Äste gespeichert.`
-                    : 'Melde dich an, dann kannst du deine Mindmap hier ergänzen. Sie wird gesichert.';
+            if (on && !canEdit()) {
+                blocked = `Mit diesem Konto (${account?.email || 'unbekannt'}) werden keine Äste gespeichert.`;
             }
             if (on && blocked) {
                 rowsEl.replaceChildren();
@@ -474,10 +490,8 @@
         editBtn.addEventListener('click', () => {
             if (editing()) return setEditing(false);
             if (!account) return;                   // session not known yet
-            if (account.canSave && loadedFor === account.email) return openFresh();
-            if (account.email) return setEditing(true);     // another kind of account: says so
-            wantEdit = true;
-            store.showLogin();
+            if (canEdit() && loadedFor === account.email) return openFresh();
+            setEditing(true);                       // another kind of account: says so
         });
 
         // Before editing, read the saved branches again: another frame, tab or device may
@@ -487,7 +501,7 @@
             if (opening) return;
             opening = true;
             try {
-                await rebuild(await store.loadMap(mapId));
+                await rebuild(isGuest() ? guestLoad() : await store.loadMap(mapId));
                 setEditing(true);
             } catch (error) {
                 console.error('Mindmap laden:', error);
@@ -512,18 +526,18 @@
                 // Another account (or a logout) after the branches were loaded: start over.
                 if (loadedFor !== undefined && acc.email !== loadedFor) { location.reload(); return; }
                 account = acc;
-                if (!acc.canSave) {
-                    if (MODE === 'pad') setEditing(true);   // says why: sign in, or another kind of account
+                if (!canEdit()) {
+                    if (MODE === 'pad') setEditing(true);   // says why: another kind of account
                     return;
                 }
                 let loaded = true;
                 try {
-                    await rebuild(await store.loadMap(mapId));
+                    await rebuild(isGuest() ? guestLoad() : await store.loadMap(mapId));
                 } catch (error) {
                     console.error('Mindmap laden:', error);
                     loaded = false;
                 }
-                loadedFor = acc.email;
+                loadedFor = acc.email;        // null for a guest: a later sign-in reloads
                 if (wantEdit && MODE !== 'preview') {
                     wantEdit = false;
                     if (loaded) setEditing(true);
@@ -546,13 +560,27 @@
         async function flushSave() {
             clearTimeout(saveTimer);
             if (saving) await saving;
-            if (!dirty || !account?.canSave) return;
+            if (!dirty || !canEdit()) return;
             dirty = false;
             const data = extractSaved();
+            const who = account.email || null;
+            if (isGuest()) {
+                try {
+                    guestSave(data);
+                    saveError = null;
+                    channel?.postMessage({ type: 'mindmap-saved', mapId, data, who });
+                } catch (error) {
+                    console.error('Mindmap im Browser speichern:', error);
+                    saveError = 'storage';
+                    dirty = true;
+                }
+                if (editing()) showStatus();
+                return;
+            }
             saving = store.saveMap(mapId, data)
                 .then(() => {
                     saveError = null;
-                    channel?.postMessage({ type: 'mindmap-saved', mapId, data });
+                    channel?.postMessage({ type: 'mindmap-saved', mapId, data, who });
                 })
                 .catch((error) => {
                     console.error('Mindmap speichern:', error);
@@ -571,6 +599,7 @@
             channel.onmessage = ({ data: msg }) => {
                 if (!msg || msg.type !== 'mindmap-saved' || msg.mapId !== mapId) return;
                 if (loadedFor === undefined || dirty || saving) return;
+                if ((msg.who || null) !== (account?.email || null)) return;    // Gast und Konto nicht mischen
                 rebuild(msg.data);
             };
         }
