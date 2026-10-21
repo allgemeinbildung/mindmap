@@ -113,6 +113,7 @@
         const LIMITS = { nodes: 200, text: 120, depth: 6 };
         let nextId = 1;
         let tree = null;            // root node
+        let baseRoot = null;        // the teacher's skeleton as read from maps/
 
         function makeNode(text, own, parent) {
             return { id: nextId++, text, own, children: [], parent };
@@ -202,6 +203,14 @@
             return out;
         }
 
+        // The skeleton plus the student's branches `data` (untrusted: mergeSaved checks it).
+        function rebuild(data) {
+            tree = fromJson(baseRoot);
+            mergeSaved(data);
+            if (editing()) renderRows();
+            return draw();
+        }
+
         // ---- drawing ------------------------------------------------------------------
 
         let renderCount = 0;
@@ -237,7 +246,8 @@
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`File not found`);
                 const jsonData = await response.json();
-                tree = fromJson(jsonData.root);
+                baseRoot = jsonData.root;
+                tree = fromJson(baseRoot);
                 await draw();
                 setupButtons();
                 startEditor(mindmapName);
@@ -341,12 +351,14 @@
 
         function editing() { return document.body.classList.contains('editing'); }
 
-        function setEditing(on) {
+        // `blocked`: open the panel with this message only, without the outline.
+        function setEditing(on, blocked = null) {
             document.body.classList.toggle('editing', on);
             editBtn.setAttribute('aria-pressed', String(on));
-            if (on && !account?.canSave) {
+            if (on && !account?.canSave) blocked = `Mit diesem Konto (${account?.email || 'unbekannt'}) werden keine Äste gespeichert.`;
+            if (on && blocked) {
                 rowsEl.replaceChildren();
-                showStatus(`Mit diesem Konto (${account?.email || 'unbekannt'}) werden keine Äste gespeichert.`);
+                showStatus(blocked);
             } else if (on) {
                 renderRows();
                 showStatus();
@@ -361,11 +373,28 @@
         editBtn.addEventListener('click', () => {
             if (editing()) return setEditing(false);
             if (!account) return;                   // session not known yet
-            if (account.canSave && loadedFor === account.email) return setEditing(true);
+            if (account.canSave && loadedFor === account.email) return openFresh();
             if (account.email) return setEditing(true);     // another kind of account: says so
             wantEdit = true;
             store.showLogin();
         });
+
+        // Before editing, read the saved branches again: another frame, tab or device may
+        // have saved since this frame loaded, and a save writes the whole map.
+        let opening = false;
+        async function openFresh() {
+            if (opening) return;
+            opening = true;
+            try {
+                await rebuild(await store.loadMap(mapId));
+                setEditing(true);
+            } catch (error) {
+                console.error('Mindmap laden:', error);
+                setEditing(true, 'Deine Äste konnten nicht geladen werden. Bitte Seite neu laden.');
+            } finally {
+                opening = false;
+            }
+        }
 
         async function startEditor(name) {
             try {
@@ -382,15 +411,19 @@
                 if (loadedFor !== undefined && acc.email !== loadedFor) { location.reload(); return; }
                 account = acc;
                 if (!acc.canSave) return;
+                let loaded = true;
                 try {
-                    mergeSaved(await store.loadMap(mapId));
+                    await rebuild(await store.loadMap(mapId));
                 } catch (error) {
                     console.error('Mindmap laden:', error);
-                    saveError = error?.code || 'error';
+                    loaded = false;
                 }
                 loadedFor = acc.email;
-                await draw();
-                if (wantEdit) { wantEdit = false; setEditing(true); }
+                if (wantEdit) {
+                    wantEdit = false;
+                    if (loaded) setEditing(true);
+                    else setEditing(true, 'Deine Äste konnten nicht geladen werden. Bitte Seite neu laden.');
+                }
             });
         }
 
@@ -410,8 +443,12 @@
             if (saving) await saving;
             if (!dirty || !account?.canSave) return;
             dirty = false;
-            saving = store.saveMap(mapId, extractSaved())
-                .then(() => { saveError = null; })
+            const data = extractSaved();
+            saving = store.saveMap(mapId, data)
+                .then(() => {
+                    saveError = null;
+                    channel?.postMessage({ type: 'mindmap-saved', mapId, data });
+                })
                 .catch((error) => {
                     console.error('Mindmap speichern:', error);
                     saveError = error?.code || 'error';
@@ -419,6 +456,18 @@
                 })
                 .finally(() => { saving = null; if (editing()) showStatus(); });
             return saving;
+        }
+
+        // Other frames of this page (and tabs of this site) with the same map: take over what
+        // was just saved there, so that a later save here does not write an old copy back.
+        // Browser-local (BroadcastChannel), no network. Only while nothing is unsaved here.
+        const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('lmsbox-mindmap') : null;
+        if (channel) {
+            channel.onmessage = ({ data: msg }) => {
+                if (!msg || msg.type !== 'mindmap-saved' || msg.mapId !== mapId) return;
+                if (loadedFor === undefined || dirty || saving) return;
+                rebuild(msg.data);
+            };
         }
 
         addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushSave(); });
