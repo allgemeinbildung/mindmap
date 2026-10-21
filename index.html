@@ -63,6 +63,34 @@
         .modal-button:hover { background-color: #0056b3; }
 
         /* Hide controls when printing */
+        /* Einheitenkarte (?unit=…), eingebettet von publish.js auf lehrmittel.aburossi.ch:
+           pad = Notizblock (Seitenleiste), preview = Vorschau im Callout, button = nur ein Knopf */
+        #open-pad { display: none; }
+        body.mode-preview, body.mode-button { padding: 0; }
+        body.mode-preview .controls, body.mode-button .controls { display: none; }
+        body.mode-preview { cursor: pointer; }
+        body.mode-preview #mermaid-container { padding: 6px 6px 34px; box-sizing: border-box; }
+        body.mode-preview #open-pad {
+            display: block; position: fixed; right: 8px; bottom: 8px;
+            padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
+            border: 1px solid #7aa7e8; border-radius: 14px; background: #eef4ff; color: #0b5394;
+        }
+        body.mode-button #open-pad {
+            display: block; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%);
+            padding: 12px 22px; font: inherit; font-size: 16px; cursor: pointer;
+            border: 1px solid #7aa7e8; border-radius: 8px; background: #eef4ff; color: #0b5394;
+        }
+        body.mode-button #open-pad:hover, body.mode-preview #open-pad:hover { background: #dce8fd; }
+        body.mode-button #mermaid-container { display: none; }
+        body.mode-pad #edit-map { display: none !important; }
+
+        /* Schmal (Notizblock auf dem Handy, schmale Seitenleiste): Gliederung oben, Karte unten */
+        @media (max-width: 600px) {
+            body.editing #editor { right: 0; bottom: auto; width: auto; min-width: 0; height: 50vh; border-right: none; border-bottom: 1px solid #ddd; }
+            body.editing { padding: calc(50vh + 10px) 56px 10px 10px; }
+            body.editing .controls { top: auto; bottom: 10px; }
+        }
+
         @media print { .controls, #editor { display: none !important; } body, body.editing { padding: 0; } }
     </style>
 </head>
@@ -73,6 +101,7 @@
         <div id="editor-rows"></div>
         <div id="editor-help">Enter: neuer Ast · Tab: einrücken · Shift+Tab: ausrücken · Backspace im leeren Ast: löschen · Esc: fertig</div>
     </div>
+    <button id="open-pad" type="button">🗺️ Meine Mindmap öffnen</button>
     <div class="controls">
         <button id="edit-map" title="Eigene Äste ergänzen" aria-pressed="false" hidden>✏️</button>
         <button id="copy-svg" title="Als SVG-Code kopieren">📋</button>
@@ -100,6 +129,33 @@
 
     <script>
         mermaid.initialize({ startOnLoad: false });
+
+        // ---- modes ------------------------------------------------------------------
+        //
+        // ?mindmap=<name>: one step map, as embedded in the vault (unchanged).
+        // ?unit=<id>&skel=<a|b|…>&mode=pad|preview|button&parent=<origin>: the student's map of a
+        // whole unit, set by publish.js. Saved under <id> (the Publish page). The skeleton is
+        // the first map in `skel` that exists, cut to the root and its main branches.
+        const PARAMS = new URLSearchParams(window.location.search);
+        const UNIT = PARAMS.get('unit');
+        const MODE = UNIT ? (['pad', 'preview', 'button'].includes(PARAMS.get('mode')) ? PARAMS.get('mode') : 'pad') : null;
+        if (MODE) document.body.classList.add('mode-' + MODE);
+        const safeName = (n) => typeof n === 'string' && n.length > 0 && n.length <= 300 && !/[\\/]|\.\./.test(n);
+        const SKELETONS = (PARAMS.get('skel') || '').split('|').filter(safeName);
+
+        // Messages to the host page (publish.js): only to the origin named in ?parent=, if listed.
+        const PARENT = (() => {
+            const p = PARAMS.get('parent');
+            if (!p || window.parent === window) return null;
+            if (p === 'https://lehrmittel.aburossi.ch') return p;
+            const local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+            return local && /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(p) ? p : null;
+        })();
+        function tellParent(type) {
+            if (PARENT) window.parent.postMessage({ type, unit: UNIT }, PARENT);
+        }
+        if (MODE === 'preview') document.body.addEventListener('click', () => tellParent('mindmap-open'));
+        if (MODE === 'button') document.getElementById('open-pad').addEventListener('click', () => tellParent('mindmap-open'));
 
         // ---- the tree ---------------------------------------------------------------
         //
@@ -236,21 +292,33 @@
             drawTimer = setTimeout(draw, 400);
         }
 
-        const renderDiagram = async () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const mindmapName = urlParams.get('mindmap');
+        async function fetchMap(name) {
+            const response = await fetch(`./maps/${name}.json`);
+            if (!response.ok) throw new Error(`File not found`);
+            return (await response.json()).root;
+        }
 
-            if (!mindmapName) { return; }
-            const filePath = `./maps/${mindmapName}.json`;
+        // Unit map: the first skeleton that exists, root and main branches only.
+        async function fetchSkeleton() {
+            for (const name of SKELETONS) {
+                try {
+                    const root = await fetchMap(name);
+                    return { text: root.text, children: (root.children || []).map((c) => ({ text: c.text, children: [] })) };
+                } catch { /* next one */ }
+            }
+            throw new Error('no skeleton');
+        }
+
+        const renderDiagram = async () => {
+            if (MODE === 'button') return;      // a button only: no map, no account, no read
+            const mindmapName = PARAMS.get('mindmap');
+            if (!UNIT && !mindmapName) { return; }
             try {
-                const response = await fetch(filePath);
-                if (!response.ok) throw new Error(`File not found`);
-                const jsonData = await response.json();
-                baseRoot = jsonData.root;
+                baseRoot = UNIT ? await fetchSkeleton() : await fetchMap(mindmapName);
                 tree = fromJson(baseRoot);
                 await draw();
                 setupButtons();
-                startEditor(mindmapName);
+                startEditor(UNIT || mindmapName);
             } catch (error) { console.error("Error:", error); }
         };
 
@@ -341,7 +409,8 @@
                 else if (saving || dirty) statusEl.append('Speichert … ');
                 else statusEl.append(`Gespeichert für ${who} · `);
             }
-            statusEl.append(link('Abmelden', signOut));
+            if (account?.email) statusEl.append(link('Abmelden', signOut));
+            else statusEl.append(link('Anmelden', () => store.showLogin()));
         }
 
         async function signOut() {
@@ -355,7 +424,11 @@
         function setEditing(on, blocked = null) {
             document.body.classList.toggle('editing', on);
             editBtn.setAttribute('aria-pressed', String(on));
-            if (on && !account?.canSave) blocked = `Mit diesem Konto (${account?.email || 'unbekannt'}) werden keine Äste gespeichert.`;
+            if (on && !account?.canSave) {
+                blocked = account?.email
+                    ? `Mit diesem Konto (${account.email}) werden keine Äste gespeichert.`
+                    : 'Melde dich an, dann kannst du deine Mindmap hier ergänzen. Sie wird gesichert.';
+            }
             if (on && blocked) {
                 rowsEl.replaceChildren();
                 showStatus(blocked);
@@ -405,12 +478,16 @@
             }
             if (!store.validMapId(name)) return;
             mapId = name;
-            editBtn.hidden = false;
+            if (!MODE) editBtn.hidden = false;
+            if (MODE === 'pad') wantEdit = true;       // the notepad is the editor
             store.onAccount(async (acc) => {
                 // Another account (or a logout) after the branches were loaded: start over.
                 if (loadedFor !== undefined && acc.email !== loadedFor) { location.reload(); return; }
                 account = acc;
-                if (!acc.canSave) return;
+                if (!acc.canSave) {
+                    if (MODE === 'pad') setEditing(true);   // says why: sign in, or another kind of account
+                    return;
+                }
                 let loaded = true;
                 try {
                     await rebuild(await store.loadMap(mapId));
@@ -419,7 +496,7 @@
                     loaded = false;
                 }
                 loadedFor = acc.email;
-                if (wantEdit) {
+                if (wantEdit && MODE !== 'preview') {
                     wantEdit = false;
                     if (loaded) setEditing(true);
                     else setEditing(true, 'Deine Äste konnten nicht geladen werden. Bitte Seite neu laden.');
@@ -576,7 +653,12 @@
 
         function onKey(e, node) {
             const key = e.key;
-            if (key === 'Escape') { e.preventDefault(); setEditing(false); return; }
+            if (key === 'Escape') {
+                e.preventDefault();
+                if (MODE === 'pad') tellParent('mindmap-close');
+                else setEditing(false);
+                return;
+            }
             if (key === 'ArrowUp' || key === 'ArrowDown') {
                 const id = neighbourRow(node, key === 'ArrowUp' ? -1 : 1);
                 if (id) { e.preventDefault(); focusRow(id); }
