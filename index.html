@@ -117,7 +117,7 @@
     <div id="editor" aria-label="Eigene Äste">
         <div id="editor-status" role="status" aria-live="polite"></div>
         <div id="editor-rows"></div>
-        <div id="editor-help">Enter: neuer Ast · Tab: einrücken · Shift+Tab: ausrücken · Backspace im leeren Ast: löschen · Esc: fertig</div>
+        <div id="editor-help">Enter: neuer Ast · Tab: einrücken · Shift+Tab: ausrücken · Backspace im leeren Ast: löschen · <span id="esc-help">Esc: fertig</span></div>
     </div>
     <button id="open-pad" type="button">🗺️ Meine Mindmap öffnen</button>
     <span id="open-pad-hint">Ergänze dort, was der Auftrag oben verlangt.</span>
@@ -159,6 +159,7 @@
         const UNIT = PARAMS.get('unit');
         const MODE = UNIT ? (['pad', 'preview', 'button'].includes(PARAMS.get('mode')) ? PARAMS.get('mode') : 'pad') : null;
         if (MODE) document.body.classList.add('mode-' + MODE);
+        if (MODE === 'pad') document.getElementById('esc-help').textContent = 'Esc: schliessen';
         const safeName = (n) => typeof n === 'string' && n.length > 0 && n.length <= 300 && !/[\\/]|\.\./.test(n);
         const SKELETONS = (PARAMS.get('skel') || '').split('|').filter(safeName);
 
@@ -174,6 +175,14 @@
             if (PARENT) window.parent.postMessage({ type, unit: UNIT }, PARENT);
         }
         if (MODE === 'preview') document.body.addEventListener('click', () => tellParent('mindmap-open'));
+        // Notizblock: Esc schliesst ihn, wo auch immer der Fokus darin steht (nicht im Anmeldedialog).
+        if (MODE === 'pad') {
+            document.addEventListener('keydown', (e) => {
+                if (e.key !== 'Escape' || e.defaultPrevented || document.getElementById('auth-dialog')) return;
+                e.preventDefault();
+                tellParent('mindmap-close');
+            });
+        }
         if (MODE === 'button') document.getElementById('open-pad').addEventListener('click', () => tellParent('mindmap-open'));
 
         // ---- the tree ---------------------------------------------------------------
@@ -673,10 +682,8 @@
         function onKey(e, node) {
             const key = e.key;
             if (key === 'Escape') {
-                e.preventDefault();
-                if (MODE === 'pad') tellParent('mindmap-close');
-                else setEditing(false);
-                return;
+                if (MODE !== 'pad') { e.preventDefault(); setEditing(false); }
+                return;     // im Notizblock schliesst der Handler am Dokument
             }
             if (key === 'ArrowUp' || key === 'ArrowDown') {
                 const id = neighbourRow(node, key === 'ArrowUp' ? -1 : 1);
