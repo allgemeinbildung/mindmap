@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Meine erste Steuererklärung",
+    "children": [
+      {
+        "text": "Wofür zahle ich?"
+      },
+      {
+        "text": "Was gebe ich an?"
+      },
+      {
+        "text": "Was darf ich abziehen?"
+      },
+      {
+        "text": "Ist das gerecht?"
+      },
+      {
+        "text": "Mein HP"
+      },
+      {
+        "text": "Gilt immer"
+      }
+    ]
+  }
+}
