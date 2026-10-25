@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Mein Anliegen: mehr Ferien für Lernende",
+    "children": [
+      {
+        "text": "Darf ich mitreden?"
+      },
+      {
+        "text": "Welcher Weg?"
+      },
+      {
+        "text": "Wer hilft, wer bremst?"
+      },
+      {
+        "text": "Wie wird daraus ein Gesetz?"
+      },
+      {
+        "text": "Mein HP"
+      },
+      {
+        "text": "Gilt immer"
+      }
+    ]
+  }
+}

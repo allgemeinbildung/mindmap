@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Welcher Clip stimmt?",
+    "children": [
+      {
+        "text": "Was ist passiert?"
+      },
+      {
+        "text": "Wer sagt was?"
+      },
+      {
+        "text": "Stimmt das?"
+      },
+      {
+        "text": "Was gilt für alle?"
+      },
+      {
+        "text": "Mein HP"
+      },
+      {
+        "text": "Gilt immer"
+      }
+    ]
+  }
+}

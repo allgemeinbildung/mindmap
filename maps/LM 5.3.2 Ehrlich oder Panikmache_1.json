@@ -1,0 +1,25 @@
+{
+  "root": {
+    "text": "Ehrlich oder Panikmache?",
+    "children": [
+      {
+        "text": "Was zeigt der Beitrag?"
+      },
+      {
+        "text": "Wie wirkt er?"
+      },
+      {
+        "text": "Was fehlt?"
+      },
+      {
+        "text": "Wer handelt, wer kontrolliert?"
+      },
+      {
+        "text": "Mein HP"
+      },
+      {
+        "text": "Gilt immer"
+      }
+    ]
+  }
+}
