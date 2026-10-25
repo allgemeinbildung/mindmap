@@ -309,6 +309,7 @@
             drawing = drawing.then(async () => {
                 const container = document.getElementById('mermaid-container');
                 try {
+                    drawnHidden = frameHidden();
                     const { svg } = await mermaid.render(`mermaid-graph-${++renderCount}`, toMermaid());
                     container.innerHTML = svg;
                     fitDiagram(container.querySelector('svg'));
@@ -317,6 +318,15 @@
             });
             return drawing;
         }
+
+        // A frame inside a hidden step (display:none in the page) has no size: Mermaid
+        // then measures every label as 0 and draws a 20×20 map that looks empty.
+        // Draw again as soon as the frame gets a size.
+        let drawnHidden = false;
+        const frameHidden = () => window.innerWidth === 0 || window.innerHeight === 0;
+        window.addEventListener('resize', () => {
+            if (drawnHidden && !frameHidden()) draw();
+        });
 
         let drawTimer = null;
         function drawSoon() {
